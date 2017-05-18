@@ -20,6 +20,7 @@
 
 @implementation YYHTabBarViewController
 
+#pragma mark - -------life cycle of the View--------------
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -30,8 +31,27 @@
     
 }
 
++ (void)load{
+
+
+    UITabBarItem *barItem = [UITabBarItem appearanceWhenContainedInInstancesOfClasses:@[self]];
+
+
+    //setting the selected text color
+    NSMutableDictionary *attriDict = [NSMutableDictionary dictionary];
+    attriDict[NSForegroundColorAttributeName] = [UIColor blackColor];
+    [barItem setTitleTextAttributes:attriDict forState:UIControlStateSelected];
+
+
+    //it's only works on UIControlStateNormal
+    NSMutableDictionary *dictFont = [NSMutableDictionary dictionary];
+    dictFont[NSFontAttributeName] = [UIFont boldSystemFontOfSize:14];
+    [barItem setTitleTextAttributes:dictFont forState:UIControlStateNormal];
+}
+#pragma mark - -------configure --------------
+
 /**
- 创建导航控制器, 并为其添加子控制器
+ creat NavigationControllers and add child VCs for it
  */
 - (void)configureChildrenViewControllers{
 
@@ -42,14 +62,14 @@
     [self configureChildViewController:homeVC
                                  image:@"tabBar_essence_icon"
                          selectedImage:@"tabBar_essence_click_icon"
-                                 title:@"精华"];
+                                 title:@"Home"];
 
     //Statistics
     YYHStatictisController *statisticsVC = [YYHStatictisController new];
     [self configureChildViewController:statisticsVC
                                  image:@"tabBar_new_icon"
                          selectedImage:@"tabBar_new_click_icon"
-                                 title:@"新帖"];
+                                 title:@"Statistics"];
 
     //Setting
     YYHSettingController *settingVC = [YYHSettingController new];
