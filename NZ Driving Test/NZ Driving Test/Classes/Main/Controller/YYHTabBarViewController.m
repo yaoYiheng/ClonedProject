@@ -45,8 +45,10 @@
 
     //it's only works on UIControlStateNormal
     NSMutableDictionary *dictFont = [NSMutableDictionary dictionary];
-    dictFont[NSFontAttributeName] = [UIFont boldSystemFontOfSize:14];
+    dictFont[NSFontAttributeName] = [UIFont systemFontOfSize:14];
     [barItem setTitleTextAttributes:dictFont forState:UIControlStateNormal];
+
+
 }
 #pragma mark - -------configure --------------
 
@@ -74,9 +76,9 @@
     //Setting
     YYHSettingController *settingVC = [YYHSettingController new];
     [self configureChildViewController:settingVC
-                                 image:@"tabBar_new_icon"
-                         selectedImage:@"tabBar_new_click_icon"
-                                 title:@"Setting"];
+                                 image:@"Seting_normal"
+                         selectedImage:@"Seting_on_click"
+                                 title:@"设置"];
 
 }
 

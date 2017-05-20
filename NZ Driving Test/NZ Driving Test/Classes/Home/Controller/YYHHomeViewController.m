@@ -7,22 +7,33 @@
 //
 
 #import "YYHHomeViewController.h"
+#import "MJExtension.h"
+#import "YYHQuestionItem.h"
+
+#import "YYHQuestionTableViewCell.h"
 
 @interface YYHHomeViewController ()
 
+/** array of all qustions*/
+@property (nonatomic, strong) NSArray *allQuestionArray;
 @end
 
+static NSString * const cellID = @"cell";
 @implementation YYHHomeViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     [self loadQuestionsData];
+    [self.tableView registerNib:[UINib nibWithNibName:@"YYHQuestionTableViewCell" bundle:nil] forCellReuseIdentifier:cellID];
+    self.title = @"新西兰交规";
 }
 
 
 - (void)loadQuestionsData{
-    
+    self.allQuestionArray = [YYHQuestionItem mj_objectArrayWithFilename: @"正确.plist"];
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -31,25 +42,20 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return 4;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    YYHQuestionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

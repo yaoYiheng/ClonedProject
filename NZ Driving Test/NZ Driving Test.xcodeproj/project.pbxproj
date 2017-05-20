@@ -32,6 +32,9 @@
 		A5F6E1AF1ECDD49A00C2C8AC /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E1A21ECDD49A00C2C8AC /* NSObject+MJKeyValue.m */; };
 		A5F6E1B01ECDD49A00C2C8AC /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E1A41ECDD49A00C2C8AC /* NSObject+MJProperty.m */; };
 		A5F6E1B11ECDD49A00C2C8AC /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E1A61ECDD49A00C2C8AC /* NSString+MJExtension.m */; };
+		A5F6E1B41ECDD4F900C2C8AC /* YYHQuestionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E1B31ECDD4F900C2C8AC /* YYHQuestionItem.m */; };
+		A5F6E1B81ECDD71100C2C8AC /* YYHQuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E1B61ECDD71100C2C8AC /* YYHQuestionTableViewCell.m */; };
+		A5F6E1B91ECDD71100C2C8AC /* YYHQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E1B71ECDD71100C2C8AC /* YYHQuestionTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +88,11 @@
 		A5F6E1A41ECDD49A00C2C8AC /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
 		A5F6E1A51ECDD49A00C2C8AC /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
 		A5F6E1A61ECDD49A00C2C8AC /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		A5F6E1B21ECDD4F900C2C8AC /* YYHQuestionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHQuestionItem.h; sourceTree = "<group>"; };
+		A5F6E1B31ECDD4F900C2C8AC /* YYHQuestionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHQuestionItem.m; sourceTree = "<group>"; };
+		A5F6E1B51ECDD71100C2C8AC /* YYHQuestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHQuestionTableViewCell.h; sourceTree = "<group>"; };
+		A5F6E1B61ECDD71100C2C8AC /* YYHQuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHQuestionTableViewCell.m; sourceTree = "<group>"; };
+		A5F6E1B71ECDD71100C2C8AC /* YYHQuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYHQuestionTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +176,8 @@
 		A5F6E15C1ECDC27000C2C8AC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A5F6E1B21ECDD4F900C2C8AC /* YYHQuestionItem.h */,
+				A5F6E1B31ECDD4F900C2C8AC /* YYHQuestionItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +185,9 @@
 		A5F6E15D1ECDC27000C2C8AC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A5F6E1B51ECDD71100C2C8AC /* YYHQuestionTableViewCell.h */,
+				A5F6E1B61ECDD71100C2C8AC /* YYHQuestionTableViewCell.m */,
+				A5F6E1B71ECDD71100C2C8AC /* YYHQuestionTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -399,6 +412,7 @@
 			files = (
 				A56F2E491EC5D9E900DCF2D2 /* LaunchScreen.storyboard in Resources */,
 				A56F2E461EC5D9E900DCF2D2 /* Assets.xcassets in Resources */,
+				A5F6E1B91ECDD71100C2C8AC /* YYHQuestionTableViewCell.xib in Resources */,
 				A56F2E441EC5D9E900DCF2D2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +426,7 @@
 			files = (
 				A5F6E16F1ECDC27100C2C8AC /* main.m in Sources */,
 				A5F6E1A91ECDD49A00C2C8AC /* MJFoundation.m in Sources */,
+				A5F6E1B41ECDD4F900C2C8AC /* YYHQuestionItem.m in Sources */,
 				A5F6E1A81ECDD49A00C2C8AC /* MJExtensionConst.m in Sources */,
 				A5F6E1861ECDCB1C00C2C8AC /* YYHStatictisController.m in Sources */,
 				A5F6E17C1ECDC77600C2C8AC /* UIImage+WithoutRendering.m in Sources */,
@@ -419,6 +434,7 @@
 				A5F6E1721ECDC6B800C2C8AC /* YYHTabBarViewController.m in Sources */,
 				A5F6E17B1ECDC77600C2C8AC /* UIBarButtonItem+YYHBarButton.m in Sources */,
 				A5F6E1AF1ECDD49A00C2C8AC /* NSObject+MJKeyValue.m in Sources */,
+				A5F6E1B81ECDD71100C2C8AC /* YYHQuestionTableViewCell.m in Sources */,
 				A5F6E1831ECDCA7C00C2C8AC /* UIView+YYHFrame.m in Sources */,
 				A5F6E1AD1ECDD49A00C2C8AC /* NSObject+MJClass.m in Sources */,
 				A5F6E1751ECDC6D600C2C8AC /* YYHNavigationController.m in Sources */,
