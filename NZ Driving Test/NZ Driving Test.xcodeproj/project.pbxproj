@@ -38,6 +38,7 @@
 		A5F6E2471ED1A9E200C2C8AC /* YYHChooseTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E2461ED1A9E200C2C8AC /* YYHChooseTypeView.m */; };
 		A5F6E2491ED1A9EA00C2C8AC /* YYHChooseTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2481ED1A9EA00C2C8AC /* YYHChooseTypeView.xib */; };
 		A5F6E24B1ED1B08100C2C8AC /* YYHHomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E24A1ED1B08100C2C8AC /* YYHHomeViewController.storyboard */; };
+		A5F6E24E1ED1B91A00C2C8AC /* YYHButtonOnChooseTyepView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E24D1ED1B91A00C2C8AC /* YYHButtonOnChooseTyepView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,8 @@
 		A5F6E2461ED1A9E200C2C8AC /* YYHChooseTypeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHChooseTypeView.m; sourceTree = "<group>"; };
 		A5F6E2481ED1A9EA00C2C8AC /* YYHChooseTypeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYHChooseTypeView.xib; sourceTree = "<group>"; };
 		A5F6E24A1ED1B08100C2C8AC /* YYHHomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YYHHomeViewController.storyboard; sourceTree = "<group>"; };
+		A5F6E24C1ED1B91A00C2C8AC /* YYHButtonOnChooseTyepView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHButtonOnChooseTyepView.h; sourceTree = "<group>"; };
+		A5F6E24D1ED1B91A00C2C8AC /* YYHButtonOnChooseTyepView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHButtonOnChooseTyepView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +202,8 @@
 				A5F6E2451ED1A9E200C2C8AC /* YYHChooseTypeView.h */,
 				A5F6E2461ED1A9E200C2C8AC /* YYHChooseTypeView.m */,
 				A5F6E2481ED1A9EA00C2C8AC /* YYHChooseTypeView.xib */,
+				A5F6E24C1ED1B91A00C2C8AC /* YYHButtonOnChooseTyepView.h */,
+				A5F6E24D1ED1B91A00C2C8AC /* YYHButtonOnChooseTyepView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -462,6 +467,7 @@
 				A5F6E1AA1ECDD49A00C2C8AC /* MJProperty.m in Sources */,
 				A5F6E1A71ECDD49A00C2C8AC /* MJDictionaryCache.m in Sources */,
 				A5F6E1AB1ECDD49A00C2C8AC /* MJPropertyKey.m in Sources */,
+				A5F6E24E1ED1B91A00C2C8AC /* YYHButtonOnChooseTyepView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

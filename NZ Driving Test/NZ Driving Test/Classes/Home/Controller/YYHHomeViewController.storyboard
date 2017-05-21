@@ -20,16 +20,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u0Q-dP-nsU">
-                                <rect key="frame" x="0.0" y="176" width="375" height="252"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0Q-dP-nsU">
+                                <rect key="frame" x="0.0" y="100" width="375" height="375"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="375" id="Qgn-uu-Yyv"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u0Q-dP-nsU" firstAttribute="top" secondItem="OOd-m3-u8m" secondAttribute="bottom" constant="80" id="J88-42-OhB"/>
+                            <constraint firstAttribute="trailing" secondItem="u0Q-dP-nsU" secondAttribute="trailing" id="efg-YC-mT9"/>
+                            <constraint firstItem="u0Q-dP-nsU" firstAttribute="leading" secondItem="QjE-7S-zsp" secondAttribute="leading" id="xyl-MC-Cyk"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="MiddlePlaceHolder" destination="u0Q-dP-nsU" id="mcJ-qf-tX5"/>
+                        <outlet property="distanceToTop" destination="J88-42-OhB" id="OoY-Dx-iYa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCx-Q2-1QD" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -11,54 +11,52 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="428" height="374"/>
+            <rect key="frame" x="0.0" y="0.0" width="334" height="329"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfW-Bg-PBk">
-                    <rect key="frame" x="60" y="60" width="110" height="110"/>
-                    <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="110" id="WBh-0r-xgM"/>
-                        <constraint firstAttribute="height" constant="110" id="lt5-WA-SK6"/>
-                    </constraints>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfW-Bg-PBk" customClass="YYHButtonOnChooseTyepView">
+                    <rect key="frame" x="20" y="40" width="137" height="119.5"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="Button"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMB-Sv-5oT">
-                    <rect key="frame" x="258" y="60" width="110" height="110"/>
-                    <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSU-hs-7F7" customClass="YYHButtonOnChooseTyepView">
+                    <rect key="frame" x="177" y="179.5" width="137" height="119.5"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="Button"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PF-D7-MhB">
-                    <rect key="frame" x="60" y="204" width="110" height="110"/>
-                    <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMB-Sv-5oT" customClass="YYHButtonOnChooseTyepView">
+                    <rect key="frame" x="177" y="40" width="137" height="119.5"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="Button"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSU-hs-7F7">
-                    <rect key="frame" x="258" y="204" width="110" height="110"/>
-                    <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PF-D7-MhB" customClass="YYHButtonOnChooseTyepView">
+                    <rect key="frame" x="20" y="179.5" width="137" height="119.5"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="Button"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="PSU-hs-7F7" firstAttribute="trailing" secondItem="JMB-Sv-5oT" secondAttribute="trailing" id="5qb-jN-7Wv"/>
-                <constraint firstItem="5PF-D7-MhB" firstAttribute="width" secondItem="hfW-Bg-PBk" secondAttribute="width" id="5xS-M6-XB3"/>
-                <constraint firstAttribute="trailing" secondItem="JMB-Sv-5oT" secondAttribute="trailing" constant="60" id="7Qi-oZ-wm4"/>
-                <constraint firstItem="PSU-hs-7F7" firstAttribute="bottom" secondItem="5PF-D7-MhB" secondAttribute="bottom" id="7nP-B1-K7o"/>
-                <constraint firstAttribute="bottom" secondItem="5PF-D7-MhB" secondAttribute="bottom" constant="60" id="Af6-yv-9P0"/>
-                <constraint firstItem="JMB-Sv-5oT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="CSx-KO-2U7"/>
-                <constraint firstItem="JMB-Sv-5oT" firstAttribute="height" secondItem="hfW-Bg-PBk" secondAttribute="height" id="OZh-HG-aZb"/>
-                <constraint firstItem="PSU-hs-7F7" firstAttribute="height" secondItem="JMB-Sv-5oT" secondAttribute="height" id="Pp0-P3-ElE"/>
-                <constraint firstItem="hfW-Bg-PBk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="60" id="RoG-58-R2e"/>
-                <constraint firstItem="hfW-Bg-PBk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="aYc-Uf-jEr"/>
-                <constraint firstItem="5PF-D7-MhB" firstAttribute="leading" secondItem="hfW-Bg-PBk" secondAttribute="leading" id="bxB-id-rZc"/>
-                <constraint firstItem="JMB-Sv-5oT" firstAttribute="width" secondItem="hfW-Bg-PBk" secondAttribute="width" id="kwe-gd-bft"/>
-                <constraint firstItem="PSU-hs-7F7" firstAttribute="width" secondItem="JMB-Sv-5oT" secondAttribute="width" id="yJe-zf-5St"/>
-                <constraint firstItem="5PF-D7-MhB" firstAttribute="height" secondItem="hfW-Bg-PBk" secondAttribute="height" id="zRt-SL-ppD"/>
+                <constraint firstItem="PSU-hs-7F7" firstAttribute="top" secondItem="5PF-D7-MhB" secondAttribute="top" id="06O-se-Dd7"/>
+                <constraint firstItem="5PF-D7-MhB" firstAttribute="height" secondItem="hfW-Bg-PBk" secondAttribute="height" id="94D-nT-Yn4"/>
+                <constraint firstItem="JMB-Sv-5oT" firstAttribute="leading" secondItem="hfW-Bg-PBk" secondAttribute="trailing" constant="20" id="9PT-HS-RtH"/>
+                <constraint firstItem="5PF-D7-MhB" firstAttribute="leading" secondItem="hfW-Bg-PBk" secondAttribute="leading" id="CqX-uX-12E"/>
+                <constraint firstAttribute="trailing" secondItem="JMB-Sv-5oT" secondAttribute="trailing" constant="20" id="Dm4-EJ-Oky"/>
+                <constraint firstAttribute="bottom" secondItem="5PF-D7-MhB" secondAttribute="bottom" constant="30" id="Ngz-wg-tvY"/>
+                <constraint firstItem="hfW-Bg-PBk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="Npq-4x-bUr"/>
+                <constraint firstItem="hfW-Bg-PBk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="RAv-A2-KCv"/>
+                <constraint firstItem="JMB-Sv-5oT" firstAttribute="height" secondItem="hfW-Bg-PBk" secondAttribute="height" id="aD7-AO-unw"/>
+                <constraint firstItem="JMB-Sv-5oT" firstAttribute="width" secondItem="hfW-Bg-PBk" secondAttribute="width" id="aLt-ud-xgB"/>
+                <constraint firstItem="PSU-hs-7F7" firstAttribute="width" secondItem="hfW-Bg-PBk" secondAttribute="width" id="bhO-q6-IYH"/>
+                <constraint firstItem="5PF-D7-MhB" firstAttribute="top" secondItem="hfW-Bg-PBk" secondAttribute="bottom" constant="20" id="c13-1p-2aV"/>
+                <constraint firstItem="5PF-D7-MhB" firstAttribute="width" secondItem="hfW-Bg-PBk" secondAttribute="width" id="eh9-cm-EQd"/>
+                <constraint firstItem="PSU-hs-7F7" firstAttribute="height" secondItem="hfW-Bg-PBk" secondAttribute="height" id="fXG-SQ-7Vs"/>
+                <constraint firstItem="PSU-hs-7F7" firstAttribute="trailing" secondItem="JMB-Sv-5oT" secondAttribute="trailing" id="kYH-0t-Q1Z"/>
+                <constraint firstItem="JMB-Sv-5oT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="vsC-l2-XTf"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-22" y="59"/>
+            <point key="canvasLocation" x="-79" y="20.5"/>
         </view>
     </objects>
 </document>

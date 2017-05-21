@@ -10,6 +10,11 @@
 
 @implementation YYHChooseTypeView
 
+
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+}
 + (instancetype)creatViewFromNib{
     return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil].firstObject;
 }
