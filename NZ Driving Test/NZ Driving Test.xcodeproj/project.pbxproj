@@ -35,6 +35,9 @@
 		A5F6E1B41ECDD4F900C2C8AC /* YYHQuestionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E1B31ECDD4F900C2C8AC /* YYHQuestionItem.m */; };
 		A5F6E1B81ECDD71100C2C8AC /* YYHQuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E1B61ECDD71100C2C8AC /* YYHQuestionTableViewCell.m */; };
 		A5F6E1B91ECDD71100C2C8AC /* YYHQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E1B71ECDD71100C2C8AC /* YYHQuestionTableViewCell.xib */; };
+		A5F6E2471ED1A9E200C2C8AC /* YYHChooseTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E2461ED1A9E200C2C8AC /* YYHChooseTypeView.m */; };
+		A5F6E2491ED1A9EA00C2C8AC /* YYHChooseTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2481ED1A9EA00C2C8AC /* YYHChooseTypeView.xib */; };
+		A5F6E24B1ED1B08100C2C8AC /* YYHHomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E24A1ED1B08100C2C8AC /* YYHHomeViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +96,10 @@
 		A5F6E1B51ECDD71100C2C8AC /* YYHQuestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHQuestionTableViewCell.h; sourceTree = "<group>"; };
 		A5F6E1B61ECDD71100C2C8AC /* YYHQuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHQuestionTableViewCell.m; sourceTree = "<group>"; };
 		A5F6E1B71ECDD71100C2C8AC /* YYHQuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYHQuestionTableViewCell.xib; sourceTree = "<group>"; };
+		A5F6E2451ED1A9E200C2C8AC /* YYHChooseTypeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHChooseTypeView.h; sourceTree = "<group>"; };
+		A5F6E2461ED1A9E200C2C8AC /* YYHChooseTypeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHChooseTypeView.m; sourceTree = "<group>"; };
+		A5F6E2481ED1A9EA00C2C8AC /* YYHChooseTypeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYHChooseTypeView.xib; sourceTree = "<group>"; };
+		A5F6E24A1ED1B08100C2C8AC /* YYHHomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YYHHomeViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +176,7 @@
 			children = (
 				A5F6E18A1ECDCC9D00C2C8AC /* YYHHomeViewController.h */,
 				A5F6E18B1ECDCC9D00C2C8AC /* YYHHomeViewController.m */,
+				A5F6E24A1ED1B08100C2C8AC /* YYHHomeViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,6 +196,9 @@
 				A5F6E1B51ECDD71100C2C8AC /* YYHQuestionTableViewCell.h */,
 				A5F6E1B61ECDD71100C2C8AC /* YYHQuestionTableViewCell.m */,
 				A5F6E1B71ECDD71100C2C8AC /* YYHQuestionTableViewCell.xib */,
+				A5F6E2451ED1A9E200C2C8AC /* YYHChooseTypeView.h */,
+				A5F6E2461ED1A9E200C2C8AC /* YYHChooseTypeView.m */,
+				A5F6E2481ED1A9EA00C2C8AC /* YYHChooseTypeView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -411,6 +422,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A56F2E491EC5D9E900DCF2D2 /* LaunchScreen.storyboard in Resources */,
+				A5F6E2491ED1A9EA00C2C8AC /* YYHChooseTypeView.xib in Resources */,
+				A5F6E24B1ED1B08100C2C8AC /* YYHHomeViewController.storyboard in Resources */,
 				A56F2E461EC5D9E900DCF2D2 /* Assets.xcassets in Resources */,
 				A5F6E1B91ECDD71100C2C8AC /* YYHQuestionTableViewCell.xib in Resources */,
 				A56F2E441EC5D9E900DCF2D2 /* Main.storyboard in Resources */,
@@ -435,6 +448,7 @@
 				A5F6E17B1ECDC77600C2C8AC /* UIBarButtonItem+YYHBarButton.m in Sources */,
 				A5F6E1AF1ECDD49A00C2C8AC /* NSObject+MJKeyValue.m in Sources */,
 				A5F6E1B81ECDD71100C2C8AC /* YYHQuestionTableViewCell.m in Sources */,
+				A5F6E2471ED1A9E200C2C8AC /* YYHChooseTypeView.m in Sources */,
 				A5F6E1831ECDCA7C00C2C8AC /* UIView+YYHFrame.m in Sources */,
 				A5F6E1AD1ECDD49A00C2C8AC /* NSObject+MJClass.m in Sources */,
 				A5F6E1751ECDC6D600C2C8AC /* YYHNavigationController.m in Sources */,

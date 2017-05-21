@@ -59,7 +59,9 @@
 
 
     //Home
-    YYHHomeViewController *homeVC = [YYHHomeViewController new];
+    UIStoryboard *story = [UIStoryboard storyboardWithName:NSStringFromClass([YYHHomeViewController class]) bundle:nil];
+
+    YYHHomeViewController *homeVC = [story instantiateInitialViewController];
 
     [self configureChildViewController:homeVC
                                  image:@"tabBar_essence_icon"
