@@ -22,6 +22,9 @@ CGFloat const YYHCornerRadius = 10;
 CGFloat const YYHMargin = 10;
 
 NSString  *const YYHcountDown = @"CountDown";
+//点击了选择类型按钮
+NSString * const YYHTypeButtonDidClicked = @"YYHTypeButtonDidClicked";
+
 
 
 

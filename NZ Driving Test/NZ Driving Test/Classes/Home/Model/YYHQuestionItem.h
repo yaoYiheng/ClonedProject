@@ -36,13 +36,16 @@ typedef NS_ENUM(NSInteger, YYHCategory) {
 @property (nonatomic, strong) NSString *C;
 @property (nonatomic, strong) NSString *D;
 
-@property (nonatomic, strong) NSString *Category;
+
 @property (nonatomic, strong) NSString *CorrectAnswer;
 @property (nonatomic, strong) NSString *Image;
 /** <#comments#>*/
 @property (nonatomic, strong) NSString *Question;
 /** type*/
 @property (nonatomic, assign) YYHType Type;
+
+/** catagories*/
+@property (nonatomic, assign) YYHCategory Category;
 /** totla*/
 @property (nonatomic, assign) NSInteger total;
 /** current*/

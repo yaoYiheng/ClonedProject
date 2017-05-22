@@ -12,6 +12,9 @@
 
 #import "YYHQuestionTableViewCell.h"
 #import "YYHChooseTypeView.h"
+#import "YYHButtonOnChooseTyepView.h"
+
+#import "YYHCatagoriesViewController.h"
 
 @interface YYHHomeViewController ()
 @property (weak, nonatomic) IBOutlet UIView *MiddlePlaceHolder;
@@ -34,8 +37,7 @@
     [self.MiddlePlaceHolder addSubview:view];
 
 
-    NSLog(@"%f", self.view.yyh_height);
-    
+    self.navigationItem.title = @"首页";
 
 //    if (iphone5) {
 //        self.distanceToTop.constant = 20;
@@ -47,31 +49,49 @@
 //        self.distanceToTop.constant = 20;
 //
 //    }
-
-    NSLog(@"占位符view--%@", self.MiddlePlaceHolder);
-    NSLog(@"view--%@", view);
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(typeButtonDidClicked:) name:YYHTypeButtonDidClicked object:nil];
 }
 
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
 
-    //for different devices
+//    //for different devices
     if (iphone4) {
         self.distanceToTop.constant = -5;
 
     }
-
-    if (iphone5) {
+    else if (iphone5) {
         self.distanceToTop.constant = 20;
 
+    }
+    else if (iphone6P)
+    {
+        self.distanceToTop.constant = 100;
     }
 
     
     YYHChooseTypeView *chooseView = self.MiddlePlaceHolder.subviews.firstObject;
     chooseView.frame = CGRectMake(0, 0, self.MiddlePlaceHolder.yyh_width, self.MiddlePlaceHolder.yyh_height);
+
 }
+#pragma mark - -------load data--------------
 - (void)loadQuestionsData{
     self.allQuestionArray = [YYHQuestionItem mj_objectArrayWithFilename: @"正确.plist"];
+     
 
+}
+#pragma mark - -------addTargetForButton--------------
+- (void)typeButtonDidClicked: (NSNotification *)notification{
+
+
+    YYHButtonOnChooseTyepView *button = notification.object;
+    NSLog(@"%ld", button.tag);
+
+    YYHCatagoriesViewController *catagory = [[YYHCatagoriesViewController alloc
+                                              ] init];
+
+    NSString *title = [button currentTitle];
+    catagory.titleForNav = title;
+    [self.navigationController pushViewController:catagory animated:YES];
 }
 @end

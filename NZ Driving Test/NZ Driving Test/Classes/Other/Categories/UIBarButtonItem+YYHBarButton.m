@@ -36,9 +36,9 @@
     [barButton setImage:image forState:UIControlStateNormal];
     [barButton setImage:highlightedImage forState:UIControlStateHighlighted];
     [barButton setTitle:title forState:UIControlStateNormal];
-    [barButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [barButton setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    barButton.contentEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 20);
+    [barButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [barButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+//    barButton.contentEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 20);
     [barButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     [barButton sizeToFit];
 

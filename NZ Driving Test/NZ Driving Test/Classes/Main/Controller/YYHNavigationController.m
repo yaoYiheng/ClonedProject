@@ -8,30 +8,62 @@
 
 #import "YYHNavigationController.h"
 
-@interface YYHNavigationController ()
+@interface YYHNavigationController ()<UIGestureRecognizerDelegate>
 
 @end
 
 @implementation YYHNavigationController
 
++ (void)load
+{
+    UINavigationBar *navBar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[self]];
+
+    // 只要是通过模型设置,都是通过富文本设置
+    // 设置导航条标题 => UINavigationBar
+    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
+    attrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:20];
+    [navBar setTitleTextAttributes:attrs];
+    attrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
+
+    // 设置导航条背景图片
+    [navBar setBackgroundImage:[UIImage imageWithStretched:@"navigationbarBackgroundRed"] forBarMetrics:UIBarMetricsDefault];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    //creat pan Ges
+    UIPanGestureRecognizer *panGes = [[UIPanGestureRecognizer alloc] initWithTarget:self.interactivePopGestureRecognizer.delegate action:@selector(handleNavigationTransition:)];
+
+    //add
+    [self.view addGestureRecognizer:panGes];
+
+
+    panGes.delegate = self;
+
+
+
+    self.interactivePopGestureRecognizer.enabled = NO;
+
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    if (self.childViewControllers.count > 0) {
+
+        viewController.hidesBottomBarWhenPushed = YES;
+
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem backBarButtonWithImage:[UIImage imageNamed:@"navigationButtonReturn"]  hightligtedImage:[UIImage imageNamed:@"navigationButtonReturnClick"] Target:self action:@selector(back) title:@"返回"];
+
+
+    }
+
+    [super pushViewController:viewController animated:animated];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark -----UIGestureRecognizerDelegate方法-----
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
+    //只有当子控制器为非根控制器时, 才允许接收手势.
+    return self.childViewControllers.count > 1;
 }
-*/
-
+- (void)back{
+    [self popViewControllerAnimated:YES];
+}
 @end

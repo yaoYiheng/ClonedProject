@@ -14,6 +14,10 @@
     [super awakeFromNib];
 
     [self setBackgroundImage:[UIImage imageNamed:@"HomeButton_Clickd"] forState:UIControlStateNormal];
+
+    self.titleLabel.font = [UIFont systemFontOfSize:22];
+    [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
     
 }
 

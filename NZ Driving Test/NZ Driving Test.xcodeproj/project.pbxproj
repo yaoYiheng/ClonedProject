@@ -39,6 +39,9 @@
 		A5F6E2491ED1A9EA00C2C8AC /* YYHChooseTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2481ED1A9EA00C2C8AC /* YYHChooseTypeView.xib */; };
 		A5F6E24B1ED1B08100C2C8AC /* YYHHomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E24A1ED1B08100C2C8AC /* YYHHomeViewController.storyboard */; };
 		A5F6E24E1ED1B91A00C2C8AC /* YYHButtonOnChooseTyepView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E24D1ED1B91A00C2C8AC /* YYHButtonOnChooseTyepView.m */; };
+		A5F6E2511ED25C0C00C2C8AC /* YYHCatagoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E2501ED25C0C00C2C8AC /* YYHCatagoriesViewController.m */; };
+		A5F6E25A1ED3379700C2C8AC /* 正确.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2581ED3379700C2C8AC /* 正确.plist */; };
+		A5F6E25B1ED3379700C2C8AC /* 中文版问题.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2591ED3379700C2C8AC /* 中文版问题.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +106,10 @@
 		A5F6E24A1ED1B08100C2C8AC /* YYHHomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YYHHomeViewController.storyboard; sourceTree = "<group>"; };
 		A5F6E24C1ED1B91A00C2C8AC /* YYHButtonOnChooseTyepView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHButtonOnChooseTyepView.h; sourceTree = "<group>"; };
 		A5F6E24D1ED1B91A00C2C8AC /* YYHButtonOnChooseTyepView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHButtonOnChooseTyepView.m; sourceTree = "<group>"; };
+		A5F6E24F1ED25C0C00C2C8AC /* YYHCatagoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHCatagoriesViewController.h; sourceTree = "<group>"; };
+		A5F6E2501ED25C0C00C2C8AC /* YYHCatagoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHCatagoriesViewController.m; sourceTree = "<group>"; };
+		A5F6E2581ED3379700C2C8AC /* 正确.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "正确.plist"; sourceTree = "<group>"; };
+		A5F6E2591ED3379700C2C8AC /* 中文版问题.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "中文版问题.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +187,8 @@
 				A5F6E18A1ECDCC9D00C2C8AC /* YYHHomeViewController.h */,
 				A5F6E18B1ECDCC9D00C2C8AC /* YYHHomeViewController.m */,
 				A5F6E24A1ED1B08100C2C8AC /* YYHHomeViewController.storyboard */,
+				A5F6E24F1ED25C0C00C2C8AC /* YYHCatagoriesViewController.h */,
+				A5F6E2501ED25C0C00C2C8AC /* YYHCatagoriesViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -246,6 +255,8 @@
 		A5F6E1621ECDC27000C2C8AC /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				A5F6E2581ED3379700C2C8AC /* 正确.plist */,
+				A5F6E2591ED3379700C2C8AC /* 中文版问题.plist */,
 				A5F6E18F1ECDD49A00C2C8AC /* MJExtension */,
 				A5F6E1761ECDC77600C2C8AC /* Categories */,
 				A5F6E1631ECDC27000C2C8AC /* AppDelegate.h */,
@@ -432,6 +443,8 @@
 				A56F2E461EC5D9E900DCF2D2 /* Assets.xcassets in Resources */,
 				A5F6E1B91ECDD71100C2C8AC /* YYHQuestionTableViewCell.xib in Resources */,
 				A56F2E441EC5D9E900DCF2D2 /* Main.storyboard in Resources */,
+				A5F6E25A1ED3379700C2C8AC /* 正确.plist in Resources */,
+				A5F6E25B1ED3379700C2C8AC /* 中文版问题.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +476,7 @@
 				A5F6E1891ECDCB3400C2C8AC /* YYHSettingController.m in Sources */,
 				A5F6E1AC1ECDD49A00C2C8AC /* MJPropertyType.m in Sources */,
 				A5F6E1B01ECDD49A00C2C8AC /* NSObject+MJProperty.m in Sources */,
+				A5F6E2511ED25C0C00C2C8AC /* YYHCatagoriesViewController.m in Sources */,
 				A5F6E1AE1ECDD49A00C2C8AC /* NSObject+MJCoding.m in Sources */,
 				A5F6E1AA1ECDD49A00C2C8AC /* MJProperty.m in Sources */,
 				A5F6E1A71ECDD49A00C2C8AC /* MJDictionaryCache.m in Sources */,

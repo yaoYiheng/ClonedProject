@@ -26,3 +26,7 @@ UIKIT_EXTERN NSString  *const YYHcountDown;
 //重复点击TabBarButton的通知
 UIKIT_EXTERN NSString * const YYHCountDownNotification;
 
+//点击了选择类型按钮
+UIKIT_EXTERN NSString * const YYHTypeButtonDidClicked;
+
+
