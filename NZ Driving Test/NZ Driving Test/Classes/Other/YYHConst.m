@@ -26,8 +26,8 @@ NSString  *const YYHcountDown = @"CountDown";
 NSString * const YYHTypeButtonDidClicked = @"YYHTypeButtonDidClicked";
 
 
-
-
+//点击了关闭按钮
+NSString * const YYHTCloseButtonDidClicked = @"YYHTCloseButtonDidClicked";
 
 
 //重复点击通知

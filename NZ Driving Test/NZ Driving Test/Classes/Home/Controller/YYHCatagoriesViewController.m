@@ -9,6 +9,7 @@
 #import "YYHCatagoriesViewController.h"
 #import "YYHQuestionItem.h"
 #import "MJExtension.h"
+#import "YYHQuestionsCollectionViewController.h"
 
 @interface YYHCatagoriesViewController ()
 
@@ -96,7 +97,7 @@ static NSString * const cellID = @"cell";
 
     self.categoreis = @[@"核心问题", @"紧急情况问题", @"泊车问题", @"路标与路牌问题", @"道路位置问题", @"交叉路口的让路问题"];
 
-    NSLog(@"=====%@=====%ld", self.class3_5C, self.class3_5C.count);
+
     
 }
 #pragma mark - -------tableView data sourse--------------
@@ -117,6 +118,15 @@ static NSString * const cellID = @"cell";
 #pragma mark - -------tableView Delegate--------------
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    YYHQuestionsCollectionViewController *questionVC = [[YYHQuestionsCollectionViewController alloc] init];
+
+    questionVC.questionArray = self.coreC;
+
+    [self presentViewController:questionVC animated:YES completion:nil];
+
+
+
 }
 - (void)configureBlock{
 
@@ -202,7 +212,7 @@ static NSString * const cellID = @"cell";
     }];
 
     //从每个类型中分离出不同的类别
-    NSLog(@"%ld", self.carTypeArray.count);
+    
 
     [self.carTypeArray enumerateObjectsUsingBlock:self.seperateItems];
 //    [self.motorcycleTypeArray enumerateObjectsUsingBlock:self.seperateItems];

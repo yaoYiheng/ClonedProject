@@ -29,4 +29,5 @@ UIKIT_EXTERN NSString * const YYHCountDownNotification;
 //点击了选择类型按钮
 UIKIT_EXTERN NSString * const YYHTypeButtonDidClicked;
 
-
+//点击了选择类型按钮
+UIKIT_EXTERN NSString * const YYHTCloseButtonDidClicked;

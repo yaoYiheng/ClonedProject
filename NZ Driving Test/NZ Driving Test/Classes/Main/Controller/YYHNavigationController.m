@@ -51,7 +51,7 @@
 
         viewController.hidesBottomBarWhenPushed = YES;
 
-        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem backBarButtonWithImage:[UIImage imageNamed:@"navigationButtonReturn"]  hightligtedImage:[UIImage imageNamed:@"navigationButtonReturnClick"] Target:self action:@selector(back) title:@"返回"];
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem backBarButtonWithImage:[UIImage imageNamed:@"closeBack"]  hightligtedImage:[UIImage imageNamed:@"closeBack"] Target:self action:@selector(back) title:@"返回"];
 
 
     }

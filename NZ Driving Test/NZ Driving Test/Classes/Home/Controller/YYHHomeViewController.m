@@ -51,7 +51,9 @@
 //    }
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(typeButtonDidClicked:) name:YYHTypeButtonDidClicked object:nil];
 }
-
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:YYHTypeButtonDidClicked object:nil];
+}
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
 
