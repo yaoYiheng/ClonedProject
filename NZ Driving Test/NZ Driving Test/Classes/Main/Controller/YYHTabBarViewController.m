@@ -72,7 +72,7 @@
     //Statistics
     YYHStatictisController *statisticsVC = [YYHStatictisController new];
     [self configureChildViewController:statisticsVC
-                                 image:@"statiscics_normal"
+                                 image:@"tabBar_click_icon-1"
                          selectedImage:@"statistics_Clicked"
                                  title:@"统计"];
 
