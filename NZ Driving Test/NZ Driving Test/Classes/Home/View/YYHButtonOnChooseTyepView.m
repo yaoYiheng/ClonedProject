@@ -13,11 +13,15 @@
 - (void)awakeFromNib{
     [super awakeFromNib];
 
-    [self setBackgroundImage:[UIImage imageNamed:@"HomeButton_Clickd"] forState:UIControlStateNormal];
+    [self setBackgroundImage:[UIImage imageNamed:@"button_normal_backbround"] forState:UIControlStateNormal];
 
     self.titleLabel.font = [UIFont systemFontOfSize:22];
     [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
+                           
+    [self setBackgroundColor:[UIColor whiteColor]];
+
+    self.layer.cornerRadius = 10;
+    self.clipsToBounds = YES;
     
 }
 

@@ -13,6 +13,8 @@
 
 /** <#comments#>*/
 @property (nonatomic, weak) NSTimer *timer;
+/** <#comments#>*/
+@property (nonatomic, assign) NSInteger second;
 @end
 
 @implementation YYHQuestionsCollectionViewController
@@ -27,6 +29,8 @@ static NSString * const reuseIdentifier = @"cell";
     //添加计时器功能已完成.
     [self addTimer];
 
+
+
 }
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self name:YYHTCloseButtonDidClicked object:nil];
@@ -40,6 +44,8 @@ static NSString * const reuseIdentifier = @"cell";
     //1. 创建timer
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
 
+#warning 在这里更改倒计时秒数为2100
+    self.second = 12;
 }
 
 /**
@@ -50,18 +56,18 @@ static NSString * const reuseIdentifier = @"cell";
  感觉最好是通过外界将倒计时传入到cell中比较好.
  */
 - (void)countDown{
-    static NSInteger second = 12;
+
 
 
 
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    dict[YYHcountDown] = [NSNumber numberWithInteger:second];
+    dict[YYHcountDown] = [NSNumber numberWithInteger:_second];
 
     [[NSNotificationCenter defaultCenter] postNotificationName:YYHCountDownNotification object:nil userInfo:dict];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeQuestionView) name:YYHTCloseButtonDidClicked object:nil];
     
-    second--;
+    _second--;
 }
 - (void)configureView{
 
@@ -127,7 +133,8 @@ static NSString * const reuseIdentifier = @"cell";
     [self dismissViewControllerAnimated:YES completion:nil];
     [self.timer invalidate];
     self.timer = nil;
-    
+
+    _second = 12;
 }
 
 @end

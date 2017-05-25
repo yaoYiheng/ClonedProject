@@ -95,7 +95,7 @@ static NSString * const cellID = @"cell";
 
     [self loadData];
 
-    self.categoreis = @[@"核心问题", @"紧急情况问题", @"泊车问题", @"路标与路牌问题", @"道路位置问题", @"交叉路口的让路问题"];
+    self.categoreis = @[@"模拟测试", @"核心问题", @"紧急情况问题", @"泊车问题", @"路标与路牌问题", @"道路位置问题", @"交叉路口的让路问题"];
 
 
     
@@ -215,9 +215,10 @@ static NSString * const cellID = @"cell";
     
 
     [self.carTypeArray enumerateObjectsUsingBlock:self.seperateItems];
-//    [self.motorcycleTypeArray enumerateObjectsUsingBlock:self.seperateItems];
-//    [self.heavyTpyeArray enumerateObjectsUsingBlock:self.seperateItems];
+    [self.motorcycleTypeArray enumerateObjectsUsingBlock:self.seperateItems];
+    [self.heavyTpyeArray enumerateObjectsUsingBlock:self.seperateItems];
 
+    YYHLog(@"%ld--%ld--%ld", self.carTypeArray.count, self.motorcycleTypeArray.count, self.heavyTpyeArray.count);
 }
 
 

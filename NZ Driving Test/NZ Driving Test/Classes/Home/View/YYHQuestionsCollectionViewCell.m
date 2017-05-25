@@ -36,10 +36,20 @@
 /** <#comments#>*/
 @property (nonatomic, weak) YYHAnswerButton *selectedButton;
 
+/** 错题数组*/
+@property (nonatomic, strong) NSMutableArray *wrongAnswerArray;
 @end
 
 @implementation YYHQuestionsCollectionViewCell
 
+#pragma mark - -------lazy loading--------------
+- (NSMutableArray *)wrongAnswerArray{
+    if (!_wrongAnswerArray) {
+        _wrongAnswerArray = [NSMutableArray array];
+
+    }
+    return _wrongAnswerArray;
+}
 #pragma mark - -------buttonClick--------------
 - (IBAction)colseButtonClick {
     [[NSNotificationCenter defaultCenter] postNotificationName:YYHTCloseButtonDidClicked object:nil];
@@ -67,36 +77,35 @@
         if (sender.tag == self.questionItem.CorrectAnswer.integerValue) {
             NSLog(@"%@", sender.currentTitle);
             self.resultLable.text = nil;
-            [UIView animateWithDuration:1.0 animations:^{
+
+
+
+            [UIView animateWithDuration:2 delay:1 options:UIViewAnimationOptionAutoreverse animations:^{
                 self.resultLable.alpha = 1.0;
 
-            } completion:^(BOOL finished)
-             {
-                 //动画结束后, 需要执行以下代码, 持续0.5s, 延迟1s执行, 将显示栏的透明度变为0.
-                 [UIView animateWithDuration:1.0 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-                     self.resultLable.numberOfLines = 0;
-                     self.resultLable.text = @"Great! You are right!~";
-                     self.resultLable.alpha = 0;
-                 } completion:nil];
-             }];
+                self.resultLable.numberOfLines = 0;
+                self.resultLable.text = @"Great! You are right!~";
+                self.resultLable.alpha = 0;
+            } completion:nil];
 
         }
         else{
             NSLog(@"回答错误");
             self.resultLable.text = nil;
+            self.resultLable.alpha = 1.0;
+
             //动画持续1s, 设置透明度为0, 并显示相应的字符串
-                [UIView animateWithDuration:1.0 animations:^{
-                    self.resultLable.alpha = 1.0;
-            
-                } completion:^(BOOL finished)
-                 {
-                     //动画结束后, 需要执行以下代码, 持续0.5s, 延迟1s执行, 将显示栏的透明度变为0.
-                     [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-                         self.resultLable.numberOfLines = 0;
-                         self.resultLable.text = @"Wrong, try agin!";
-                         self.resultLable.alpha = 0;
-                     } completion:nil];
-                 }];
+
+            [UIView animateWithDuration:1.5 delay:1 options:UIViewAnimationOptionShowHideTransitionViews animations:^{
+                self.resultLable.numberOfLines = 0;
+                self.resultLable.text = @"Wrong, try agin!";
+                self.resultLable.alpha = 0;
+            } completion:nil];
+
+            //将错误的回答保存.
+            if (![self.wrongAnswerArray containsObject:self.questionItem]) {
+                [self.wrongAnswerArray addObject:self.questionItem];
+            }
         }
     }
 

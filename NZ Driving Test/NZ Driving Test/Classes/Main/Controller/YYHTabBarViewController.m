@@ -39,13 +39,14 @@
 
     //setting the selected text color
     NSMutableDictionary *attriDict = [NSMutableDictionary dictionary];
+
     attriDict[NSForegroundColorAttributeName] = [UIColor blackColor];
     [barItem setTitleTextAttributes:attriDict forState:UIControlStateSelected];
 
 
     //it's only works on UIControlStateNormal
     NSMutableDictionary *dictFont = [NSMutableDictionary dictionary];
-    dictFont[NSFontAttributeName] = [UIFont systemFontOfSize:14];
+    dictFont[NSFontAttributeName] = [UIFont systemFontOfSize:13];
     [barItem setTitleTextAttributes:dictFont forState:UIControlStateNormal];
 
 
@@ -65,15 +66,15 @@
 
     [self configureChildViewController:homeVC
                                  image:@"tabBar_essence_icon"
-                         selectedImage:@"tabBar_essence_click_icon"
-                                 title:@"Home"];
+                         selectedImage:@"tabBar_click_icon"
+                                 title:@"首页"];
 
     //Statistics
     YYHStatictisController *statisticsVC = [YYHStatictisController new];
     [self configureChildViewController:statisticsVC
-                                 image:@"tabBar_new_icon"
-                         selectedImage:@"tabBar_new_click_icon"
-                                 title:@"Statistics"];
+                                 image:@"statiscics_normal"
+                         selectedImage:@"statistics_Clicked"
+                                 title:@"统计"];
 
     //Setting
     YYHSettingController *settingVC = [YYHSettingController new];

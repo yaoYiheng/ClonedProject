@@ -111,6 +111,8 @@
 		A5F6E2EA1ED3605D00C2C8AC /* 064.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2A91ED3605D00C2C8AC /* 064.png */; };
 		A5F6E2EB1ED3605D00C2C8AC /* 065.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2AA1ED3605D00C2C8AC /* 065.png */; };
 		A5F6E2EC1ED3605D00C2C8AC /* 24.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2AB1ED3605D00C2C8AC /* 24.png */; };
+		A5F6E2F01ED5890300C2C8AC /* YYHCatagoriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E2EE1ED5890300C2C8AC /* YYHCatagoriesCell.m */; };
+		A5F6E2F11ED5890300C2C8AC /* YYHCatagoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2EF1ED5890300C2C8AC /* YYHCatagoriesCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -251,6 +253,9 @@
 		A5F6E2A91ED3605D00C2C8AC /* 064.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 064.png; sourceTree = "<group>"; };
 		A5F6E2AA1ED3605D00C2C8AC /* 065.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 065.png; sourceTree = "<group>"; };
 		A5F6E2AB1ED3605D00C2C8AC /* 24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 24.png; sourceTree = "<group>"; };
+		A5F6E2ED1ED5890300C2C8AC /* YYHCatagoriesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHCatagoriesCell.h; sourceTree = "<group>"; };
+		A5F6E2EE1ED5890300C2C8AC /* YYHCatagoriesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHCatagoriesCell.m; sourceTree = "<group>"; };
+		A5F6E2EF1ED5890300C2C8AC /* YYHCatagoriesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYHCatagoriesCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,6 +366,9 @@
 				A5F6E2641ED355B100C2C8AC /* YYHQuestionsCollectionViewCell.xib */,
 				A5F6E2671ED3576E00C2C8AC /* YYHAnswerButton.h */,
 				A5F6E2681ED3576E00C2C8AC /* YYHAnswerButton.m */,
+				A5F6E2ED1ED5890300C2C8AC /* YYHCatagoriesCell.h */,
+				A5F6E2EE1ED5890300C2C8AC /* YYHCatagoriesCell.m */,
+				A5F6E2EF1ED5890300C2C8AC /* YYHCatagoriesCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -711,6 +719,7 @@
 				A56F2E461EC5D9E900DCF2D2 /* Assets.xcassets in Resources */,
 				A5F6E2CC1ED3605D00C2C8AC /* 034.png in Resources */,
 				A5F6E2C61ED3605D00C2C8AC /* 028.png in Resources */,
+				A5F6E2F11ED5890300C2C8AC /* YYHCatagoriesCell.xib in Resources */,
 				A5F6E2BE1ED3605D00C2C8AC /* 018.png in Resources */,
 				A5F6E2E51ED3605D00C2C8AC /* 059.png in Resources */,
 				A5F6E1B91ECDD71100C2C8AC /* YYHQuestionTableViewCell.xib in Resources */,
@@ -771,6 +780,7 @@
 				A5F6E1A71ECDD49A00C2C8AC /* MJDictionaryCache.m in Sources */,
 				A5F6E2651ED355B100C2C8AC /* YYHQuestionsCollectionViewCell.m in Sources */,
 				A5F6E2611ED3556900C2C8AC /* YYHQuestionsCollectionViewController.m in Sources */,
+				A5F6E2F01ED5890300C2C8AC /* YYHCatagoriesCell.m in Sources */,
 				A5F6E1AB1ECDD49A00C2C8AC /* MJPropertyKey.m in Sources */,
 				A5F6E24E1ED1B91A00C2C8AC /* YYHButtonOnChooseTyepView.m in Sources */,
 			);
