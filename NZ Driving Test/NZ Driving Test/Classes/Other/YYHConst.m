@@ -33,3 +33,7 @@ NSString * const YYHTCloseButtonDidClicked = @"YYHTCloseButtonDidClicked";
 //重复点击通知
 NSString * const YYHCountDownNotification = @"YYHCountDownNotification";
 
+//保存数组对象的文件名
+NSString * const YYHCacheFileName = @"questionArray.plist";
+
+NSString * const YYHPassingWrongNotification = @"YYHPassingWrongNotification";

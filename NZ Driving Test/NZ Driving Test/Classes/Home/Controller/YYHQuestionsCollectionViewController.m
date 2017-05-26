@@ -15,17 +15,33 @@
 @property (nonatomic, weak) NSTimer *timer;
 /** <#comments#>*/
 @property (nonatomic, assign) NSInteger second;
+
+/** 错题数组*/
+@property (nonatomic, strong) NSMutableArray *wrongAnswerArray;
 @end
 
 @implementation YYHQuestionsCollectionViewController
 
 static NSString * const reuseIdentifier = @"cell";
+#pragma mark - -------lazy loading--------------
+- (NSMutableArray *)wrongAnswerArray{
+    if (!_wrongAnswerArray) {
+        _wrongAnswerArray = [NSMutableArray array];
+    }
+    return _wrongAnswerArray;
+}
+#pragma mark - -------view life cycle--------------
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     [self configureView];
 
+
+    //当点击了关闭按钮
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeQuestionView) name:YYHTCloseButtonDidClicked object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addQuestionItemsIntoArray:) name:YYHPassingWrongNotification object:nil];
     //添加计时器功能已完成.
     [self addTimer];
 
@@ -37,6 +53,8 @@ static NSString * const reuseIdentifier = @"cell";
 }
 - (void)viewWillAppear:(BOOL)animated{
 }
+
+#pragma mark - -------configure--------------
 /**
  添加计时器
  */
@@ -65,7 +83,6 @@ static NSString * const reuseIdentifier = @"cell";
 
     [[NSNotificationCenter defaultCenter] postNotificationName:YYHCountDownNotification object:nil userInfo:dict];
 
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeQuestionView) name:YYHTCloseButtonDidClicked object:nil];
     
     _second--;
 }
@@ -128,7 +145,7 @@ static NSString * const reuseIdentifier = @"cell";
     return cell;
 }
 
-#pragma mark - -------dismiss questionViewVC--------------
+#pragma mark - -------method for notifications--------------
 - (void)closeQuestionView{
     [self dismissViewControllerAnimated:YES completion:nil];
     [self.timer invalidate];
@@ -136,5 +153,23 @@ static NSString * const reuseIdentifier = @"cell";
 
     _second = 12;
 }
+- (void)addQuestionItemsIntoArray: (NSNotification *)info{
 
+    YYHQuestionItem *item = info.object;
+        if (![self.wrongAnswerArray containsObject:item]) {
+            [self.wrongAnswerArray addObject:item];
+            NSString *cachePath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
+
+            //filePath	NSPathStore2 *	@"/Users/Morris/Library/Developer/CoreSimulator/Devices/8D765B5B-AF57-4187-90E4-7C45469EBBCC/data/Containers/Data/Application/EBFA39B9-C9D3-4222-8660-80A5D3692B74/Library/Caches/questions.plist"	0x00007febd4e33830
+            NSString *filePath = [cachePath stringByAppendingPathComponent:@"questions.plist"];
+
+    YYHLog(@"%@--%@", item, self.wrongAnswerArray);
+
+            NSArray *array = @[@"123", @"1234"];
+            [array writeToFile:@"/Users/Morris/Desktop/home.plist" atomically:YES];
+        }
+
+
+
+}
 @end

@@ -72,15 +72,15 @@
     //Statistics
     YYHStatictisController *statisticsVC = [YYHStatictisController new];
     [self configureChildViewController:statisticsVC
-                                 image:@"tabBar_click_icon-1"
+                                 image:@"statiscics_normal"
                          selectedImage:@"statistics_Clicked"
                                  title:@"统计"];
 
     //Setting
     YYHSettingController *settingVC = [YYHSettingController new];
     [self configureChildViewController:settingVC
-                                 image:@"Seting_normal"
-                         selectedImage:@"Seting_on_click"
+                                 image:@"setting_clicked"
+                         selectedImage:@"setting_normal"
                                  title:@"设置"];
 
 }

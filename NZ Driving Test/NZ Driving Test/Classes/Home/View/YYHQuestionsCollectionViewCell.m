@@ -36,20 +36,13 @@
 /** <#comments#>*/
 @property (nonatomic, weak) YYHAnswerButton *selectedButton;
 
-/** 错题数组*/
-@property (nonatomic, strong) NSMutableArray *wrongAnswerArray;
+
 @end
 
 @implementation YYHQuestionsCollectionViewCell
 
 #pragma mark - -------lazy loading--------------
-- (NSMutableArray *)wrongAnswerArray{
-    if (!_wrongAnswerArray) {
-        _wrongAnswerArray = [NSMutableArray array];
 
-    }
-    return _wrongAnswerArray;
-}
 #pragma mark - -------buttonClick--------------
 - (IBAction)colseButtonClick {
     [[NSNotificationCenter defaultCenter] postNotificationName:YYHTCloseButtonDidClicked object:nil];
@@ -90,7 +83,7 @@
 
         }
         else{
-            NSLog(@"回答错误");
+            
             self.resultLable.text = nil;
             self.resultLable.alpha = 1.0;
 
@@ -102,12 +95,12 @@
                 self.resultLable.alpha = 0;
             } completion:nil];
 
-            //将错误的回答保存.
-            if (![self.wrongAnswerArray containsObject:self.questionItem]) {
-                [self.wrongAnswerArray addObject:self.questionItem];
+            //不需要再这里进行判断, 在这里负责将每一个对象传递出去, 外界负责判断
+            [[NSNotificationCenter defaultCenter] postNotificationName:YYHPassingWrongNotification object:self.questionItem];
+
             }
-        }
     }
+
 
 
     self.selectedButton = sender;
@@ -166,7 +159,7 @@
 
 //更改时间栏
 - (void)changeTimeLabel: (NSNotification *)time{
-    NSLog(@"%@", time.userInfo[YYHcountDown]);
+
     NSNumber *sec = time.userInfo[YYHcountDown];
 
     NSInteger second = [sec integerValue];
@@ -213,7 +206,7 @@
         self.resultLable.textColor = [UIColor redColor];
     }
     second--;
-    NSLog(@"%ld", (long)second);
+
 //    [self.resultLabel.text setTitle:[NSString stringWithFormat:@"跳过 (%d)", second] forState:UIControlStateNormal];
     self.resultLable.text =  [NSString stringWithFormat:@"%02ld:%02ld", second / 60, second % 60];
 }

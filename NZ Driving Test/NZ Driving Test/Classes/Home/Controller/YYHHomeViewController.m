@@ -87,7 +87,7 @@
 
 
     YYHButtonOnChooseTyepView *button = notification.object;
-    NSLog(@"%ld", button.tag);
+    NSLog(@"%ld", (long)button.tag);
 
     YYHCatagoriesViewController *catagory = [[YYHCatagoriesViewController alloc
                                               ] init];
