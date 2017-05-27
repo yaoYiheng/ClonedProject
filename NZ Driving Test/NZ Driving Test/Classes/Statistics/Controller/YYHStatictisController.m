@@ -5,8 +5,9 @@
 //  Created by 姚懿恒 on 2017/5/19.
 //  Copyright © 2017年 姚懿恒. All rights reserved.
 //
-
+#import "MJExtension.h"
 #import "YYHStatictisController.h"
+#import "YYHQuestionItem.h"
 
 @interface YYHStatictisController ()
 
@@ -18,6 +19,7 @@
 #pragma mark - -------lazy loading--------------
 - (NSMutableArray *)questionArray{
     if (!_questionArray) {
+
         _questionArray = [NSMutableArray array];
     }
 
@@ -26,12 +28,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSString *path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
-    NSString *fileFullPath = [path stringByAppendingPathComponent:YYHCacheFileName];
-    
-    self.questionArray = [[NSMutableArray alloc] initWithContentsOfFile:fileFullPath];
 
-    NSLog(@"%ld-----%@", self.questionArray.count, self.questionArray);
+
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+
+
 
 }
 
@@ -63,9 +67,20 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
 
+    NSString *path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
+    NSString *fileFullPath = [path stringByAppendingPathComponent:YYHCacheFileName];
+
+
+    NSLog(@"%@", fileFullPath);
+    //    NSLog(@"%ld-----%@", self.questionArray.count, self.questionArray);
+
+    self.questionArray = [NSKeyedUnarchiver unarchiveObjectWithFile:fileFullPath];
+
+
     cell.textLabel.text = [NSString stringWithFormat:@"%ld---", indexPath.row];
     return cell;
 }
+
 
 
 /*

@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, YYHCategory) {
 };
 #import <Foundation/Foundation.h>
 
-@interface YYHQuestionItem : NSObject
+@interface YYHQuestionItem : NSObject <NSCoding>
 /** <#comments#>*/
 @property (nonatomic, strong) NSString *A;
 @property (nonatomic, strong) NSString *B;

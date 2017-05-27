@@ -160,13 +160,18 @@ static NSString * const reuseIdentifier = @"cell";
             [self.wrongAnswerArray addObject:item];
             NSString *cachePath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
 
-            //filePath	NSPathStore2 *	@"/Users/Morris/Library/Developer/CoreSimulator/Devices/8D765B5B-AF57-4187-90E4-7C45469EBBCC/data/Containers/Data/Application/EBFA39B9-C9D3-4222-8660-80A5D3692B74/Library/Caches/questions.plist"	0x00007febd4e33830
-            NSString *filePath = [cachePath stringByAppendingPathComponent:@"questions.plist"];
+            NSString *filePath = [cachePath stringByAppendingPathComponent:YYHCacheFileName];
 
     YYHLog(@"%@--%@", item, self.wrongAnswerArray);
 
-            NSArray *array = @[@"123", @"1234"];
-            [array writeToFile:@"/Users/Morris/Desktop/home.plist" atomically:YES];
+
+//            NSArray *array = @[@"123", @"1234"];
+            if ([NSKeyedArchiver archiveRootObject:self.wrongAnswerArray toFile:filePath]) {
+                YYHLog(@"成功");
+            }
+            else{
+                YYHLog(@"失败");
+            }
         }
 
 

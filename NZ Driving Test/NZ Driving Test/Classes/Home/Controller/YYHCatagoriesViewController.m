@@ -121,7 +121,24 @@ static NSString * const cellID = @"cell";
 
     YYHQuestionsCollectionViewController *questionVC = [[YYHQuestionsCollectionViewController alloc] init];
 
-    questionVC.questionArray = self.coreC;
+    NSLog(@"%@---%ld", self.carTypeArray, self.carTypeArray.count);
+    if (indexPath.row == 0) {
+
+        //加载35道随机的问题
+        NSMutableArray *radom = [NSMutableArray array];
+
+        NSUInteger randomCount = self.carTypeArray.count;
+
+        NSInteger randomIndex = arc4random_uniform(<#uint32_t __upper_bound#>)
+
+
+
+        for (NSInteger index = 0; index < 35; index++) {
+            <#statements#>
+        }
+//        questionVC.questionArray =
+    }
+
 
     [self presentViewController:questionVC animated:YES completion:nil];
 
