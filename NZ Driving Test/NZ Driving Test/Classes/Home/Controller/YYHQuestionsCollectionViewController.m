@@ -63,7 +63,7 @@ static NSString * const reuseIdentifier = @"cell";
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
 
 #warning 在这里更改倒计时秒数为2100
-    self.second = 12;
+    self.second = 0;
 }
 
 /**
@@ -84,7 +84,7 @@ static NSString * const reuseIdentifier = @"cell";
     [[NSNotificationCenter defaultCenter] postNotificationName:YYHCountDownNotification object:nil userInfo:dict];
 
     
-    _second--;
+    _second++;
 }
 - (void)configureView{
 

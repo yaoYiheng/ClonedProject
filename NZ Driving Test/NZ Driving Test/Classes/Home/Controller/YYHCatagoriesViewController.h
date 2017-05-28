@@ -11,4 +11,7 @@
 @interface YYHCatagoriesViewController : UITableViewController
 /** title*/
 @property (nonatomic, strong) NSString *titleForNav;
+
+/**questions array for type*/
+@property (nonatomic, strong) NSMutableArray *typesArray;
 @end

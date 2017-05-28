@@ -90,10 +90,10 @@ static NSString * const cellID = @"cell";
 
     self.navigationItem.title = self.titleForNav;
 
-    [self configureBlock];
 
 
-    [self loadData];
+//
+//    [self loadData];
 
     self.categoreis = @[@"模拟测试", @"核心问题", @"紧急情况问题", @"泊车问题", @"路标与路牌问题", @"道路位置问题", @"交叉路口的让路问题"];
 
@@ -117,34 +117,63 @@ static NSString * const cellID = @"cell";
 }
 #pragma mark - -------tableView Delegate--------------
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    YYHFunc
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
     YYHQuestionsCollectionViewController *questionVC = [[YYHQuestionsCollectionViewController alloc] init];
 
-    NSLog(@"%@---%ld", self.carTypeArray, self.carTypeArray.count);
+    //for random test
     if (indexPath.row == 0) {
 
         //加载35道随机的问题
-        NSMutableArray *radom = [NSMutableArray array];
-
-        NSUInteger randomCount = self.carTypeArray.count;
-
-        NSInteger randomIndex = arc4random_uniform(<#uint32_t __upper_bound#>)
+        NSMutableArray *randomArray = [NSMutableArray array];
 
 
 
         for (NSInteger index = 0; index < 35; index++) {
-            <#statements#>
+
+            uint32_t randomCount = (uint32_t)self.typesArray.count;
+
+            uint32_t randomIndex = arc4random_uniform(randomCount);
+            YYHQuestionItem *randonItem = self.typesArray[randomIndex];
+
+            [randomArray addObject:randonItem];
         }
-//        questionVC.questionArray =
+        questionVC.questionArray = randomArray;
     }
 
+
+    //for core questions
+    if(indexPath.row == 1){
+//        NSMutableArray *coreArray = [NSMutableArray array];
+        
+        questionVC.questionArray = self.coreC;
+    }
+    else if (indexPath.row == 2){
+        questionVC.questionArray = self.emerginciesC;
+    }
+    else if (indexPath.row == 3){
+        questionVC.questionArray = self.parkingC;
+    }
+    else if (indexPath.row == 4){
+        questionVC.questionArray = self.signsC;
+    }
+    else if (indexPath.row == 5){
+        questionVC.questionArray = self.positionC;
+    }
+    else if (indexPath.row == 6){
+        questionVC.questionArray = self.intersectionC;
+    }
 
     [self presentViewController:questionVC animated:YES completion:nil];
 
 
 
 }
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.categoreis.count;
+}
+#pragma mark - -------configure--------------
 - (void)configureBlock{
 
     __weak typeof(self) weakSelf = self;
@@ -196,7 +225,7 @@ static NSString * const cellID = @"cell";
         }
         else if (questionItem.Category == YYHCategoryClass3To5)
         {
-            
+
             [weakSelf.class3_5C addObject:questionItem];
         }
         
@@ -204,39 +233,48 @@ static NSString * const cellID = @"cell";
         
     };
 }
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.categoreis.count;
+
+- (void)setTypesArray:(NSMutableArray *)typesArray{
+    _typesArray = typesArray;
+
+    YYHFunc
+    [self configureBlock];
+
+    [self.typesArray enumerateObjectsUsingBlock:self.seperateItems];
+
+//    [self.typesArray enumerateObjectsUsingBlock:self.seperateItems];
+
 }
-- (void)loadData{
-
-    self.allQuestionsCN = [YYHQuestionItem mj_objectArrayWithFilename: @"中文版问题.plist"];
-
-    self.allQuestionEN = [YYHQuestionItem mj_objectArrayWithFilename: @"正确.plist"];
-
-
-
-    [self.allQuestionsCN enumerateObjectsUsingBlock:^(YYHQuestionItem * questionItem, NSUInteger idx, BOOL * _Nonnull stop) {
-        //
-        if (questionItem.Type == YYHTypeCar) {
-            [self.carTypeArray addObject:questionItem];
-        }
-        else if (questionItem.Type == YYHTypeMotorcycle){
-            [self.motorcycleTypeArray addObject:questionItem];
-        }
-        else if (questionItem.Type == YYHTypeHeavyVehicle){
-            [self.heavyTpyeArray addObject:questionItem];
-        }
-    }];
-
-    //从每个类型中分离出不同的类别
-    
-
-    [self.carTypeArray enumerateObjectsUsingBlock:self.seperateItems];
-    [self.motorcycleTypeArray enumerateObjectsUsingBlock:self.seperateItems];
-    [self.heavyTpyeArray enumerateObjectsUsingBlock:self.seperateItems];
-
-    YYHLog(@"%ld--%ld--%ld", self.carTypeArray.count, self.motorcycleTypeArray.count, self.heavyTpyeArray.count);
-}
+//- (void)loadData{
+//
+//    self.allQuestionsCN = [YYHQuestionItem mj_objectArrayWithFilename: @"中文版问题.plist"];
+//
+//    self.allQuestionEN = [YYHQuestionItem mj_objectArrayWithFilename: @"正确.plist"];
+//
+//
+//
+//    [self.allQuestionsCN enumerateObjectsUsingBlock:^(YYHQuestionItem * questionItem, NSUInteger idx, BOOL * _Nonnull stop) {
+//        //
+//        if (questionItem.Type == YYHTypeCar) {
+//            [self.carTypeArray addObject:questionItem];
+//        }
+//        else if (questionItem.Type == YYHTypeMotorcycle){
+//            [self.motorcycleTypeArray addObject:questionItem];
+//        }
+//        else if (questionItem.Type == YYHTypeHeavyVehicle){
+//            [self.heavyTpyeArray addObject:questionItem];
+//        }
+//    }];
+//
+//    //从每个类型中分离出不同的类别
+//    
+//
+//    [self.carTypeArray enumerateObjectsUsingBlock:self.seperateItems];
+//    [self.motorcycleTypeArray enumerateObjectsUsingBlock:self.seperateItems];
+//    [self.heavyTpyeArray enumerateObjectsUsingBlock:self.seperateItems];
+//
+//    YYHLog(@"%ld--%ld--%ld", self.carTypeArray.count, self.motorcycleTypeArray.count, self.heavyTpyeArray.count);
+//}
 
 
 #pragma mark - -------lazy loading--------------
