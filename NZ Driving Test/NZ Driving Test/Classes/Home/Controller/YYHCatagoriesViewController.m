@@ -10,6 +10,7 @@
 #import "YYHQuestionItem.h"
 #import "MJExtension.h"
 #import "YYHQuestionsCollectionViewController.h"
+#import "YYHCatagoriesCell.h"
 
 @interface YYHCatagoriesViewController ()
 
@@ -90,6 +91,8 @@ static NSString * const cellID = @"cell";
 
     self.navigationItem.title = self.titleForNav;
 
+    self.tableView.backgroundColor = [UIColor blackColor];
+
 
 
 //
@@ -97,27 +100,34 @@ static NSString * const cellID = @"cell";
 
     self.categoreis = @[@"模拟测试", @"核心问题", @"紧急情况问题", @"泊车问题", @"路标与路牌问题", @"道路位置问题", @"交叉路口的让路问题"];
 
+//    [self.tableView registerNib:[UINib nibWithNibName:@"YYHCatagoriesCell" bundle:nil] forCellReuseIdentifier:cellID];
+
 
     
 }
 #pragma mark - -------tableView data sourse--------------
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+//    YYHCatagoriesCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
 
-    if (cell == nil) {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
 
+//    cell.contents = 
     cell.textLabel.text = [NSString stringWithFormat:@"%@", self.categoreis[indexPath.row]];
 
 
 
     return cell;
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 90;
+}
 #pragma mark - -------tableView Delegate--------------
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    YYHFunc
+
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
     YYHQuestionsCollectionViewController *questionVC = [[YYHQuestionsCollectionViewController alloc] init];
@@ -128,17 +138,42 @@ static NSString * const cellID = @"cell";
         //加载35道随机的问题
         NSMutableArray *randomArray = [NSMutableArray array];
 
+        NSInteger count = randomArray.count;
 
-
-        for (NSInteger index = 0; index < 35; index++) {
-
+//        for (NSInteger index = 0; index < 35; index++) {
+//
+//            uint32_t randomCount = (uint32_t)self.typesArray.count;
+//
+//            uint32_t randomIndex = arc4random_uniform(randomCount);
+//            YYHQuestionItem *randonItem = self.typesArray[randomIndex];
+//
+//            //make sure that every item in array is unique
+//            if ([randomArray containsObject:randonItem]) {
+//                YYHLog(@"------%@", randomArray);
+//                continue;
+//
+//            }
+//            [randomArray addObject:randonItem];
+//
+//
+//    }
+        while (count < 35)
+        {
             uint32_t randomCount = (uint32_t)self.typesArray.count;
 
             uint32_t randomIndex = arc4random_uniform(randomCount);
             YYHQuestionItem *randonItem = self.typesArray[randomIndex];
 
+            //make sure that every items in array is unique
+            if ([randomArray containsObject:randonItem]) {
+                continue;
+            }
             [randomArray addObject:randonItem];
+            count++;
+            YYHLog(@"%ld", count);
         }
+
+
         questionVC.questionArray = randomArray;
     }
 

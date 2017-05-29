@@ -21,4 +21,9 @@
     // Configure the view for the selected state
 }
 
+- (void)setFrame:(CGRect)frame{
+    frame.size.height -= 10;
+    frame.size.width -= 20;
+    [super setFrame:frame];
+}
 @end

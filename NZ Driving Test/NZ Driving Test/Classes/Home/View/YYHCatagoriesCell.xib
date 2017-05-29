@@ -14,29 +14,29 @@
             <rect key="frame" x="0.0" y="0.0" width="329" height="98"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="329" height="97.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="329" height="97"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqB-Oe-zaJ">
-                        <rect key="frame" x="143" y="38" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TGM-ly-PbK">
-                        <rect key="frame" x="8" y="8" width="87" height="82"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a6v-2q-GSW">
+                        <rect key="frame" x="0.0" y="0.0" width="329" height="97.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vc0-32-7Bh">
-                        <rect key="frame" x="279" y="39" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cp7-Cd-23F" customClass="YYHAnswerButton">
+                        <rect key="frame" x="141" y="33" width="46" height="30"/>
+                        <state key="normal" title="Button"/>
+                    </button>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="a6v-2q-GSW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4uf-Za-pJT"/>
+                    <constraint firstAttribute="bottom" secondItem="a6v-2q-GSW" secondAttribute="bottom" id="HwL-fe-Hyd"/>
+                    <constraint firstAttribute="trailing" secondItem="a6v-2q-GSW" secondAttribute="trailing" id="Jca-Fq-7Aa"/>
+                    <constraint firstItem="a6v-2q-GSW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="MAq-ZS-ucX"/>
+                    <constraint firstItem="cp7-Cd-23F" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="r1J-ih-Sme"/>
+                    <constraint firstItem="cp7-Cd-23F" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sZZ-us-mAp"/>
+                </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="57.5" y="20"/>
         </tableViewCell>
     </objects>
