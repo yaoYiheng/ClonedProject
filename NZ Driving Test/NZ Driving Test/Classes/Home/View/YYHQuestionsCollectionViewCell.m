@@ -31,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet UIStackView *StackView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *gapBetween;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *distanceToTop;
 /** <#comments#>*/
 @property (nonatomic, weak) NSTimer *timer;
 /** <#comments#>*/
@@ -68,18 +69,23 @@
     //按钮第二次点击时
     if (self.selectedButton == sender) {
         if (sender.tag == self.questionItem.CorrectAnswer.integerValue) {
-            NSLog(@"%@", sender.currentTitle);
+            
             self.resultLable.text = nil;
 
 
 
-            [UIView animateWithDuration:2 delay:1 options:UIViewAnimationOptionAutoreverse animations:^{
+            [UIView animateWithDuration:2 delay:1 options:UIViewAnimationOptionShowHideTransitionViews animations:^{
                 self.resultLable.alpha = 1.0;
 
+                self.resultLabel.textColor = [UIColor greenColor];
                 self.resultLable.numberOfLines = 0;
-                self.resultLable.text = @"Great! You are right!~";
+                self.resultLable.text = @"好极了, 回答正确!";
                 self.resultLable.alpha = 0;
-            } completion:nil];
+                self.imageView.hidden = YES;
+            } completion:^(BOOL finished) {
+                self.imageView.hidden = NO;
+
+            }];
 
         }
         else{
@@ -90,10 +96,15 @@
             //动画持续1s, 设置透明度为0, 并显示相应的字符串
 
             [UIView animateWithDuration:1.5 delay:1 options:UIViewAnimationOptionShowHideTransitionViews animations:^{
+                self.resultLabel.textColor = [UIColor redColor];
                 self.resultLable.numberOfLines = 0;
-                self.resultLable.text = @"Wrong, try agin!";
+                self.resultLable.text = @"回答错误, 再试一次吧~";
+
                 self.resultLable.alpha = 0;
-            } completion:nil];
+                self.imageView.hidden = YES;
+            } completion:^(BOOL finished) {
+                self.imageView.hidden = NO;
+            }];
 
             //不需要再这里进行判断, 在这里负责将每一个对象传递出去, 外界负责判断
             [[NSNotificationCenter defaultCenter] postNotificationName:YYHPassingWrongNotification object:self.questionItem];
@@ -112,10 +123,20 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+
+    if (iphone4) {
+        self.resultLabel.font = [UIFont systemFontOfSize:11];
+        self.questionLabel.font = [UIFont systemFontOfSize:12];
+//        self.resultLable.font = [UIFont systemFontOfSize:11];
+        self.distanceToTop.constant = 40;
+        self.timeLabel.font = [UIFont systemFontOfSize:13];
+        self.indexLabel.font = [UIFont systemFontOfSize:11];
+
+    }
     if (iphone5) {
         self.resultLabel.font = [UIFont systemFontOfSize:13];
         self.questionLabel.font = [UIFont systemFontOfSize:14];
-        self.resultLable.font = [UIFont systemFontOfSize:13];
+//        self.resultLable.font = [UIFont systemFontOfSize:13];
 
 
     }
@@ -161,6 +182,10 @@
     [super layoutSubviews];
     //超出父控件也显示
     self.resultLable.clipsToBounds = NO;
+    if (iphone4) {
+        self.gapBetween.constant = 10;
+        [self layoutIfNeeded];
+    }
     if (iphone5) {
         self.gapBetween.constant = 20;
         [self layoutIfNeeded];

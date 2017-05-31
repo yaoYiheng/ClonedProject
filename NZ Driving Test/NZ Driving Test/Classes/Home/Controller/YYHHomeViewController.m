@@ -10,7 +10,7 @@
 #import "MJExtension.h"
 #import "YYHQuestionItem.h"
 
-#import "YYHQuestionTableViewCell.h"
+
 #import "YYHChooseTypeView.h"
 #import "YYHButtonOnChooseTyepView.h"
 
@@ -206,7 +206,7 @@
 
 #warning 在此可修改中文或英文版
 
-    [self.allQuestionEN enumerateObjectsUsingBlock:^(YYHQuestionItem * questionItem, NSUInteger idx, BOOL * _Nonnull stop) {
+    [self.allQuestionsCN enumerateObjectsUsingBlock:^(YYHQuestionItem * questionItem, NSUInteger idx, BOOL * _Nonnull stop) {
         if (questionItem.Category == YYHCategoryClass3To5) {
             [self.heavy3_5TpyeArray addObject:questionItem];
         }

@@ -8,6 +8,7 @@
 #import "MJExtension.h"
 #import "YYHStatictisController.h"
 #import "YYHQuestionItem.h"
+#import "YYHQuestionsCollectionViewController.h"
 
 @interface YYHStatictisController ()
 
@@ -29,24 +30,37 @@
     [super viewDidLoad];
 
 
+    self.navigationItem.title = @"错题统计";
 
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    //
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *savedEncodedData = [defaults objectForKey:YYHWrongQuestionsArray];
+    self.questionArray = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithData:savedEncodedData];
+    [self.tableView reloadData];
 
 
 
 }
 
+- (void)setquestionItem:(YYHQuestionItem *)item{
+
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    YYHFunc
-    NSLog(@"%@", self.questionArray);
-}
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    YYHQuestionsCollectionViewController *questionVC = [[YYHQuestionsCollectionViewController alloc] init];
+    
+    questionVC.questionArray = self.questionArray;
+
+    [self presentViewController:questionVC animated:YES completion:nil];
+    
 
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -67,64 +81,20 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
 
-    NSString *path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
-    NSString *fileFullPath = [path stringByAppendingPathComponent:YYHCacheFileName];
+//    NSString *path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
+//    NSString *fileFullPath = [path stringByAppendingPathComponent:YYHCacheFileName];
+//
+//
+//    NSLog(@"%@", fileFullPath);
+//    //    NSLog(@"%ld-----%@", self.questionArray.count, self.questionArray);
+//
+//    self.questionArray = [NSKeyedUnarchiver unarchiveObjectWithFile:fileFullPath];
 
 
-    NSLog(@"%@", fileFullPath);
-    //    NSLog(@"%ld-----%@", self.questionArray.count, self.questionArray);
+    YYHQuestionItem *item = self.questionArray[indexPath.row];
 
-    self.questionArray = [NSKeyedUnarchiver unarchiveObjectWithFile:fileFullPath];
-
-
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld---", indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", item.Question];
     return cell;
 }
-
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

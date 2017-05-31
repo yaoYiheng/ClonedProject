@@ -40,3 +40,4 @@ UIKIT_EXTERN NSString * const YYHCacheFileName;
 UIKIT_EXTERN NSString * const YYHPassingWrongNotification;
 
 
+UIKIT_EXTERN NSString * const YYHWrongQuestionsArray;

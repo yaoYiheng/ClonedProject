@@ -37,3 +37,5 @@ NSString * const YYHCountDownNotification = @"YYHCountDownNotification";
 NSString * const YYHCacheFileName = @"questionArray.plist";
 
 NSString * const YYHPassingWrongNotification = @"YYHPassingWrongNotification";
+
+NSString * const YYHWrongQuestionsArray = @"YYHWrongQuestionsArray";

@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0Q-dP-nsU">
-                                <rect key="frame" x="0.0" y="100" width="375" height="375"/>
+                                <rect key="frame" x="0.0" y="170" width="375" height="375"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="375" id="Qgn-uu-Yyv"/>
@@ -35,7 +35,7 @@
                         <constraints>
                             <constraint firstItem="qx9-vt-5xn" firstAttribute="top" secondItem="OOd-m3-u8m" secondAttribute="bottom" id="0Ld-RJ-Igh"/>
                             <constraint firstItem="qx9-vt-5xn" firstAttribute="leading" secondItem="QjE-7S-zsp" secondAttribute="leading" id="CwN-Ud-xmj"/>
-                            <constraint firstItem="u0Q-dP-nsU" firstAttribute="top" secondItem="OOd-m3-u8m" secondAttribute="bottom" constant="80" id="J88-42-OhB"/>
+                            <constraint firstItem="u0Q-dP-nsU" firstAttribute="top" secondItem="OOd-m3-u8m" secondAttribute="bottom" constant="150" id="J88-42-OhB"/>
                             <constraint firstItem="xM8-pH-qoK" firstAttribute="top" secondItem="qx9-vt-5xn" secondAttribute="bottom" id="KRo-s5-Gce"/>
                             <constraint firstAttribute="trailing" secondItem="qx9-vt-5xn" secondAttribute="trailing" id="ULE-Sg-6JT"/>
                             <constraint firstAttribute="trailing" secondItem="u0Q-dP-nsU" secondAttribute="trailing" id="efg-YC-mT9"/>

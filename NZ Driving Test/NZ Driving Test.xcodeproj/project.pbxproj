@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A53175921EDEBFDC00821472 /* YYHWrongCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A53175901EDEBFDC00821472 /* YYHWrongCell.m */; };
+		A53175931EDEBFDC00821472 /* YYHWrongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53175911EDEBFDC00821472 /* YYHWrongCell.xib */; };
 		A56F2E441EC5D9E900DCF2D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56F2E421EC5D9E900DCF2D2 /* Main.storyboard */; };
 		A56F2E461EC5D9E900DCF2D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A56F2E451EC5D9E900DCF2D2 /* Assets.xcassets */; };
 		A56F2E491EC5D9E900DCF2D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56F2E471EC5D9E900DCF2D2 /* LaunchScreen.storyboard */; };
@@ -33,8 +35,6 @@
 		A5F6E1B01ECDD49A00C2C8AC /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E1A41ECDD49A00C2C8AC /* NSObject+MJProperty.m */; };
 		A5F6E1B11ECDD49A00C2C8AC /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E1A61ECDD49A00C2C8AC /* NSString+MJExtension.m */; };
 		A5F6E1B41ECDD4F900C2C8AC /* YYHQuestionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E1B31ECDD4F900C2C8AC /* YYHQuestionItem.m */; };
-		A5F6E1B81ECDD71100C2C8AC /* YYHQuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E1B61ECDD71100C2C8AC /* YYHQuestionTableViewCell.m */; };
-		A5F6E1B91ECDD71100C2C8AC /* YYHQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E1B71ECDD71100C2C8AC /* YYHQuestionTableViewCell.xib */; };
 		A5F6E2471ED1A9E200C2C8AC /* YYHChooseTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E2461ED1A9E200C2C8AC /* YYHChooseTypeView.m */; };
 		A5F6E2491ED1A9EA00C2C8AC /* YYHChooseTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2481ED1A9EA00C2C8AC /* YYHChooseTypeView.xib */; };
 		A5F6E24B1ED1B08100C2C8AC /* YYHHomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E24A1ED1B08100C2C8AC /* YYHHomeViewController.storyboard */; };
@@ -116,6 +116,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A531758F1EDEBFDC00821472 /* YYHWrongCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYHWrongCell.h; path = ../../Setting/View/YYHWrongCell.h; sourceTree = "<group>"; };
+		A53175901EDEBFDC00821472 /* YYHWrongCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYHWrongCell.m; path = ../../Setting/View/YYHWrongCell.m; sourceTree = "<group>"; };
+		A53175911EDEBFDC00821472 /* YYHWrongCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YYHWrongCell.xib; path = ../../Setting/View/YYHWrongCell.xib; sourceTree = "<group>"; };
 		A56F2E361EC5D9E900DCF2D2 /* NZ Driving Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NZ Driving Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A56F2E431EC5D9E900DCF2D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A56F2E451EC5D9E900DCF2D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,9 +171,6 @@
 		A5F6E1A61ECDD49A00C2C8AC /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
 		A5F6E1B21ECDD4F900C2C8AC /* YYHQuestionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHQuestionItem.h; sourceTree = "<group>"; };
 		A5F6E1B31ECDD4F900C2C8AC /* YYHQuestionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHQuestionItem.m; sourceTree = "<group>"; };
-		A5F6E1B51ECDD71100C2C8AC /* YYHQuestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHQuestionTableViewCell.h; sourceTree = "<group>"; };
-		A5F6E1B61ECDD71100C2C8AC /* YYHQuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHQuestionTableViewCell.m; sourceTree = "<group>"; };
-		A5F6E1B71ECDD71100C2C8AC /* YYHQuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYHQuestionTableViewCell.xib; sourceTree = "<group>"; };
 		A5F6E2451ED1A9E200C2C8AC /* YYHChooseTypeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHChooseTypeView.h; sourceTree = "<group>"; };
 		A5F6E2461ED1A9E200C2C8AC /* YYHChooseTypeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHChooseTypeView.m; sourceTree = "<group>"; };
 		A5F6E2481ED1A9EA00C2C8AC /* YYHChooseTypeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYHChooseTypeView.xib; sourceTree = "<group>"; };
@@ -353,9 +353,6 @@
 		A5F6E15D1ECDC27000C2C8AC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A5F6E1B51ECDD71100C2C8AC /* YYHQuestionTableViewCell.h */,
-				A5F6E1B61ECDD71100C2C8AC /* YYHQuestionTableViewCell.m */,
-				A5F6E1B71ECDD71100C2C8AC /* YYHQuestionTableViewCell.xib */,
 				A5F6E2451ED1A9E200C2C8AC /* YYHChooseTypeView.h */,
 				A5F6E2461ED1A9E200C2C8AC /* YYHChooseTypeView.m */,
 				A5F6E2481ED1A9EA00C2C8AC /* YYHChooseTypeView.xib */,
@@ -488,6 +485,9 @@
 		A5F6E16D1ECDC27000C2C8AC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A531758F1EDEBFDC00821472 /* YYHWrongCell.h */,
+				A53175901EDEBFDC00821472 /* YYHWrongCell.m */,
+				A53175911EDEBFDC00821472 /* YYHWrongCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -713,6 +713,7 @@
 				A5F6E2D81ED3605D00C2C8AC /* 046.png in Resources */,
 				A5F6E2CF1ED3605D00C2C8AC /* 037.png in Resources */,
 				A5F6E2C31ED3605D00C2C8AC /* 024.png in Resources */,
+				A53175931EDEBFDC00821472 /* YYHWrongCell.xib in Resources */,
 				A5F6E2D21ED3605D00C2C8AC /* 040.png in Resources */,
 				A5F6E2EC1ED3605D00C2C8AC /* 24.png in Resources */,
 				A5F6E2D01ED3605D00C2C8AC /* 038.png in Resources */,
@@ -722,7 +723,6 @@
 				A5F6E2F11ED5890300C2C8AC /* YYHCatagoriesCell.xib in Resources */,
 				A5F6E2BE1ED3605D00C2C8AC /* 018.png in Resources */,
 				A5F6E2E51ED3605D00C2C8AC /* 059.png in Resources */,
-				A5F6E1B91ECDD71100C2C8AC /* YYHQuestionTableViewCell.xib in Resources */,
 				A5F6E2BB1ED3605D00C2C8AC /* 015.png in Resources */,
 				A5F6E2B41ED3605D00C2C8AC /* 008.png in Resources */,
 				A5F6E2661ED355B100C2C8AC /* YYHQuestionsCollectionViewCell.xib in Resources */,
@@ -763,7 +763,6 @@
 				A5F6E1721ECDC6B800C2C8AC /* YYHTabBarViewController.m in Sources */,
 				A5F6E17B1ECDC77600C2C8AC /* UIBarButtonItem+YYHBarButton.m in Sources */,
 				A5F6E1AF1ECDD49A00C2C8AC /* NSObject+MJKeyValue.m in Sources */,
-				A5F6E1B81ECDD71100C2C8AC /* YYHQuestionTableViewCell.m in Sources */,
 				A5F6E2471ED1A9E200C2C8AC /* YYHChooseTypeView.m in Sources */,
 				A5F6E1831ECDCA7C00C2C8AC /* UIView+YYHFrame.m in Sources */,
 				A5F6E1AD1ECDD49A00C2C8AC /* NSObject+MJClass.m in Sources */,
@@ -771,6 +770,7 @@
 				A5F6E1B11ECDD49A00C2C8AC /* NSString+MJExtension.m in Sources */,
 				A5F6E18C1ECDCC9D00C2C8AC /* YYHHomeViewController.m in Sources */,
 				A5F6E16E1ECDC27000C2C8AC /* AppDelegate.m in Sources */,
+				A53175921EDEBFDC00821472 /* YYHWrongCell.m in Sources */,
 				A5F6E1891ECDCB3400C2C8AC /* YYHSettingController.m in Sources */,
 				A5F6E1AC1ECDD49A00C2C8AC /* MJPropertyType.m in Sources */,
 				A5F6E1B01ECDD49A00C2C8AC /* NSObject+MJProperty.m in Sources */,

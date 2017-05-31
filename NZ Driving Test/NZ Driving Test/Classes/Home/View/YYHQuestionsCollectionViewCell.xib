@@ -59,10 +59,10 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acW-Sh-MUR">
-                        <rect key="frame" x="20" y="65" width="335" height="218"/>
+                        <rect key="frame" x="20" y="65" width="335" height="203"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="clip" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ltb-j1-PVY">
-                                <rect key="frame" x="5" y="195" width="325" height="23"/>
+                                <rect key="frame" x="5" y="180" width="325" height="23"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -80,38 +80,38 @@
                             <constraint firstAttribute="trailing" secondItem="Ltb-j1-PVY" secondAttribute="trailing" constant="5" id="1JJ-KX-5E1"/>
                             <constraint firstAttribute="bottom" secondItem="Ltb-j1-PVY" secondAttribute="bottom" id="33C-ue-Fxk"/>
                             <constraint firstItem="Ltb-j1-PVY" firstAttribute="leading" secondItem="acW-Sh-MUR" secondAttribute="leading" constant="5" id="6V9-Ai-1AK"/>
-                            <constraint firstItem="Ltb-j1-PVY" firstAttribute="top" secondItem="2dE-rC-2XU" secondAttribute="bottom" constant="25" id="AF9-9r-6pl"/>
+                            <constraint firstItem="Ltb-j1-PVY" firstAttribute="top" secondItem="2dE-rC-2XU" secondAttribute="bottom" constant="10" id="AF9-9r-6pl"/>
                             <constraint firstItem="2dE-rC-2XU" firstAttribute="centerX" secondItem="acW-Sh-MUR" secondAttribute="centerX" id="Sj7-xw-yPU"/>
                             <constraint firstItem="2dE-rC-2XU" firstAttribute="top" secondItem="acW-Sh-MUR" secondAttribute="top" constant="20" id="yfl-16-UTm"/>
                             <constraint firstItem="Ltb-j1-PVY" firstAttribute="centerX" secondItem="acW-Sh-MUR" secondAttribute="centerX" id="yo9-Sd-ded"/>
                         </constraints>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vfv-Ku-qKc">
-                        <rect key="frame" x="10" y="333" width="355" height="324"/>
+                        <rect key="frame" x="10" y="318" width="355" height="339"/>
                         <subviews>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWX-4e-uIW" customClass="YYHAnswerButton">
-                                <rect key="frame" x="10" y="0.0" width="335" height="77.5"/>
+                                <rect key="frame" x="10" y="0.0" width="335" height="81"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="answerButtonClick:" destination="Mib-18-95h" eventType="touchUpInside" id="mz2-bl-B2Q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YA4-Xy-lTw" customClass="YYHAnswerButton">
-                                <rect key="frame" x="10" y="82.5" width="335" height="77"/>
+                                <rect key="frame" x="10" y="86" width="335" height="81"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="answerButtonClick:" destination="Mib-18-95h" eventType="touchUpInside" id="iay-LZ-Rzi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWS-Vq-PGD" customClass="YYHAnswerButton">
-                                <rect key="frame" x="10" y="164.5" width="335" height="77.5"/>
+                                <rect key="frame" x="10" y="172" width="335" height="81"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="answerButtonClick:" destination="Mib-18-95h" eventType="touchUpInside" id="7IU-F0-Zxk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6W-1d-gr0" customClass="YYHAnswerButton">
-                                <rect key="frame" x="10" y="247" width="335" height="77"/>
+                                <rect key="frame" x="10" y="258" width="335" height="81"/>
                                 <state key="normal" title="Button"/>
                                 <state key="selected" backgroundImage="FollowBtnClickBg.png"/>
                                 <connections>
@@ -131,8 +131,8 @@
                         </constraints>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DN-eo-QI1">
-                        <rect key="frame" x="10" y="278" width="355" height="50"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <rect key="frame" x="10" y="-32" width="355" height="345"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                         <color key="textColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -141,7 +141,7 @@
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="QPb-uT-4Xk" firstAttribute="top" secondItem="Mib-18-95h" secondAttribute="top" constant="30" id="1aL-H3-rxf"/>
-                <constraint firstItem="2DN-eo-QI1" firstAttribute="top" secondItem="acW-Sh-MUR" secondAttribute="bottom" constant="-5" id="2Cj-Dm-5E7"/>
+                <constraint firstItem="2DN-eo-QI1" firstAttribute="top" secondItem="acW-Sh-MUR" secondAttribute="bottom" constant="-300" id="2Cj-Dm-5E7"/>
                 <constraint firstItem="2DN-eo-QI1" firstAttribute="leading" secondItem="Mib-18-95h" secondAttribute="leading" constant="10" id="56C-ND-N9E"/>
                 <constraint firstItem="QPb-uT-4Xk" firstAttribute="leading" secondItem="Mib-18-95h" secondAttribute="leading" id="5LI-FR-H0z"/>
                 <constraint firstAttribute="trailing" secondItem="acW-Sh-MUR" secondAttribute="trailing" constant="20" id="BAe-CW-BBg"/>
@@ -170,6 +170,7 @@
                 <outlet property="answerC" destination="AWS-Vq-PGD" id="C2W-nu-tbt"/>
                 <outlet property="answerD" destination="b6W-1d-gr0" id="dgf-C7-emJ"/>
                 <outlet property="closeButton" destination="M98-DK-1w9" id="jub-2H-AxO"/>
+                <outlet property="distanceToTop" destination="q8S-5d-zIs" id="guk-Db-3ZU"/>
                 <outlet property="gapBetween" destination="nyA-wh-Vi0" id="KaF-qg-cWe"/>
                 <outlet property="imageView" destination="2dE-rC-2XU" id="gz3-2M-L7O"/>
                 <outlet property="indexLabel" destination="GeD-k7-Qg9" id="ROe-9R-K3y"/>

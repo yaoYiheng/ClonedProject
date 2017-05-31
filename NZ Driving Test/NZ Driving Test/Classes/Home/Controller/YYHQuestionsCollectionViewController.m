@@ -51,8 +51,6 @@ static NSString * const reuseIdentifier = @"cell";
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self name:YYHTCloseButtonDidClicked object:nil];
 }
-- (void)viewWillAppear:(BOOL)animated{
-}
 
 #pragma mark - -------configure--------------
 /**
@@ -62,7 +60,7 @@ static NSString * const reuseIdentifier = @"cell";
     //1. 创建timer
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
 
-#warning 在这里更改倒计时秒数为2100
+
     self.second = 0;
 }
 
@@ -151,28 +149,41 @@ static NSString * const reuseIdentifier = @"cell";
     [self.timer invalidate];
     self.timer = nil;
 
-    _second = 12;
 }
 - (void)addQuestionItemsIntoArray: (NSNotification *)info{
 
     YYHQuestionItem *item = info.object;
-        if (![self.wrongAnswerArray containsObject:item]) {
-            [self.wrongAnswerArray addObject:item];
-            NSString *cachePath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
 
-            NSString *filePath = [cachePath stringByAppendingPathComponent:YYHCacheFileName];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *savedEncodedData = [defaults objectForKey:YYHWrongQuestionsArray];
 
-    YYHLog(@"%@--%@", item, self.wrongAnswerArray);
+    if (savedEncodedData) {
+        self.wrongAnswerArray = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithData:savedEncodedData];
+
+        [self.wrongAnswerArray addObject:item];
+        //save data
+        NSData *encodedWrongList = [NSKeyedArchiver archivedDataWithRootObject:self.wrongAnswerArray];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:encodedWrongList forKey:YYHWrongQuestionsArray];
+
+    }else{
+
+        //save data
+        NSData *encodedWrongList = [NSKeyedArchiver archivedDataWithRootObject:self.wrongAnswerArray];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:encodedWrongList forKey:YYHWrongQuestionsArray];
+    }
 
 
-//            NSArray *array = @[@"123", @"1234"];
-            if ([NSKeyedArchiver archiveRootObject:self.wrongAnswerArray toFile:filePath]) {
-                YYHLog(@"成功");
-            }
-            else{
-                YYHLog(@"失败");
-            }
-        }
+//    if (![self.wrongAnswerArray containsObject:item]) {
+//        [self.wrongAnswerArray addObject:item];
+//
+//
+//    }
+
+
+
+
 
 
 

@@ -38,13 +38,19 @@
     [self setBackgroundImage:[UIImage imageNamed:@"optionals_click"] forState:UIControlStateSelected];
     [self setBackgroundImage:[UIImage imageWithStretched:@"button_normal_backbround"] forState:UIControlStateNormal];
 
-    if (iphone5) {
+    if (iphone5 || iphone4) {
         self.layer.cornerRadius = 5;
     }
     self.layer.cornerRadius = 10;
 }
 - (void)layoutSubviews{
     [super layoutSubviews];
+    if (iphone4) {
+        self.titleLabel.font = [UIFont systemFontOfSize:10];
+        self.titleLabel.contentMode = UIViewContentModeScaleAspectFill;
+        self.titleLabel.numberOfLines = 0;
+        self.contentEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 5);
+    }
     if (iphone5) {
         self.titleLabel.font = [UIFont systemFontOfSize:12];
         self.titleLabel.contentMode = UIViewContentModeScaleAspectFill;

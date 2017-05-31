@@ -84,6 +84,10 @@
 
 
 static NSString * const cellID = @"cell";
+#pragma mark - -------view life cycle--------------
+- (void)viewWillAppear:(BOOL)animated{
+    YYHFunc;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -170,7 +174,7 @@ static NSString * const cellID = @"cell";
             }
             [randomArray addObject:randonItem];
             count++;
-            YYHLog(@"%ld", count);
+            
         }
 
 
@@ -272,7 +276,7 @@ static NSString * const cellID = @"cell";
 - (void)setTypesArray:(NSMutableArray *)typesArray{
     _typesArray = typesArray;
 
-    YYHFunc
+    
     [self configureBlock];
 
     [self.typesArray enumerateObjectsUsingBlock:self.seperateItems];
@@ -280,37 +284,6 @@ static NSString * const cellID = @"cell";
 //    [self.typesArray enumerateObjectsUsingBlock:self.seperateItems];
 
 }
-//- (void)loadData{
-//
-//    self.allQuestionsCN = [YYHQuestionItem mj_objectArrayWithFilename: @"中文版问题.plist"];
-//
-//    self.allQuestionEN = [YYHQuestionItem mj_objectArrayWithFilename: @"正确.plist"];
-//
-//
-//
-//    [self.allQuestionsCN enumerateObjectsUsingBlock:^(YYHQuestionItem * questionItem, NSUInteger idx, BOOL * _Nonnull stop) {
-//        //
-//        if (questionItem.Type == YYHTypeCar) {
-//            [self.carTypeArray addObject:questionItem];
-//        }
-//        else if (questionItem.Type == YYHTypeMotorcycle){
-//            [self.motorcycleTypeArray addObject:questionItem];
-//        }
-//        else if (questionItem.Type == YYHTypeHeavyVehicle){
-//            [self.heavyTpyeArray addObject:questionItem];
-//        }
-//    }];
-//
-//    //从每个类型中分离出不同的类别
-//    
-//
-//    [self.carTypeArray enumerateObjectsUsingBlock:self.seperateItems];
-//    [self.motorcycleTypeArray enumerateObjectsUsingBlock:self.seperateItems];
-//    [self.heavyTpyeArray enumerateObjectsUsingBlock:self.seperateItems];
-//
-//    YYHLog(@"%ld--%ld--%ld", self.carTypeArray.count, self.motorcycleTypeArray.count, self.heavyTpyeArray.count);
-//}
-
 
 #pragma mark - -------lazy loading--------------
 - (NSMutableArray *)motorcycleTypeArray{
