@@ -50,6 +50,7 @@ static NSString * const reuseIdentifier = @"cell";
 }
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self name:YYHTCloseButtonDidClicked object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:YYHPassingWrongNotification object:nil];
 }
 
 #pragma mark - -------configure--------------
@@ -145,7 +146,9 @@ static NSString * const reuseIdentifier = @"cell";
 
 #pragma mark - -------method for notifications--------------
 - (void)closeQuestionView{
+    YYHFunc
     [self dismissViewControllerAnimated:YES completion:nil];
+//    [self.navigationController popViewControllerAnimated:YES];
     [self.timer invalidate];
     self.timer = nil;
 

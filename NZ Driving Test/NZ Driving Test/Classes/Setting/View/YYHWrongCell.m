@@ -17,16 +17,27 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    self.layer.cornerRadius = YYHMargin;
+    self.layer.masksToBounds = YES;
+    if (iphone4) {
+        self.questionLabel.font = [UIFont systemFontOfSize:12];
+
+    }
+    else if (iphone5) {
+        self.questionLabel.font = [UIFont systemFontOfSize:13];
+
+    }
 }
 - (void)setItem:(YYHQuestionItem *)item{
     _item = item;
     self.questionLabel.text = self.item.Question;
 }
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)setFrame:(CGRect)frame{
+    
+    frame.origin.x += YYHMargin;
+    frame.size.width -= 2 * YYHMargin;
+    frame.size.height -= YYHMargin;
+    [super setFrame:frame];
 }
 
 @end

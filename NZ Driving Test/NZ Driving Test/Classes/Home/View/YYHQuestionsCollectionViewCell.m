@@ -37,6 +37,7 @@
 /** <#comments#>*/
 @property (nonatomic, weak) YYHAnswerButton *selectedButton;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topViewDistance;
 
 @end
 
@@ -46,6 +47,7 @@
 
 #pragma mark - -------buttonClick--------------
 - (IBAction)colseButtonClick {
+    YYHFunc
     [[NSNotificationCenter defaultCenter] postNotificationName:YYHTCloseButtonDidClicked object:nil];
 }
 
@@ -127,16 +129,18 @@
     if (iphone4) {
         self.resultLabel.font = [UIFont systemFontOfSize:11];
         self.questionLabel.font = [UIFont systemFontOfSize:12];
-//        self.resultLable.font = [UIFont systemFontOfSize:11];
+
         self.distanceToTop.constant = 40;
         self.timeLabel.font = [UIFont systemFontOfSize:13];
         self.indexLabel.font = [UIFont systemFontOfSize:11];
+
+        self.topViewDistance.constant = 15;
 
     }
     if (iphone5) {
         self.resultLabel.font = [UIFont systemFontOfSize:13];
         self.questionLabel.font = [UIFont systemFontOfSize:14];
-//        self.resultLable.font = [UIFont systemFontOfSize:13];
+
 
 
     }

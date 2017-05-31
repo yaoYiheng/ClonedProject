@@ -9,14 +9,19 @@
 #import "YYHStatictisController.h"
 #import "YYHQuestionItem.h"
 #import "YYHQuestionsCollectionViewController.h"
+#import "YYHWrongCell.h"
 
 @interface YYHStatictisController ()
 
 /** question Array*/
 @property (nonatomic, strong) NSMutableArray *questionArray;
+/** 背景*/
+@property (nonatomic, weak) UIImageView *backgroundImageView;
 @end
 
 @implementation YYHStatictisController
+
+static NSString * const cellID = @"cell";
 #pragma mark - -------lazy loading--------------
 - (NSMutableArray *)questionArray{
     if (!_questionArray) {
@@ -29,8 +34,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    //方法二:1.清空当前分割线的样式
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
+    //2. 设置当前tableView的背景颜色
+    self.tableView.backgroundColor = YYHColor(220, 220, 221);
+
+    self.tableView.contentInset = UIEdgeInsetsMake(YYHMargin * 3, 0, 0, 0);
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.image = [UIImage imageNamed:@"background"];
+    self.tableView.backgroundView = imageView;
+    self.backgroundImageView = imageView;
+
 
     self.navigationItem.title = @"错题统计";
+
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YYHWrongCell class]) bundle:nil] forCellReuseIdentifier:cellID];
 
 }
 
@@ -40,16 +59,18 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSData *savedEncodedData = [defaults objectForKey:YYHWrongQuestionsArray];
     self.questionArray = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithData:savedEncodedData];
+
+
+    if (self.questionArray.count == 0) {
+        NSLog(@"没有任何错题, 真棒!");
+    }
+
     [self.tableView reloadData];
 
-
-
 }
 
-- (void)setquestionItem:(YYHQuestionItem *)item{
-
-}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     YYHQuestionsCollectionViewController *questionVC = [[YYHQuestionsCollectionViewController alloc] init];
@@ -59,6 +80,10 @@
     [self presentViewController:questionVC animated:YES completion:nil];
     
 
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,24 +101,14 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }
-
-//    NSString *path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
-//    NSString *fileFullPath = [path stringByAppendingPathComponent:YYHCacheFileName];
-//
-//
-//    NSLog(@"%@", fileFullPath);
-//    //    NSLog(@"%ld-----%@", self.questionArray.count, self.questionArray);
-//
-//    self.questionArray = [NSKeyedUnarchiver unarchiveObjectWithFile:fileFullPath];
+    YYHWrongCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
 
 
     YYHQuestionItem *item = self.questionArray[indexPath.row];
 
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", item.Question];
+
+
+    cell.item = item;
     return cell;
 }
 

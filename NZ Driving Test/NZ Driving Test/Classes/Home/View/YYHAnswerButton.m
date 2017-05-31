@@ -32,8 +32,6 @@
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
 
-    [self addTarget:self action:@selector(titleButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-
 
     [self setBackgroundImage:[UIImage imageNamed:@"optionals_click"] forState:UIControlStateSelected];
     [self setBackgroundImage:[UIImage imageWithStretched:@"button_normal_backbround"] forState:UIControlStateNormal];
@@ -60,26 +58,7 @@
 
 
 }
-- (void)titleButtonClick:(YYHAnswerButton *)button{
 
-//
-//    NSLog(@"第一次点击");
-//    /*
-//     UIControlStateNormal       = 0,
-//     UIControlStateHighlighted  = 1 << 0,
-//     UIControlStateDisabled     = 1 << 1,
-//     UIControlStateSelected     = 1 << 2,
-//     */
-//
-//    if (self.selectedButton == button) {
-//        YYHFunc
-//        NSLog(@"第二次点击");
-//    }
-//
-//    self.selectedButton = button;
-
-
-}
 - (void)setHighlighted:(BOOL)highlighted{
 
 }
