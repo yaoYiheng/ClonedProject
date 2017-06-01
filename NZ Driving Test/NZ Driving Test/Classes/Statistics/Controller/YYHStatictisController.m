@@ -40,7 +40,7 @@ static NSString * const cellID = @"cell";
     //2. 设置当前tableView的背景颜色
     self.tableView.backgroundColor = YYHColor(220, 220, 221);
 
-    self.tableView.contentInset = UIEdgeInsetsMake(YYHMargin * 3, 0, 0, 0);
+//    self.tableView.contentInset = UIEdgeInsetsMake(YYHMargin, 0, 0, 0);
     UIImageView *imageView = [[UIImageView alloc] init];
     imageView.image = [UIImage imageNamed:@"background"];
     self.tableView.backgroundView = imageView;
@@ -81,7 +81,21 @@ static NSString * const cellID = @"cell";
     
 
 }
+- (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
 
+    UITableViewRowAction *action = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+
+        //通过修改模型数据达到修改界面的目的. 删除所选择的那一行.
+        [self.questionArray removeObjectAtIndex:indexPath.row];
+
+        /**在数组中删除模型后, 需对tableView进行刷新,
+         这里使用deleteRowsAtIndexPaths:进行局部刷新, 并实现动画.
+         */
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        tableView.editing = NO;
+    }];
+    return @[action];
+}
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 80;
 }

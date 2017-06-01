@@ -17,8 +17,13 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.layer.cornerRadius = YYHMargin;
-    self.layer.masksToBounds = YES;
+//    self.layer.cornerRadius = YYHMargin;
+//    self.layer.masksToBounds = YES;
+
+    self.yyh_x += YYHMargin;
+    self.yyh_width -= 2 * YYHMargin;
+    self.yyh_height -= YYHMargin;
+
     if (iphone4) {
         self.questionLabel.font = [UIFont systemFontOfSize:12];
 
@@ -32,12 +37,12 @@
     _item = item;
     self.questionLabel.text = self.item.Question;
 }
-- (void)setFrame:(CGRect)frame{
-    
-    frame.origin.x += YYHMargin;
-    frame.size.width -= 2 * YYHMargin;
-    frame.size.height -= YYHMargin;
-    [super setFrame:frame];
-}
+//- (void)setFrame:(CGRect)frame{
+//    
+//    frame.origin.x += YYHMargin;
+//    frame.size.width -= 2 * YYHMargin;
+//    frame.size.height -= YYHMargin;
+//    [super setFrame:frame];
+//}
 
 @end
