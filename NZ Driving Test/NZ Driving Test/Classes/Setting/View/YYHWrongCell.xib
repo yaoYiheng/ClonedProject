@@ -17,10 +17,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hLf-xK-8nY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKe-w2-wt2">
                         <rect key="frame" x="10" y="0.0" width="365" height="80"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -31,14 +27,10 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="hLf-xK-8nY" secondAttribute="trailing" id="6Hs-Ml-2e0"/>
-                    <constraint firstItem="hLf-xK-8nY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="I09-8h-F3l"/>
                     <constraint firstAttribute="trailing" secondItem="WKe-w2-wt2" secondAttribute="trailing" id="IQF-66-g60"/>
                     <constraint firstItem="WKe-w2-wt2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="T3Z-gf-7YA"/>
                     <constraint firstAttribute="bottom" secondItem="WKe-w2-wt2" secondAttribute="bottom" id="c9x-he-5Kb"/>
                     <constraint firstItem="WKe-w2-wt2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="l0o-pd-EcK"/>
-                    <constraint firstAttribute="bottom" secondItem="hLf-xK-8nY" secondAttribute="bottom" id="rgl-V8-FYZ"/>
-                    <constraint firstItem="hLf-xK-8nY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="xYF-hF-aeg"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

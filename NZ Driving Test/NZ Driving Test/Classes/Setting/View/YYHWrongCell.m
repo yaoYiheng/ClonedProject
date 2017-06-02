@@ -37,12 +37,5 @@
     _item = item;
     self.questionLabel.text = self.item.Question;
 }
-//- (void)setFrame:(CGRect)frame{
-//    
-//    frame.origin.x += YYHMargin;
-//    frame.size.width -= 2 * YYHMargin;
-//    frame.size.height -= YYHMargin;
-//    [super setFrame:frame];
-//}
 
 @end

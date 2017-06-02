@@ -25,15 +25,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *indexLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *closeButton;
 
 @property (weak, nonatomic) IBOutlet UIStackView *StackView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *gapBetween;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *distanceToTop;
-/** <#comments#>*/
-@property (nonatomic, weak) NSTimer *timer;
+
 /** <#comments#>*/
 @property (nonatomic, weak) YYHAnswerButton *selectedButton;
 
@@ -61,13 +60,6 @@
 
 
 
-    NSInteger correctIndex = _questionItem.CorrectAnswer.integerValue;
-    NSLog(@"%ld", (long)correctIndex);
-
-    
-
-
-
     //按钮第二次点击时
     if (self.selectedButton == sender) {
         if (sender.tag == self.questionItem.CorrectAnswer.integerValue) {
@@ -75,11 +67,12 @@
             self.resultLable.text = nil;
 
 
+            
 
-            [UIView animateWithDuration:2 delay:1 options:UIViewAnimationOptionShowHideTransitionViews animations:^{
+            [UIView animateWithDuration:1 delay:0.2 options:UIViewAnimationOptionShowHideTransitionViews animations:^{
                 self.resultLable.alpha = 1.0;
 
-                self.resultLabel.textColor = [UIColor greenColor];
+
                 self.resultLable.numberOfLines = 0;
                 self.resultLable.text = @"好极了, 回答正确!";
                 self.resultLable.alpha = 0;
@@ -97,8 +90,8 @@
 
             //动画持续1s, 设置透明度为0, 并显示相应的字符串
 
-            [UIView animateWithDuration:1.5 delay:1 options:UIViewAnimationOptionShowHideTransitionViews animations:^{
-                self.resultLabel.textColor = [UIColor redColor];
+            [UIView animateWithDuration:1 delay:0.2 options:UIViewAnimationOptionShowHideTransitionViews animations:^{
+
                 self.resultLable.numberOfLines = 0;
                 self.resultLable.text = @"回答错误, 再试一次吧~";
 
@@ -127,7 +120,7 @@
     [super awakeFromNib];
 
     if (iphone4) {
-        self.resultLabel.font = [UIFont systemFontOfSize:11];
+
         self.questionLabel.font = [UIFont systemFontOfSize:12];
 
         self.distanceToTop.constant = 40;
@@ -138,14 +131,12 @@
 
     }
     if (iphone5) {
-        self.resultLabel.font = [UIFont systemFontOfSize:13];
+
         self.questionLabel.font = [UIFont systemFontOfSize:14];
 
 
 
     }
-
-
 
     
 
@@ -197,9 +188,13 @@
 }
 
 
+/**
+ 设置模型数据
+ */
 -  (void)setQuestionItem:(YYHQuestionItem *)questionItem{
     _questionItem = questionItem;
 
+    //每次传入模型时, 重新初始化子控件上的内容, 防止内容错乱显示
     [self initSubViewsContent];
 
 
@@ -218,10 +213,7 @@
         self.imageView.image = nil;
     }
 
-
-
-
-
+    
     if (questionItem.C.length < 1 ) {
         self.answerC.hidden = YES;
         self.answerD.hidden = YES;

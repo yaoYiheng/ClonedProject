@@ -148,7 +148,7 @@ static NSString * const reuseIdentifier = @"cell";
 - (void)closeQuestionView{
     YYHFunc
     [self dismissViewControllerAnimated:YES completion:nil];
-//    [self.navigationController popViewControllerAnimated:YES];
+
     [self.timer invalidate];
     self.timer = nil;
 
@@ -159,30 +159,16 @@ static NSString * const reuseIdentifier = @"cell";
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSData *savedEncodedData = [defaults objectForKey:YYHWrongQuestionsArray];
+    
+    self.wrongAnswerArray = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithData:savedEncodedData];
 
-    if (savedEncodedData) {
-        self.wrongAnswerArray = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithData:savedEncodedData];
+    [self.wrongAnswerArray addObject:item];
+    //save data
+    NSData *encodedWrongList = [NSKeyedArchiver archivedDataWithRootObject:self.wrongAnswerArray];
 
-        [self.wrongAnswerArray addObject:item];
-        //save data
-        NSData *encodedWrongList = [NSKeyedArchiver archivedDataWithRootObject:self.wrongAnswerArray];
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        [defaults setObject:encodedWrongList forKey:YYHWrongQuestionsArray];
-
-    }else{
-
-        //save data
-        NSData *encodedWrongList = [NSKeyedArchiver archivedDataWithRootObject:self.wrongAnswerArray];
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        [defaults setObject:encodedWrongList forKey:YYHWrongQuestionsArray];
-    }
+    [defaults setObject:encodedWrongList forKey:YYHWrongQuestionsArray];
 
 
-//    if (![self.wrongAnswerArray containsObject:item]) {
-//        [self.wrongAnswerArray addObject:item];
-//
-//
-//    }
 
 
 

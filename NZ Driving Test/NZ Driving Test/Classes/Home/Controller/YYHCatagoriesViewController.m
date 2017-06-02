@@ -91,36 +91,18 @@ static NSString * const cellID = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
-
-    self.navigationItem.title = self.titleForNav;
-
-    self.tableView.backgroundColor = [UIColor blackColor];
-
-
-
-//
-//    [self loadData];
-
-    self.categoreis = @[@"模拟测试", @"核心问题", @"紧急情况问题", @"泊车问题", @"路标与路牌问题", @"道路位置问题", @"交叉路口的让路问题"];
-
-//    [self.tableView registerNib:[UINib nibWithNibName:@"YYHCatagoriesCell" bundle:nil] forCellReuseIdentifier:cellID];
-
-
+    [self configureBase];
     
 }
+
 #pragma mark - -------tableView data sourse--------------
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
 //    YYHCatagoriesCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-    }
+    YYHCatagoriesCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
 
-//    cell.contents = 
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", self.categoreis[indexPath.row]];
+    cell.categoryText = [NSString stringWithFormat:@"%@", self.categoreis[indexPath.row]];
 
 
 
@@ -144,23 +126,6 @@ static NSString * const cellID = @"cell";
 
         NSInteger count = randomArray.count;
 
-//        for (NSInteger index = 0; index < 35; index++) {
-//
-//            uint32_t randomCount = (uint32_t)self.typesArray.count;
-//
-//            uint32_t randomIndex = arc4random_uniform(randomCount);
-//            YYHQuestionItem *randonItem = self.typesArray[randomIndex];
-//
-//            //make sure that every item in array is unique
-//            if ([randomArray containsObject:randonItem]) {
-//                YYHLog(@"------%@", randomArray);
-//                continue;
-//
-//            }
-//            [randomArray addObject:randonItem];
-//
-//
-//    }
         while (count < 35)
         {
             uint32_t randomCount = (uint32_t)self.typesArray.count;
@@ -213,6 +178,24 @@ static NSString * const cellID = @"cell";
     return self.categoreis.count;
 }
 #pragma mark - -------configure--------------
+- (void)configureBase{
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.image = [UIImage imageNamed:@"background"];
+    self.tableView.backgroundView = imageView;
+
+
+    self.navigationItem.title = self.titleForNav;
+
+
+    self.tableView.contentInset = UIEdgeInsetsMake(YYHMargin, 0, 0, 0);
+    self.categoreis = @[@"模拟测试", @"核心问题", @"紧急情况问题", @"泊车问题", @"路标与路牌问题", @"道路位置问题", @"交叉路口的让路问题"];
+
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YYHCatagoriesCell class]) bundle:nil] forCellReuseIdentifier:cellID];
+    
+}
+#pragma mark - -------shitty codes--------------
 - (void)configureBlock{
 
     __weak typeof(self) weakSelf = self;
@@ -281,7 +264,7 @@ static NSString * const cellID = @"cell";
 
     [self.typesArray enumerateObjectsUsingBlock:self.seperateItems];
 
-//    [self.typesArray enumerateObjectsUsingBlock:self.seperateItems];
+
 
 }
 

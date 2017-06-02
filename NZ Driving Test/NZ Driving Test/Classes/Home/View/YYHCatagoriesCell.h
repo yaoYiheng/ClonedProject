@@ -10,4 +10,6 @@
 
 @interface YYHCatagoriesCell : UITableViewCell
 
+/** <#comments#>*/
+@property (nonatomic, strong) NSString *categoryText;
 @end

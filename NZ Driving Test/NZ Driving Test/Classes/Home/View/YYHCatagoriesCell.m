@@ -8,22 +8,42 @@
 
 #import "YYHCatagoriesCell.h"
 
+@interface YYHCatagoriesCell ()
+@property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
+
+@end
 @implementation YYHCatagoriesCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    if (iphone4) {
+        self.categoryLabel.font = [UIFont systemFontOfSize:12];
+
+    }
+    else if (iphone5) {
+        self.categoryLabel.font = [UIFont systemFontOfSize:13];
+        
+    }
+    else if (iphone6){
+        self.categoryLabel.font = [UIFont systemFontOfSize:14];
+    }
+    else if (iphone7P || iphone6P){
+        self.categoryLabel.font = [UIFont systemFontOfSize:15];
+    }
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+- (void)setCategoryText:(NSString *)categoryText{
+    _categoryText = categoryText;
+
+    self.categoryLabel.text = categoryText;
 }
-
 - (void)setFrame:(CGRect)frame{
-    frame.size.height -= 10;
-    frame.size.width -= 20;
+
+    frame.origin.x += YYHMargin * 5;
+    frame.size.width -= 10 * YYHMargin;
+    frame.size.height -= YYHMargin;
     [super setFrame:frame];
 }
+
 @end

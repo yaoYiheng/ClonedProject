@@ -15,8 +15,7 @@
 
 /** question Array*/
 @property (nonatomic, strong) NSMutableArray *questionArray;
-/** 背景*/
-@property (nonatomic, weak) UIImageView *backgroundImageView;
+
 @end
 
 @implementation YYHStatictisController
@@ -31,25 +30,29 @@ static NSString * const cellID = @"cell";
 
     return _questionArray;
 }
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-    //方法二:1.清空当前分割线的样式
+#pragma mark - -------configure--------------
+- (void)configureBase{
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
-    //2. 设置当前tableView的背景颜色
-    self.tableView.backgroundColor = YYHColor(220, 220, 221);
 
-//    self.tableView.contentInset = UIEdgeInsetsMake(YYHMargin, 0, 0, 0);
     UIImageView *imageView = [[UIImageView alloc] init];
     imageView.image = [UIImage imageNamed:@"background"];
     self.tableView.backgroundView = imageView;
-    self.backgroundImageView = imageView;
+
 
 
     self.navigationItem.title = @"错题统计";
 
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YYHWrongCell class]) bundle:nil] forCellReuseIdentifier:cellID];
+}
+#pragma mark - -------view life cycle--------------
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+
+    [self configureBase];
+
 
 }
 
@@ -87,6 +90,12 @@ static NSString * const cellID = @"cell";
 
         //通过修改模型数据达到修改界面的目的. 删除所选择的那一行.
         [self.questionArray removeObjectAtIndex:indexPath.row];
+
+        //save data
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSData *encodedWrongList = [NSKeyedArchiver archivedDataWithRootObject:self.questionArray];
+
+        [defaults setObject:encodedWrongList forKey:YYHWrongQuestionsArray];
 
         /**在数组中删除模型后, 需对tableView进行刷新,
          这里使用deleteRowsAtIndexPaths:进行局部刷新, 并实现动画.

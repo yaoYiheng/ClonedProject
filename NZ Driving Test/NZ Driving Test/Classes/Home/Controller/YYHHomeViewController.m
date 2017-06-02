@@ -21,27 +21,6 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *distanceToTop;
 
 
-@property (nonatomic, strong) NSMutableArray *allForEach;
-/** behaviour*/
-@property (nonatomic, strong) NSMutableArray *behaviour;
-/** emergincies*/
-@property (nonatomic, strong) NSMutableArray *emergincies;
-/** sign*/
-@property (nonatomic, strong) NSMutableArray *signs;
-/** postition*/
-@property (nonatomic, strong) NSMutableArray *position;
-/** parking*/
-@property (nonatomic, strong) NSMutableArray *parking;
-/** intersection*/
-@property (nonatomic, strong) NSMutableArray *intersection;
-/** for core*/
-@property (nonatomic, strong) NSMutableArray *core;
-/** Class2*/
-@property (nonatomic, strong) NSMutableArray *class2;
-/** class3_5*/
-@property (nonatomic, strong) NSMutableArray *class3_5;
-/** bike*/
-@property (nonatomic, strong) NSMutableArray *bikepSecific;
 
 //Chinese proterty
 @property (nonatomic, strong) NSMutableArray *allForEachC;
@@ -105,6 +84,7 @@
 
     self.navigationItem.title = @"首页";
 
+    YYHLog(@"%f", YYHScreenH);
 
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(typeButtonDidClicked:) name:YYHTypeButtonDidClicked object:nil];
@@ -124,7 +104,7 @@
         self.distanceToTop.constant = 20;
 
     }
-    else if (iphone6P)
+    else if (iphone6P || iphone7P)
     {
         self.distanceToTop.constant = 100;
     }
