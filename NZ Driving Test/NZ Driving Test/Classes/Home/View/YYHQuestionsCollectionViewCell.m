@@ -199,7 +199,7 @@
 
 
     self.questionLabel.text = questionItem.Question;
-    [self.questionLabel sizeToFit];
+
 
     self.indexLabel.text = [NSString stringWithFormat:@"%ld / %ld", questionItem.current.row + 1, (long)questionItem.total];
 
@@ -234,6 +234,7 @@
 
     self.selectedButton = nil;
     self.resultLable.text = nil;
-    self.questionLabel.text = @"";
+//    self.questionLabel.text = nil;
+//    self.questionLabel.textAlignment = NSTextAlignmentCenter;
 }
 @end
