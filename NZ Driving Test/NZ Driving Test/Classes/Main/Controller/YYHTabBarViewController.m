@@ -23,9 +23,7 @@
 #pragma mark - -------life cycle of the View--------------
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 
-    self.view.backgroundColor = YYHRandomColor;
 
     [self configureChildrenViewControllers];
     

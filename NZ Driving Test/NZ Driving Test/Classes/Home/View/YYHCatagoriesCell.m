@@ -17,18 +17,18 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     if (iphone4) {
-        self.categoryLabel.font = [UIFont systemFontOfSize:12];
+        self.categoryLabel.font = [UIFont systemFontOfSize:13];
 
     }
     else if (iphone5) {
-        self.categoryLabel.font = [UIFont systemFontOfSize:13];
+        self.categoryLabel.font = [UIFont systemFontOfSize:14];
         
     }
     else if (iphone6){
-        self.categoryLabel.font = [UIFont systemFontOfSize:14];
+        self.categoryLabel.font = [UIFont systemFontOfSize:15];
     }
     else if (iphone7P || iphone6P){
-        self.categoryLabel.font = [UIFont systemFontOfSize:15];
+        self.categoryLabel.font = [UIFont systemFontOfSize:16];
     }
 }
 

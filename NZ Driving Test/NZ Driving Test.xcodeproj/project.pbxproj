@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A507D1891EE14FBA00FDC5CE /* YYHStatictisController.m in Sources */ = {isa = PBXBuildFile; fileRef = A507D1881EE14FBA00FDC5CE /* YYHStatictisController.m */; };
 		A53175921EDEBFDC00821472 /* YYHWrongCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A53175901EDEBFDC00821472 /* YYHWrongCell.m */; };
 		A53175931EDEBFDC00821472 /* YYHWrongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53175911EDEBFDC00821472 /* YYHWrongCell.xib */; };
 		A56F2E441EC5D9E900DCF2D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56F2E421EC5D9E900DCF2D2 /* Main.storyboard */; };
@@ -20,7 +21,6 @@
 		A5F6E17C1ECDC77600C2C8AC /* UIImage+WithoutRendering.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E17A1ECDC77600C2C8AC /* UIImage+WithoutRendering.m */; };
 		A5F6E17F1ECDC7BB00C2C8AC /* YYHConst.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E17E1ECDC7BB00C2C8AC /* YYHConst.m */; };
 		A5F6E1831ECDCA7C00C2C8AC /* UIView+YYHFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E1821ECDCA7C00C2C8AC /* UIView+YYHFrame.m */; };
-		A5F6E1861ECDCB1C00C2C8AC /* YYHStatictisController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E1851ECDCB1C00C2C8AC /* YYHStatictisController.m */; };
 		A5F6E1891ECDCB3400C2C8AC /* YYHSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E1881ECDCB3400C2C8AC /* YYHSettingController.m */; };
 		A5F6E18C1ECDCC9D00C2C8AC /* YYHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E18B1ECDCC9D00C2C8AC /* YYHHomeViewController.m */; };
 		A5F6E1A71ECDD49A00C2C8AC /* MJDictionaryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E1911ECDD49A00C2C8AC /* MJDictionaryCache.m */; };
@@ -113,9 +113,13 @@
 		A5F6E2EC1ED3605D00C2C8AC /* 24.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2AB1ED3605D00C2C8AC /* 24.png */; };
 		A5F6E2F01ED5890300C2C8AC /* YYHCatagoriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E2EE1ED5890300C2C8AC /* YYHCatagoriesCell.m */; };
 		A5F6E2F11ED5890300C2C8AC /* YYHCatagoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2EF1ED5890300C2C8AC /* YYHCatagoriesCell.xib */; };
+		A5FC77F41EE1A5AC00BF41D8 /* YYHShowRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FC77F21EE1A5AC00BF41D8 /* YYHShowRightViewController.m */; };
+		A5FC77F51EE1A5AC00BF41D8 /* YYHShowRightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FC77F31EE1A5AC00BF41D8 /* YYHShowRightViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A507D1871EE14FBA00FDC5CE /* YYHStatictisController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHStatictisController.h; sourceTree = "<group>"; };
+		A507D1881EE14FBA00FDC5CE /* YYHStatictisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHStatictisController.m; sourceTree = "<group>"; };
 		A531758F1EDEBFDC00821472 /* YYHWrongCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYHWrongCell.h; path = ../../Setting/View/YYHWrongCell.h; sourceTree = "<group>"; };
 		A53175901EDEBFDC00821472 /* YYHWrongCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYHWrongCell.m; path = ../../Setting/View/YYHWrongCell.m; sourceTree = "<group>"; };
 		A53175911EDEBFDC00821472 /* YYHWrongCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YYHWrongCell.xib; path = ../../Setting/View/YYHWrongCell.xib; sourceTree = "<group>"; };
@@ -140,8 +144,6 @@
 		A5F6E1801ECDC87D00C2C8AC /* NZ Driving Test.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NZ Driving Test.pch"; sourceTree = "<group>"; };
 		A5F6E1811ECDCA7C00C2C8AC /* UIView+YYHFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YYHFrame.h"; sourceTree = "<group>"; };
 		A5F6E1821ECDCA7C00C2C8AC /* UIView+YYHFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YYHFrame.m"; sourceTree = "<group>"; };
-		A5F6E1841ECDCB1C00C2C8AC /* YYHStatictisController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHStatictisController.h; sourceTree = "<group>"; };
-		A5F6E1851ECDCB1C00C2C8AC /* YYHStatictisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHStatictisController.m; sourceTree = "<group>"; };
 		A5F6E1871ECDCB3400C2C8AC /* YYHSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHSettingController.h; sourceTree = "<group>"; };
 		A5F6E1881ECDCB3400C2C8AC /* YYHSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHSettingController.m; sourceTree = "<group>"; };
 		A5F6E18A1ECDCC9D00C2C8AC /* YYHHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHHomeViewController.h; sourceTree = "<group>"; };
@@ -256,6 +258,9 @@
 		A5F6E2ED1ED5890300C2C8AC /* YYHCatagoriesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHCatagoriesCell.h; sourceTree = "<group>"; };
 		A5F6E2EE1ED5890300C2C8AC /* YYHCatagoriesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHCatagoriesCell.m; sourceTree = "<group>"; };
 		A5F6E2EF1ED5890300C2C8AC /* YYHCatagoriesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYHCatagoriesCell.xib; sourceTree = "<group>"; };
+		A5FC77F11EE1A5AC00BF41D8 /* YYHShowRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHShowRightViewController.h; sourceTree = "<group>"; };
+		A5FC77F21EE1A5AC00BF41D8 /* YYHShowRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHShowRightViewController.m; sourceTree = "<group>"; };
+		A5FC77F31EE1A5AC00BF41D8 /* YYHShowRightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYHShowRightViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -469,8 +474,11 @@
 		A5F6E16B1ECDC27000C2C8AC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A5F6E1841ECDCB1C00C2C8AC /* YYHStatictisController.h */,
-				A5F6E1851ECDCB1C00C2C8AC /* YYHStatictisController.m */,
+				A507D1871EE14FBA00FDC5CE /* YYHStatictisController.h */,
+				A507D1881EE14FBA00FDC5CE /* YYHStatictisController.m */,
+				A5FC77F11EE1A5AC00BF41D8 /* YYHShowRightViewController.h */,
+				A5FC77F21EE1A5AC00BF41D8 /* YYHShowRightViewController.m */,
+				A5FC77F31EE1A5AC00BF41D8 /* YYHShowRightViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -738,6 +746,7 @@
 				A5F6E2D61ED3605D00C2C8AC /* 044.png in Resources */,
 				A5F6E2DD1ED3605D00C2C8AC /* 051.png in Resources */,
 				A5F6E2C11ED3605D00C2C8AC /* 021.png in Resources */,
+				A5FC77F51EE1A5AC00BF41D8 /* YYHShowRightViewController.xib in Resources */,
 				A5F6E25A1ED3379700C2C8AC /* 正确.plist in Resources */,
 				A5F6E2D31ED3605D00C2C8AC /* 041.png in Resources */,
 				A5F6E25B1ED3379700C2C8AC /* 中文版问题.plist in Resources */,
@@ -753,11 +762,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5F6E16F1ECDC27100C2C8AC /* main.m in Sources */,
+				A507D1891EE14FBA00FDC5CE /* YYHStatictisController.m in Sources */,
 				A5F6E1A91ECDD49A00C2C8AC /* MJFoundation.m in Sources */,
 				A5F6E1B41ECDD4F900C2C8AC /* YYHQuestionItem.m in Sources */,
 				A5F6E1A81ECDD49A00C2C8AC /* MJExtensionConst.m in Sources */,
 				A5F6E2691ED3576E00C2C8AC /* YYHAnswerButton.m in Sources */,
-				A5F6E1861ECDCB1C00C2C8AC /* YYHStatictisController.m in Sources */,
 				A5F6E17C1ECDC77600C2C8AC /* UIImage+WithoutRendering.m in Sources */,
 				A5F6E17F1ECDC7BB00C2C8AC /* YYHConst.m in Sources */,
 				A5F6E1721ECDC6B800C2C8AC /* YYHTabBarViewController.m in Sources */,
@@ -767,6 +776,7 @@
 				A5F6E1831ECDCA7C00C2C8AC /* UIView+YYHFrame.m in Sources */,
 				A5F6E1AD1ECDD49A00C2C8AC /* NSObject+MJClass.m in Sources */,
 				A5F6E1751ECDC6D600C2C8AC /* YYHNavigationController.m in Sources */,
+				A5FC77F41EE1A5AC00BF41D8 /* YYHShowRightViewController.m in Sources */,
 				A5F6E1B11ECDD49A00C2C8AC /* NSString+MJExtension.m in Sources */,
 				A5F6E18C1ECDCC9D00C2C8AC /* YYHHomeViewController.m in Sources */,
 				A5F6E16E1ECDC27000C2C8AC /* AppDelegate.m in Sources */,

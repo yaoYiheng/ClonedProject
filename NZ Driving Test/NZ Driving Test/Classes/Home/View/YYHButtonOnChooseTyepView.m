@@ -28,9 +28,22 @@
 - (void)awakeFromNib{
     [super awakeFromNib];
 
+    if (iphone4) {
+        self.titleLabel.font = [UIFont systemFontOfSize:13];
 
+    }
+    else if (iphone5) {
+        self.titleLabel.font = [UIFont systemFontOfSize:14];
 
-    self.titleLabel.font = [UIFont systemFontOfSize:17];
+    }
+    else if (iphone6){
+        self.titleLabel.font = [UIFont systemFontOfSize:15];
+    }
+    else if (iphone6P || iphone7P){
+        self.titleLabel.font = [UIFont systemFontOfSize:16];
+    }
+
+//    self.titleLabel.font = [UIFont systemFontOfSize:17];
     self.titleLabel.contentMode = UIViewContentModeScaleAspectFill;
     self.titleLabel.numberOfLines = 0;
     //可以通过修改内容内边距来调整文字的显示区域
@@ -44,20 +57,18 @@
     [self setBackgroundImage:[UIImage imageNamed:@"optionals_click"] forState:UIControlStateSelected];
     [self setBackgroundImage:[UIImage imageWithStretched:@"button_normal_backbround"] forState:UIControlStateNormal];
 
-    if (iphone5) {
-        self.layer.cornerRadius = 5;
-    }
+
     self.layer.cornerRadius = 10;
 }
-- (void)layoutSubviews{
-    [super layoutSubviews];
-    if (iphone5) {
-        self.titleLabel.font = [UIFont systemFontOfSize:15];
-        self.titleLabel.contentMode = UIViewContentModeScaleAspectFill;
-        self.titleLabel.numberOfLines = 0;
-        self.contentEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 5);
-    }
-    
-    
-}
+//- (void)layoutSubviews{
+//    [super layoutSubviews];
+//    if (iphone5) {
+//        self.titleLabel.font = [UIFont systemFontOfSize:15];
+//        self.titleLabel.contentMode = UIViewContentModeScaleAspectFill;
+//        self.titleLabel.numberOfLines = 0;
+//        self.contentEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 5);
+//    }
+//    
+//    
+//}
 @end

@@ -10,7 +10,7 @@
 #import "YYHQuestionItem.h"
 #import "YYHQuestionsCollectionViewController.h"
 #import "YYHWrongCell.h"
-
+#import "YYHShowRightViewController.h"
 @interface YYHStatictisController ()
 
 /** question Array*/
@@ -76,11 +76,11 @@ static NSString * const cellID = @"cell";
     
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    YYHQuestionsCollectionViewController *questionVC = [[YYHQuestionsCollectionViewController alloc] init];
+    YYHShowRightViewController *rightVC = [[YYHShowRightViewController alloc] init];
     
-    questionVC.questionArray = self.questionArray;
+    rightVC.questionItem = self.questionArray[indexPath.row];
 
-    [self presentViewController:questionVC animated:YES completion:nil];
+    [self presentViewController:rightVC animated:YES completion:nil];
     
 
 }

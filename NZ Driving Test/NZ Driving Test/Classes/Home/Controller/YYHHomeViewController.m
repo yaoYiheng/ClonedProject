@@ -101,12 +101,15 @@
 
     }
     else if (iphone5) {
-        self.distanceToTop.constant = 20;
+        self.distanceToTop.constant = 30;
 
+    }
+    else if (iphone6){
+        self.distanceToTop.constant = 75;
     }
     else if (iphone6P || iphone7P)
     {
-        self.distanceToTop.constant = 100;
+        self.distanceToTop.constant = 120;
     }
 
     

@@ -25,12 +25,18 @@
     self.yyh_height -= YYHMargin;
 
     if (iphone4) {
-        self.questionLabel.font = [UIFont systemFontOfSize:12];
+        self.questionLabel.font = [UIFont systemFontOfSize:13];
 
     }
     else if (iphone5) {
-        self.questionLabel.font = [UIFont systemFontOfSize:13];
+        self.questionLabel.font = [UIFont systemFontOfSize:14];
 
+    }
+    else if (iphone6){
+        self.questionLabel.font = [UIFont systemFontOfSize:15];
+    }
+    else if (iphone6P || iphone7P){
+        self.questionLabel.font = [UIFont systemFontOfSize:16];
     }
 }
 - (void)setItem:(YYHQuestionItem *)item{
