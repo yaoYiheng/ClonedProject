@@ -247,6 +247,7 @@
     }
 
     if (button.tag == 3) {
+        [self.heavy3_5TpyeArray addObjectsFromArray:self.heavyTpyeArray];
         catagory.typesArray = self.heavy3_5TpyeArray;
     }
     //heavy

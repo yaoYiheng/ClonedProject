@@ -44,7 +44,7 @@
     self.questionLabel.text = self.questionItem.Question;
 
     NSInteger index = self.questionItem.CorrectAnswer.integerValue - 1;
-    self.rightLabel.text = [NSString stringWithFormat:@"正确答案是: %@", self.optionals[index]];
+    self.rightLabel.text = [NSString stringWithFormat:@"%@", self.optionals[index]];
 
 }
 - (void)configureSubviews{
