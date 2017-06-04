@@ -7,6 +7,7 @@
 //
 
 #import "YYHNavigationController.h"
+#import "YYHDiscalmerViewController.h"
 
 @interface YYHNavigationController ()<UIGestureRecognizerDelegate>
 
@@ -27,6 +28,8 @@
 
     // 设置导航条背景图片
     [navBar setBackgroundImage:[UIImage imageWithStretched:@"navigationbarBackgroundRed"] forBarMetrics:UIBarMetricsDefault];
+
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,21 +48,29 @@
 
 
 }
+
+
 - (void)handleNavigationTransition:(UIPanGestureRecognizer *)sender {
     
 }
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
+
     if (self.childViewControllers.count > 0) {
-
-        if (self.childViewControllers.count > 1) {
-            viewController.hidesBottomBarWhenPushed = YES;
-        }
-
 
         viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem backBarButtonWithImage:[UIImage imageNamed:@"closeBack"]  hightligtedImage:[UIImage imageNamed:@"closeBack"] Target:self action:@selector(back) title:@"返回"];
 
+        if (self.childViewControllers.count > 1) {
+            viewController.hidesBottomBarWhenPushed = YES;
+
+
+        }
+
+
+
 
     }
+
+
 
     [super pushViewController:viewController animated:animated];
 }

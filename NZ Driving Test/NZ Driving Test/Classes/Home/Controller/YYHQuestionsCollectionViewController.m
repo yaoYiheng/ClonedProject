@@ -146,11 +146,21 @@ static NSString * const reuseIdentifier = @"cell";
 
 #pragma mark - -------method for notifications--------------
 - (void)closeQuestionView{
-    YYHFunc
-    [self dismissViewControllerAnimated:YES completion:nil];
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"确定退出吗?" message:nil preferredStyle:UIAlertControllerStyleAlert];
 
-    [self.timer invalidate];
-    self.timer = nil;
+    UIAlertAction *cancle = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *confirm = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+
+        [self.timer invalidate];
+        self.timer = nil;
+    }];
+
+    [alertVC addAction:cancle];
+    [alertVC addAction:confirm];
+
+    [self presentViewController:alertVC animated:YES completion:nil];
+
 
 }
 - (void)addQuestionItemsIntoArray: (NSNotification *)info{
