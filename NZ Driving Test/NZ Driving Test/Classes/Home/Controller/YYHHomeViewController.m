@@ -111,8 +111,14 @@
     {
         self.distanceToTop.constant = 120;
     }
+    else if (iPad){
+        self.distanceToTop.constant = 250;
+    }
+    else if (iPad12){
+        self.distanceToTop.constant = 350;
+    }
 
-    
+
     YYHChooseTypeView *chooseView = self.MiddlePlaceHolder.subviews.firstObject;
     chooseView.frame = CGRectMake(0, 0, self.MiddlePlaceHolder.yyh_width, self.MiddlePlaceHolder.yyh_height);
 

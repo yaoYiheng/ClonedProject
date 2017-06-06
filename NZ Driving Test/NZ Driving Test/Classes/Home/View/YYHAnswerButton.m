@@ -40,24 +40,32 @@
         self.layer.cornerRadius = 5;
     }
     self.layer.cornerRadius = 10;
-}
-- (void)layoutSubviews{
-    [super layoutSubviews];
+
+    self.titleLabel.contentMode = UIViewContentModeScaleAspectFill;
+    self.titleLabel.numberOfLines = 0;
+    self.contentEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 5);
     if (iphone4) {
         self.titleLabel.font = [UIFont systemFontOfSize:10];
-        self.titleLabel.contentMode = UIViewContentModeScaleAspectFill;
-        self.titleLabel.numberOfLines = 0;
-        self.contentEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 5);
+
     }
-    if (iphone5) {
+    else if (iphone5) {
         self.titleLabel.font = [UIFont systemFontOfSize:12];
-        self.titleLabel.contentMode = UIViewContentModeScaleAspectFill;
-        self.titleLabel.numberOfLines = 0;
-        self.contentEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 5);
+
     }
-
-
+    else if (iphone6){
+        self.titleLabel.font = [UIFont systemFontOfSize:14];
+    }
+    else if (iphone6P || iphone7P){
+        self.titleLabel.font = [UIFont systemFontOfSize:14];
+    }
+    else if (iPad){
+        self.titleLabel.font = [UIFont systemFontOfSize:22];
+    }
+    else if (iPad12){
+        self.titleLabel.font = [UIFont systemFontOfSize:25];
+    }
 }
+
 
 - (void)setHighlighted:(BOOL)highlighted{
 

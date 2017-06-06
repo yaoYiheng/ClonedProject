@@ -83,8 +83,18 @@
         self.questionLabel.font = [UIFont systemFontOfSize:17];
         self.rightLabel.font = [UIFont systemFontOfSize:17];
     }
+    else if (iPad){
+        self.distanceToTop.constant = 300;
+        self.questionLabel.font = [UIFont systemFontOfSize:25];
+        self.rightLabel.font = [UIFont systemFontOfSize:25];
+    }
+    else if (iPad12){
+        self.distanceToTop.constant = 300;
+        self.questionLabel.font = [UIFont systemFontOfSize:25];
+        self.rightLabel.font = [UIFont systemFontOfSize:25];
+    }
 
-    
+
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

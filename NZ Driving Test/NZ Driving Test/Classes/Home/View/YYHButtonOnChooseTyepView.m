@@ -10,20 +10,7 @@
 
 @implementation YYHButtonOnChooseTyepView
 
-//- (void)awakeFromNib{
-//    [super awakeFromNib];
-//
-//    [self setBackgroundImage:[UIImage imageNamed:@"button_normal_backbround"] forState:UIControlStateNormal];
-//
-//    self.titleLabel.font = [UIFont systemFontOfSize:22];
-//    [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//                           
-//    [self setBackgroundColor:[UIColor whiteColor]];
-//
-//    self.layer.cornerRadius = 10;
-//    self.clipsToBounds = YES;
-//    
-//}
+
 
 - (void)awakeFromNib{
     [super awakeFromNib];
@@ -41,6 +28,12 @@
     }
     else if (iphone6P || iphone7P){
         self.titleLabel.font = [UIFont systemFontOfSize:16];
+    }
+    else if (iPad){
+        self.titleLabel.font = [UIFont systemFontOfSize:23];
+    }
+    else if (iPad12){
+        self.titleLabel.font = [UIFont systemFontOfSize:25];
     }
 
 //    self.titleLabel.font = [UIFont systemFontOfSize:17];
@@ -60,15 +53,5 @@
 
     self.layer.cornerRadius = 10;
 }
-//- (void)layoutSubviews{
-//    [super layoutSubviews];
-//    if (iphone5) {
-//        self.titleLabel.font = [UIFont systemFontOfSize:15];
-//        self.titleLabel.contentMode = UIViewContentModeScaleAspectFill;
-//        self.titleLabel.numberOfLines = 0;
-//        self.contentEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 5);
-//    }
-//    
-//    
-//}
+
 @end

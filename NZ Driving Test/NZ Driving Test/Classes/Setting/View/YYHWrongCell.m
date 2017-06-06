@@ -38,6 +38,12 @@
     else if (iphone6P || iphone7P){
         self.questionLabel.font = [UIFont systemFontOfSize:16];
     }
+    else if (iPad){
+        self.questionLabel.font = [UIFont systemFontOfSize:22];
+    }
+    else if (iPad12){
+        self.questionLabel.font = [UIFont systemFontOfSize:25];
+    }
 }
 - (void)setItem:(YYHQuestionItem *)item{
     _item = item;

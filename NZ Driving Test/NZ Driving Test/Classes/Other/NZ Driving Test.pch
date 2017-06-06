@@ -15,6 +15,8 @@
 /***********屏幕适配*************/
 #define YYhScreenW [UIScreen mainScreen].bounds.size.width
 #define YYHScreenH [UIScreen mainScreen].bounds.size.height
+#define iPad12 (YYHScreenH == 1366)
+#define iPad (YYHScreenH == 1024)
 #define iphone7P (YYHScreenH == 736)
 #define iphone6P (YYHScreenH == 736)
 #define iphone6 (YYHScreenH == 667)

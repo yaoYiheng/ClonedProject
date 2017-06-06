@@ -30,6 +30,12 @@
     else if (iphone7P || iphone6P){
         self.categoryLabel.font = [UIFont systemFontOfSize:16];
     }
+    else if(iPad){
+        self.categoryLabel.font = [UIFont systemFontOfSize:22];
+    }
+    else if (iPad12){
+        self.categoryLabel.font = [UIFont systemFontOfSize:25];
+    }
 }
 
 
@@ -40,9 +46,19 @@
 }
 - (void)setFrame:(CGRect)frame{
 
-    frame.origin.x += YYHMargin * 5;
-    frame.size.width -= 10 * YYHMargin;
-    frame.size.height -= YYHMargin;
+
+
+    if (iPad || iPad12) {
+        frame.origin.x += YYHMargin * 12;
+        frame.size.width -= 24 * YYHMargin;
+        frame.size.height -= YYHMargin * 2;
+    }
+
+    else{
+        frame.origin.x += YYHMargin * 5;
+        frame.size.width -= 10 * YYHMargin;
+        frame.size.height -= YYHMargin;
+    }
     [super setFrame:frame];
 }
 

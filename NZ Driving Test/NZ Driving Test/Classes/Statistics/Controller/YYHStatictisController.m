@@ -106,7 +106,10 @@ static NSString * const cellID = @"cell";
     return @[action];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 80;
+    if (YYHScreenH < iphone7P) {
+        return 160;
+    }
+    else return 90;
 }
 
 - (void)didReceiveMemoryWarning {

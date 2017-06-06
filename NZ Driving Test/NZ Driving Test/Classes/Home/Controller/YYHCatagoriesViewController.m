@@ -85,9 +85,7 @@
 
 static NSString * const cellID = @"cell";
 #pragma mark - -------view life cycle--------------
-- (void)viewWillAppear:(BOOL)animated{
-    YYHFunc;
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -109,7 +107,11 @@ static NSString * const cellID = @"cell";
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 90;
+    
+    if (iPad || iPad12) {
+        return 160;
+    }
+    else return 90;
 }
 #pragma mark - -------tableView Delegate--------------
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -190,6 +192,10 @@ static NSString * const cellID = @"cell";
 
 
     self.tableView.contentInset = UIEdgeInsetsMake(YYHMargin, 0, 0, 0);
+    if (iPad || iPad12) {
+        self.tableView.contentInset = UIEdgeInsetsMake(YYHMargin * 3, 0, 0, 0);
+    }
+
     self.categoreis = @[@"模拟测试", @"核心问题", @"紧急情况问题", @"泊车问题", @"路标与路牌问题", @"道路位置问题", @"交叉路口的让路问题"];
 
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YYHCatagoriesCell class]) bundle:nil] forCellReuseIdentifier:cellID];

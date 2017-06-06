@@ -46,7 +46,7 @@
 
 #pragma mark - -------buttonClick--------------
 - (IBAction)colseButtonClick {
-    YYHFunc
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:YYHTCloseButtonDidClicked object:nil];
 }
 
@@ -120,7 +120,6 @@
     [super awakeFromNib];
 
     if (iphone4) {
-
         self.questionLabel.font = [UIFont systemFontOfSize:12];
 
         self.distanceToTop.constant = 40;
@@ -130,13 +129,57 @@
         self.topViewDistance.constant = 15;
 
     }
-    if (iphone5) {
+    else if (iphone5) {
+        self.questionLabel.font = [UIFont systemFontOfSize:15];
 
-        self.questionLabel.font = [UIFont systemFontOfSize:14];
 
 
+        self.distanceToTop.constant = 40;
+        self.timeLabel.font = [UIFont systemFontOfSize:14];
+        self.indexLabel.font = [UIFont systemFontOfSize:12];
+
+        self.topViewDistance.constant = 15;
 
     }
+    else if (iphone6){
+        self.questionLabel.font = [UIFont systemFontOfSize:16];
+
+
+        self.distanceToTop.constant = 40;
+        self.timeLabel.font = [UIFont systemFontOfSize:16];
+        self.indexLabel.font = [UIFont systemFontOfSize:13];
+
+        self.topViewDistance.constant = 15;
+    }
+    else if (iphone6P || iphone7P){
+        self.distanceToTop.constant = 140;
+        self.questionLabel.font = [UIFont systemFontOfSize:16];
+
+
+        self.timeLabel.font = [UIFont systemFontOfSize:16];
+        self.indexLabel.font = [UIFont systemFontOfSize:13];
+
+        self.topViewDistance.constant = 15;
+    }
+    else if (iPad){
+        self.distanceToTop.constant = 250;
+        self.questionLabel.font = [UIFont systemFontOfSize:25];
+
+        self.timeLabel.font = [UIFont systemFontOfSize:25];
+        self.indexLabel.font = [UIFont systemFontOfSize:23];
+
+        self.topViewDistance.constant = 30;
+    }
+    else if (iPad12){
+        self.distanceToTop.constant = 280;
+        self.questionLabel.font = [UIFont systemFontOfSize:25];
+
+        self.timeLabel.font = [UIFont systemFontOfSize:25];
+        self.indexLabel.font = [UIFont systemFontOfSize:23];
+
+        self.topViewDistance.constant = 30;
+    }
+
 
     
 
