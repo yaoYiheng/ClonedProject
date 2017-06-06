@@ -119,20 +119,21 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 
+
     if (iphone4) {
-        self.questionLabel.font = [UIFont systemFontOfSize:12];
+        self.questionLabel.font = [UIFont systemFontOfSize:13];
 
         self.distanceToTop.constant = 40;
         self.timeLabel.font = [UIFont systemFontOfSize:13];
         self.indexLabel.font = [UIFont systemFontOfSize:11];
-
+        self.gapBetween.constant = 10;
         self.topViewDistance.constant = 15;
 
     }
     else if (iphone5) {
         self.questionLabel.font = [UIFont systemFontOfSize:15];
 
-
+        self.gapBetween.constant = 20;
 
         self.distanceToTop.constant = 40;
         self.timeLabel.font = [UIFont systemFontOfSize:14];
@@ -156,10 +157,10 @@
         self.questionLabel.font = [UIFont systemFontOfSize:16];
 
 
-        self.timeLabel.font = [UIFont systemFontOfSize:16];
-        self.indexLabel.font = [UIFont systemFontOfSize:13];
+        self.timeLabel.font = [UIFont systemFontOfSize:18];
+        self.indexLabel.font = [UIFont systemFontOfSize:15];
 
-        self.topViewDistance.constant = 15;
+        self.topViewDistance.constant = 30;
     }
     else if (iPad){
         self.distanceToTop.constant = 250;
@@ -189,14 +190,9 @@
 
     self.imageView.layer.masksToBounds = YES;
     self.imageView.layer.cornerRadius = YYHCornerRadius;
-    //紫色
-//    self.questionLabel.textColor = YYHColor(240, 89, 249);
-//    绿色
-//    self.questionLabel.textColor = YYHColor(38, 199, 111);
-    self.questionLabel.textColor = YYHColor(44, 202, 235);
-//    self.questionLabel.textColor = YYHRandomColor;
 
-//    [self addTimer];
+    self.questionLabel.textColor = YYHColor(44, 202, 235);
+
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeTimeLabel:) name:YYHCountDownNotification object:nil];
 
@@ -213,21 +209,6 @@
 
 
     self.timeLabel.text =  [NSString stringWithFormat:@"%02ld:%02ld", second / 60, second % 60];
-}
-
-
-- (void)layoutSubviews{
-    [super layoutSubviews];
-    //超出父控件也显示
-    self.resultLable.clipsToBounds = NO;
-    if (iphone4) {
-        self.gapBetween.constant = 10;
-        [self layoutIfNeeded];
-    }
-    if (iphone5) {
-        self.gapBetween.constant = 20;
-        [self layoutIfNeeded];
-    }
 }
 
 
@@ -277,7 +258,6 @@
 
     self.selectedButton = nil;
     self.resultLable.text = nil;
-//    self.questionLabel.text = nil;
-//    self.questionLabel.textAlignment = NSTextAlignmentCenter;
+
 }
 @end

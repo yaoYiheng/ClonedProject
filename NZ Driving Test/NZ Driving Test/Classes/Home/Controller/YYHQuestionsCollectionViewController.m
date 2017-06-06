@@ -51,6 +51,9 @@ static NSString * const reuseIdentifier = @"cell";
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self name:YYHTCloseButtonDidClicked object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:YYHPassingWrongNotification object:nil];
+
+    [self.timer invalidate];
+    self.timer = nil;
 }
 
 #pragma mark - -------configure--------------

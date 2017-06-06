@@ -14,14 +14,25 @@
 @end
 
 @implementation YYHSettingController
+- (IBAction)segmentClicked:(UISegmentedControl *)sender {
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:YYHChangeVersionNotification object:sender];
+}
 
 static NSString * const reuseIdentifier = @"cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.navigationItem.title = @"设置";
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"Info"] hightligtedImage:[UIImage imageNamed:@"Info"] Target:self action:@selector(showDisclamer)];
+    self.navigationItem.title = @"更多";
+
+
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.image = [UIImage imageNamed:@"background"];
+    self.tableView.backgroundView = imageView;
+
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
 }
 
 - (void)showDisclamer{
@@ -37,31 +48,9 @@ static NSString * const reuseIdentifier = @"cell";
 #pragma mark - Table view data source
 
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return 1;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
-
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
-    }
-
-
-
-
-    return cell;
-}
-
-
 #pragma mark - -------delegate--------------
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 0) {
 
-
-    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 @end

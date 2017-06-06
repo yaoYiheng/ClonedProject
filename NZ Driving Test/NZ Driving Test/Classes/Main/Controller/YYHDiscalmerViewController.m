@@ -28,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.navigationItem.title = @"免责声明";
     [self loadDiscalmer];
 }
 -(void)loadDiscalmer

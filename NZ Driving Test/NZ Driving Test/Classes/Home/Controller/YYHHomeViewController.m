@@ -88,9 +88,13 @@
 
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(typeButtonDidClicked:) name:YYHTypeButtonDidClicked object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeVersion:) name:YYHChangeVersionNotification object:nil];
 }
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self name:YYHTypeButtonDidClicked object:nil];
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:YYHChangeVersionNotification object:nil];
 }
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
@@ -193,8 +197,6 @@
     self.allQuestionEN = [YYHQuestionItem mj_objectArrayWithFilename: @"正确.plist"];
 
 
-#warning 在此可修改中文或英文版
-
     [self.allQuestionsCN enumerateObjectsUsingBlock:^(YYHQuestionItem * questionItem, NSUInteger idx, BOOL * _Nonnull stop) {
         if (questionItem.Category == YYHCategoryClass3To5) {
             [self.heavy3_5TpyeArray addObject:questionItem];
@@ -223,6 +225,59 @@
     [self.heavyTpyeArray enumerateObjectsUsingBlock:self.seperateItems];
 
 
+
+
+    
+}
+
+- (void)chageVersionWithArray: (NSArray *)array{
+
+    [array enumerateObjectsUsingBlock:^(YYHQuestionItem * questionItem, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (questionItem.Category == YYHCategoryClass3To5) {
+            [self.heavy3_5TpyeArray addObject:questionItem];
+        }
+
+        //
+        if (questionItem.Type == YYHTypeCar) {
+            [self.carTypeArray addObject:questionItem];
+        }
+        else if (questionItem.Type == YYHTypeMotorcycle){
+            [self.motorcycleTypeArray addObject:questionItem];
+        }
+        else if (questionItem.Type == YYHTypeHeavyVehicle){
+            [self.heavyTpyeArray addObject:questionItem];
+        }
+        else if (questionItem.Category == YYHCategoryClass3To5) {
+
+        }
+    }];
+
+    //从每个类型中分离出不同的类别
+
+
+    [self.carTypeArray enumerateObjectsUsingBlock:self.seperateItems];
+    [self.motorcycleTypeArray enumerateObjectsUsingBlock:self.seperateItems];
+    [self.heavyTpyeArray enumerateObjectsUsingBlock:self.seperateItems];
+}
+
+
+/**
+ 改变问题语言
+
+ */
+-(void)changeVersion: (NSNotification *)info{
+
+    UISegmentedControl *sender = info.object;
+
+    if (sender.selectedSegmentIndex == 0) {
+        //加载中文版本
+        [self chageVersionWithArray:self.allQuestionsCN];
+
+
+    }else if (sender.selectedSegmentIndex == 1){
+        //加载英文版本
+        [self chageVersionWithArray:self.allQuestionEN];
+    }
     
 }
 #pragma mark - -------addTargetForButton--------------

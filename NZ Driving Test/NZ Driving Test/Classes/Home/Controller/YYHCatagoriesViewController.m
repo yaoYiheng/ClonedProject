@@ -96,7 +96,6 @@ static NSString * const cellID = @"cell";
 #pragma mark - -------tableView data sourse--------------
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-//    YYHCatagoriesCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
 
     YYHCatagoriesCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
 
@@ -151,7 +150,7 @@ static NSString * const cellID = @"cell";
 
     //for core questions
     if(indexPath.row == 1){
-//        NSMutableArray *coreArray = [NSMutableArray array];
+
         
         questionVC.questionArray = self.coreC;
     }
@@ -196,7 +195,7 @@ static NSString * const cellID = @"cell";
         self.tableView.contentInset = UIEdgeInsetsMake(YYHMargin * 3, 0, 0, 0);
     }
 
-    self.categoreis = @[@"模拟测试", @"核心问题", @"紧急情况问题", @"泊车问题", @"路标与路牌问题", @"道路位置问题", @"交叉路口的让路问题"];
+    self.categoreis = @[@"随机三十五题", @"核心问题", @"紧急情况问题", @"泊车问题", @"路标与路牌问题", @"道路位置问题", @"交叉路口的让路问题"];
 
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YYHCatagoriesCell class]) bundle:nil] forCellReuseIdentifier:cellID];
     

@@ -34,8 +34,7 @@
 
 - (void)buttonClick: (YYHButtonOnChooseTyepView *)button{
 
-//    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-//    dict[YYHTypeButtonDidClicked] = button;
+
     [[NSNotificationCenter defaultCenter] postNotificationName:YYHTypeButtonDidClicked  object:button userInfo:nil];;
 }
 @end

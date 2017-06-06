@@ -22,7 +22,7 @@
 
 
 
-    self.titleLabel.font = [UIFont systemFontOfSize:17];
+    
     self.titleLabel.contentMode = UIViewContentModeScaleAspectFill;
     self.titleLabel.numberOfLines = 0;
     //可以通过修改内容内边距来调整文字的显示区域
@@ -36,10 +36,8 @@
     [self setBackgroundImage:[UIImage imageNamed:@"optionals_click"] forState:UIControlStateSelected];
     [self setBackgroundImage:[UIImage imageWithStretched:@"button_normal_backbround"] forState:UIControlStateNormal];
 
-    if (iphone5 || iphone4) {
-        self.layer.cornerRadius = 5;
-    }
-    self.layer.cornerRadius = 10;
+
+    self.layer.cornerRadius = YYHMargin;
 
     self.titleLabel.contentMode = UIViewContentModeScaleAspectFill;
     self.titleLabel.numberOfLines = 0;

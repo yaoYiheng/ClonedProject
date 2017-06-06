@@ -7,27 +7,7 @@
 //
 
 #import "YYHQuestionItem.h"
-/*
- @property (nonatomic, strong) NSString *A;
- @property (nonatomic, strong) NSString *B;
- @property (nonatomic, strong) NSString *C;
- @property (nonatomic, strong) NSString *D;
 
-
- @property (nonatomic, strong) NSString *CorrectAnswer;
- @property (nonatomic, strong) NSString *Image;
-
-@property (nonatomic, strong) NSString *Question;
- 
- @property (nonatomic, assign) YYHType Type;
-
-
-@property (nonatomic, assign) YYHCategory Category;
-
-@property (nonatomic, assign) NSInteger total;
-
-@property (nonatomic, strong) NSIndexPath *current;
- */
 
 @implementation YYHQuestionItem : NSObject 
 
@@ -43,13 +23,7 @@
     [aCoder encodeObject:self.Image forKey:@"Image"];
     [aCoder encodeObject:self.Question forKey:@"Question"];
 
-    /*
-     self.Category = [aDecoder decodeIntegerForKey:@"Category"];
-     self.Type = [aDecoder decodeIntegerForKey:@"Type"];
-     self.total = [aDecoder decodeIntegerForKey:@"total"];
 
-     self.current = [aDecoder decodeObjectForKey:@"current"];
-     */
     [aCoder encodeInteger:self.Category forKey:@"Category"];
     [aCoder encodeInteger:self.Type forKey:@"Type"];
     [aCoder encodeObject:self.current forKey:@"current"];

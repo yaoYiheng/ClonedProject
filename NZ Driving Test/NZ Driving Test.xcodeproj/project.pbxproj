@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A507D1891EE14FBA00FDC5CE /* YYHStatictisController.m in Sources */ = {isa = PBXBuildFile; fileRef = A507D1881EE14FBA00FDC5CE /* YYHStatictisController.m */; };
+		A52FF4881EE6AF9000CBFD17 /* YYHSettingController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52FF4871EE6AF9000CBFD17 /* YYHSettingController.storyboard */; };
 		A53175921EDEBFDC00821472 /* YYHWrongCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A53175901EDEBFDC00821472 /* YYHWrongCell.m */; };
 		A53175931EDEBFDC00821472 /* YYHWrongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53175911EDEBFDC00821472 /* YYHWrongCell.xib */; };
 		A56A5BD91EE3FD8C0034780F /* 免责声明.htm in Resources */ = {isa = PBXBuildFile; fileRef = A56A5BD81EE3FD8C0034780F /* 免责声明.htm */; };
@@ -122,6 +123,7 @@
 /* Begin PBXFileReference section */
 		A507D1871EE14FBA00FDC5CE /* YYHStatictisController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHStatictisController.h; sourceTree = "<group>"; };
 		A507D1881EE14FBA00FDC5CE /* YYHStatictisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHStatictisController.m; sourceTree = "<group>"; };
+		A52FF4871EE6AF9000CBFD17 /* YYHSettingController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YYHSettingController.storyboard; sourceTree = "<group>"; };
 		A531758F1EDEBFDC00821472 /* YYHWrongCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYHWrongCell.h; path = ../../Setting/View/YYHWrongCell.h; sourceTree = "<group>"; };
 		A53175901EDEBFDC00821472 /* YYHWrongCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYHWrongCell.m; path = ../../Setting/View/YYHWrongCell.m; sourceTree = "<group>"; };
 		A53175911EDEBFDC00821472 /* YYHWrongCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YYHWrongCell.xib; path = ../../Setting/View/YYHWrongCell.xib; sourceTree = "<group>"; };
@@ -451,6 +453,7 @@
 			children = (
 				A5F6E1871ECDCB3400C2C8AC /* YYHSettingController.h */,
 				A5F6E1881ECDCB3400C2C8AC /* YYHSettingController.m */,
+				A52FF4871EE6AF9000CBFD17 /* YYHSettingController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -743,6 +746,7 @@
 				A5F6E2BB1ED3605D00C2C8AC /* 015.png in Resources */,
 				A5F6E2B41ED3605D00C2C8AC /* 008.png in Resources */,
 				A5F6E2661ED355B100C2C8AC /* YYHQuestionsCollectionViewCell.xib in Resources */,
+				A52FF4881EE6AF9000CBFD17 /* YYHSettingController.storyboard in Resources */,
 				A5F6E2D41ED3605D00C2C8AC /* 042.png in Resources */,
 				A5F6E2C81ED3605D00C2C8AC /* 030.png in Resources */,
 				A5F6E2E81ED3605D00C2C8AC /* 062.png in Resources */,
@@ -924,7 +928,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NZ Driving Test/Classes/Other/NZ Driving Test.pch";
 				INFOPLIST_FILE = "NZ Driving Test/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.NZ-Driving-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -940,7 +944,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NZ Driving Test/Classes/Other/NZ Driving Test.pch";
 				INFOPLIST_FILE = "NZ Driving Test/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.NZ-Driving-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";

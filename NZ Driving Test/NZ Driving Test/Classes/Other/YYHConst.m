@@ -39,3 +39,7 @@ NSString * const YYHCacheFileName = @"questionArray.plist";
 NSString * const YYHPassingWrongNotification = @"YYHPassingWrongNotification";
 
 NSString * const YYHWrongQuestionsArray = @"YYHWrongQuestionsArray";
+
+
+NSString * const YYHChangeVersionNotification = @"YYHChangeVersionNotification";
+

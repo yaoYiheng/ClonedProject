@@ -41,3 +41,8 @@ UIKIT_EXTERN NSString * const YYHPassingWrongNotification;
 
 
 UIKIT_EXTERN NSString * const YYHWrongQuestionsArray;
+
+
+UIKIT_EXTERN NSString * const YYHChangeVersionNotification;
+
+

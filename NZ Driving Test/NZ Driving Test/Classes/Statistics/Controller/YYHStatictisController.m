@@ -56,17 +56,17 @@ static NSString * const cellID = @"cell";
 
 }
 
+/**
+ 每一需要显示该view时, 从新加载数据
+
+ @param animated <#animated description#>
+ */
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    //
+
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSData *savedEncodedData = [defaults objectForKey:YYHWrongQuestionsArray];
     self.questionArray = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithData:savedEncodedData];
-
-
-    if (self.questionArray.count == 0) {
-        NSLog(@"没有任何错题, 真棒!");
-    }
 
     [self.tableView reloadData];
 
@@ -84,6 +84,10 @@ static NSString * const cellID = @"cell";
     
 
 }
+
+/**
+ 左划删除
+ */
 - (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
 
     UITableViewRowAction *action = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
@@ -106,7 +110,7 @@ static NSString * const cellID = @"cell";
     return @[action];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (YYHScreenH < iphone7P) {
+    if (iPad || iPad12) {
         return 160;
     }
     else return 90;

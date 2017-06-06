@@ -75,11 +75,13 @@
                                  title:@"统计"];
 
     //Setting
-    YYHSettingController *settingVC = [YYHSettingController new];
+    UIStoryboard *setting = [UIStoryboard storyboardWithName:NSStringFromClass([YYHSettingController class]) bundle:nil];
+
+    YYHSettingController *settingVC = [setting instantiateInitialViewController];
     [self configureChildViewController:settingVC
                                  image:@"setting_clicked"
                          selectedImage:@"setting_normal"
-                                 title:@"设置"];
+                                 title:@"更多"];
 
 }
 
