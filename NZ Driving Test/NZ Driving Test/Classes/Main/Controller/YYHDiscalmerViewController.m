@@ -7,18 +7,18 @@
 //
 
 #import "YYHDiscalmerViewController.h"
-#import <SafariServices/SafariServices.h>
+#import <WebKit/WebKit.h>
 
 @interface YYHDiscalmerViewController ()
-@property (weak, nonatomic) UIWebView *webView;
+@property (weak, nonatomic) WKWebView *webView;
 
 @end
 
 @implementation YYHDiscalmerViewController
 
-- (UIWebView *)webView{
+- (WKWebView *)webView{
     if (!_webView) {
-        UIWebView *webView = [[UIWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        WKWebView *webView = [[WKWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
         [self.view addSubview:webView];
         self.webView = webView;
     }
@@ -35,11 +35,9 @@
 {
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"免责声明.htm" withExtension:nil];
 
+      NSURLRequest *request = [NSURLRequest requestWithURL:url];
     //加载网页
-    [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
-
-
-    self.webView.dataDetectorTypes = UIDataDetectorTypeAll;
+    [self.webView loadRequest:request];
 }
 
 

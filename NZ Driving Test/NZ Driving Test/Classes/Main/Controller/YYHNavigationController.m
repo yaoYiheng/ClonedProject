@@ -58,9 +58,9 @@
     if (self.childViewControllers.count > 0) {
 
         viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem backBarButtonWithImage:[UIImage imageNamed:@"closeBack"]  hightligtedImage:[UIImage imageNamed:@"closeBack"] Target:self action:@selector(back) title:@"返回"];
-
-        if (self.childViewControllers.count > 1) {
             viewController.hidesBottomBarWhenPushed = YES;
+        if (self.childViewControllers.count > 1) {
+
 
 
         }

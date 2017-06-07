@@ -194,35 +194,7 @@
 
     self.allQuestionsCN = [YYHQuestionItem mj_objectArrayWithFilename: @"中文版问题.plist"];
 
-    self.allQuestionEN = [YYHQuestionItem mj_objectArrayWithFilename: @"正确.plist"];
-
-
-    [self.allQuestionsCN enumerateObjectsUsingBlock:^(YYHQuestionItem * questionItem, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (questionItem.Category == YYHCategoryClass3To5) {
-            [self.heavy3_5TpyeArray addObject:questionItem];
-        }
-
-        //
-        if (questionItem.Type == YYHTypeCar) {
-            [self.carTypeArray addObject:questionItem];
-        }
-        else if (questionItem.Type == YYHTypeMotorcycle){
-            [self.motorcycleTypeArray addObject:questionItem];
-        }
-        else if (questionItem.Type == YYHTypeHeavyVehicle){
-            [self.heavyTpyeArray addObject:questionItem];
-        }
-        else if (questionItem.Category == YYHCategoryClass3To5) {
-
-        }
-    }];
-
-    //从每个类型中分离出不同的类别
-
-
-    [self.carTypeArray enumerateObjectsUsingBlock:self.seperateItems];
-    [self.motorcycleTypeArray enumerateObjectsUsingBlock:self.seperateItems];
-    [self.heavyTpyeArray enumerateObjectsUsingBlock:self.seperateItems];
+    [self chageVersionWithArray:self.allQuestionsCN];
 
 
 
@@ -267,16 +239,22 @@
  */
 -(void)changeVersion: (NSNotification *)info{
 
+
     UISegmentedControl *sender = info.object;
 
     if (sender.selectedSegmentIndex == 0) {
+        [self initAllArrays];
         //加载中文版本
         [self chageVersionWithArray:self.allQuestionsCN];
 
 
     }else if (sender.selectedSegmentIndex == 1){
+        [self initAllArrays];
         //加载英文版本
+        self.allQuestionEN = [YYHQuestionItem mj_objectArrayWithFilename: @"正确.plist"];
+
         [self chageVersionWithArray:self.allQuestionEN];
+
     }
     
 }
@@ -319,7 +297,12 @@
 
     [self.navigationController pushViewController:catagory animated:YES];
 }
-
+- (void)initAllArrays{
+    self.motorcycleTypeArray = nil;
+    self.carTypeArray = nil;
+    self.heavy3_5TpyeArray = nil;
+    self.heavyTpyeArray = nil;
+}
 #pragma mark - -------lazy loading--------------
 - (NSMutableArray *)motorcycleTypeArray{
     if (!_motorcycleTypeArray) {

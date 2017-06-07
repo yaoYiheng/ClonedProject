@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A507D1891EE14FBA00FDC5CE /* YYHStatictisController.m in Sources */ = {isa = PBXBuildFile; fileRef = A507D1881EE14FBA00FDC5CE /* YYHStatictisController.m */; };
 		A52FF4881EE6AF9000CBFD17 /* YYHSettingController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52FF4871EE6AF9000CBFD17 /* YYHSettingController.storyboard */; };
+		A52FF48D1EE7DCE900CBFD17 /* 019.png in Resources */ = {isa = PBXBuildFile; fileRef = A52FF48C1EE7DCE900CBFD17 /* 019.png */; };
 		A53175921EDEBFDC00821472 /* YYHWrongCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A53175901EDEBFDC00821472 /* YYHWrongCell.m */; };
 		A53175931EDEBFDC00821472 /* YYHWrongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53175911EDEBFDC00821472 /* YYHWrongCell.xib */; };
 		A56A5BD91EE3FD8C0034780F /* 免责声明.htm in Resources */ = {isa = PBXBuildFile; fileRef = A56A5BD81EE3FD8C0034780F /* 免责声明.htm */; };
@@ -49,10 +50,8 @@
 		A5F6E2651ED355B100C2C8AC /* YYHQuestionsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E2631ED355B100C2C8AC /* YYHQuestionsCollectionViewCell.m */; };
 		A5F6E2661ED355B100C2C8AC /* YYHQuestionsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2641ED355B100C2C8AC /* YYHQuestionsCollectionViewCell.xib */; };
 		A5F6E2691ED3576E00C2C8AC /* YYHAnswerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E2681ED3576E00C2C8AC /* YYHAnswerButton.m */; };
-		A5F6E2AC1ED3605D00C2C8AC /* 000.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E26B1ED3605D00C2C8AC /* 000.png */; };
 		A5F6E2AD1ED3605D00C2C8AC /* 001.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E26C1ED3605D00C2C8AC /* 001.png */; };
 		A5F6E2AE1ED3605D00C2C8AC /* 002.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E26D1ED3605D00C2C8AC /* 002.png */; };
-		A5F6E2AF1ED3605D00C2C8AC /* 003.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E26E1ED3605D00C2C8AC /* 003.png */; };
 		A5F6E2B01ED3605D00C2C8AC /* 004.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E26F1ED3605D00C2C8AC /* 004.png */; };
 		A5F6E2B11ED3605D00C2C8AC /* 005.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2701ED3605D00C2C8AC /* 005.png */; };
 		A5F6E2B21ED3605D00C2C8AC /* 006.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2711ED3605D00C2C8AC /* 006.png */; };
@@ -68,7 +67,6 @@
 		A5F6E2BC1ED3605D00C2C8AC /* 016.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E27B1ED3605D00C2C8AC /* 016.png */; };
 		A5F6E2BD1ED3605D00C2C8AC /* 017.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E27C1ED3605D00C2C8AC /* 017.png */; };
 		A5F6E2BE1ED3605D00C2C8AC /* 018.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E27D1ED3605D00C2C8AC /* 018.png */; };
-		A5F6E2BF1ED3605D00C2C8AC /* 019.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E27E1ED3605D00C2C8AC /* 019.png */; };
 		A5F6E2C01ED3605D00C2C8AC /* 020.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E27F1ED3605D00C2C8AC /* 020.png */; };
 		A5F6E2C11ED3605D00C2C8AC /* 021.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2801ED3605D00C2C8AC /* 021.png */; };
 		A5F6E2C21ED3605D00C2C8AC /* 022.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2811ED3605D00C2C8AC /* 022.png */; };
@@ -124,6 +122,7 @@
 		A507D1871EE14FBA00FDC5CE /* YYHStatictisController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHStatictisController.h; sourceTree = "<group>"; };
 		A507D1881EE14FBA00FDC5CE /* YYHStatictisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHStatictisController.m; sourceTree = "<group>"; };
 		A52FF4871EE6AF9000CBFD17 /* YYHSettingController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YYHSettingController.storyboard; sourceTree = "<group>"; };
+		A52FF48C1EE7DCE900CBFD17 /* 019.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 019.png; sourceTree = "<group>"; };
 		A531758F1EDEBFDC00821472 /* YYHWrongCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYHWrongCell.h; path = ../../Setting/View/YYHWrongCell.h; sourceTree = "<group>"; };
 		A53175901EDEBFDC00821472 /* YYHWrongCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYHWrongCell.m; path = ../../Setting/View/YYHWrongCell.m; sourceTree = "<group>"; };
 		A53175911EDEBFDC00821472 /* YYHWrongCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YYHWrongCell.xib; path = ../../Setting/View/YYHWrongCell.xib; sourceTree = "<group>"; };
@@ -197,10 +196,8 @@
 		A5F6E2641ED355B100C2C8AC /* YYHQuestionsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYHQuestionsCollectionViewCell.xib; sourceTree = "<group>"; };
 		A5F6E2671ED3576E00C2C8AC /* YYHAnswerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHAnswerButton.h; sourceTree = "<group>"; };
 		A5F6E2681ED3576E00C2C8AC /* YYHAnswerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHAnswerButton.m; sourceTree = "<group>"; };
-		A5F6E26B1ED3605D00C2C8AC /* 000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 000.png; sourceTree = "<group>"; };
 		A5F6E26C1ED3605D00C2C8AC /* 001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 001.png; sourceTree = "<group>"; };
 		A5F6E26D1ED3605D00C2C8AC /* 002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 002.png; sourceTree = "<group>"; };
-		A5F6E26E1ED3605D00C2C8AC /* 003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 003.png; sourceTree = "<group>"; };
 		A5F6E26F1ED3605D00C2C8AC /* 004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 004.png; sourceTree = "<group>"; };
 		A5F6E2701ED3605D00C2C8AC /* 005.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 005.png; sourceTree = "<group>"; };
 		A5F6E2711ED3605D00C2C8AC /* 006.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 006.png; sourceTree = "<group>"; };
@@ -216,7 +213,6 @@
 		A5F6E27B1ED3605D00C2C8AC /* 016.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 016.png; sourceTree = "<group>"; };
 		A5F6E27C1ED3605D00C2C8AC /* 017.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 017.png; sourceTree = "<group>"; };
 		A5F6E27D1ED3605D00C2C8AC /* 018.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 018.png; sourceTree = "<group>"; };
-		A5F6E27E1ED3605D00C2C8AC /* 019.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 019.png; sourceTree = "<group>"; };
 		A5F6E27F1ED3605D00C2C8AC /* 020.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 020.png; sourceTree = "<group>"; };
 		A5F6E2801ED3605D00C2C8AC /* 021.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 021.png; sourceTree = "<group>"; };
 		A5F6E2811ED3605D00C2C8AC /* 022.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 022.png; sourceTree = "<group>"; };
@@ -557,10 +553,8 @@
 		A5F6E26A1ED3605D00C2C8AC /* 题库图片 */ = {
 			isa = PBXGroup;
 			children = (
-				A5F6E26B1ED3605D00C2C8AC /* 000.png */,
 				A5F6E26C1ED3605D00C2C8AC /* 001.png */,
 				A5F6E26D1ED3605D00C2C8AC /* 002.png */,
-				A5F6E26E1ED3605D00C2C8AC /* 003.png */,
 				A5F6E26F1ED3605D00C2C8AC /* 004.png */,
 				A5F6E2701ED3605D00C2C8AC /* 005.png */,
 				A5F6E2711ED3605D00C2C8AC /* 006.png */,
@@ -576,7 +570,7 @@
 				A5F6E27B1ED3605D00C2C8AC /* 016.png */,
 				A5F6E27C1ED3605D00C2C8AC /* 017.png */,
 				A5F6E27D1ED3605D00C2C8AC /* 018.png */,
-				A5F6E27E1ED3605D00C2C8AC /* 019.png */,
+				A52FF48C1EE7DCE900CBFD17 /* 019.png */,
 				A5F6E27F1ED3605D00C2C8AC /* 020.png */,
 				A5F6E2801ED3605D00C2C8AC /* 021.png */,
 				A5F6E2811ED3605D00C2C8AC /* 022.png */,
@@ -693,7 +687,6 @@
 				A56A5BD91EE3FD8C0034780F /* 免责声明.htm in Resources */,
 				A5F6E2CB1ED3605D00C2C8AC /* 033.png in Resources */,
 				A5F6E2B11ED3605D00C2C8AC /* 005.png in Resources */,
-				A5F6E2BF1ED3605D00C2C8AC /* 019.png in Resources */,
 				A5F6E2C41ED3605D00C2C8AC /* 025.png in Resources */,
 				A5F6E2B01ED3605D00C2C8AC /* 004.png in Resources */,
 				A5F6E2E71ED3605D00C2C8AC /* 061.png in Resources */,
@@ -705,10 +698,8 @@
 				A5F6E2DB1ED3605D00C2C8AC /* 049.png in Resources */,
 				A5F6E2C01ED3605D00C2C8AC /* 020.png in Resources */,
 				A5F6E2CE1ED3605D00C2C8AC /* 036.png in Resources */,
-				A5F6E2AF1ED3605D00C2C8AC /* 003.png in Resources */,
 				A5F6E2D11ED3605D00C2C8AC /* 039.png in Resources */,
 				A5F6E2AE1ED3605D00C2C8AC /* 002.png in Resources */,
-				A5F6E2AC1ED3605D00C2C8AC /* 000.png in Resources */,
 				A5F6E2B31ED3605D00C2C8AC /* 007.png in Resources */,
 				A5F6E2E21ED3605D00C2C8AC /* 056.png in Resources */,
 				A5F6E2B81ED3605D00C2C8AC /* 012.png in Resources */,
@@ -717,6 +708,7 @@
 				A5F6E2DF1ED3605D00C2C8AC /* 053.png in Resources */,
 				A56F2E491EC5D9E900DCF2D2 /* LaunchScreen.storyboard in Resources */,
 				A5F6E2491ED1A9EA00C2C8AC /* YYHChooseTypeView.xib in Resources */,
+				A52FF48D1EE7DCE900CBFD17 /* 019.png in Resources */,
 				A5F6E2C21ED3605D00C2C8AC /* 022.png in Resources */,
 				A5F6E2B91ED3605D00C2C8AC /* 013.png in Resources */,
 				A5F6E2EB1ED3605D00C2C8AC /* 065.png in Resources */,
@@ -928,7 +920,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NZ Driving Test/Classes/Other/NZ Driving Test.pch";
 				INFOPLIST_FILE = "NZ Driving Test/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.NZ-Driving-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -944,7 +936,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NZ Driving Test/Classes/Other/NZ Driving Test.pch";
 				INFOPLIST_FILE = "NZ Driving Test/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.NZ-Driving-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -52,5 +52,40 @@ static NSString * const reuseIdentifier = @"cell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    if (indexPath.row == 1) {
+        //清除所有错题.
+        [self clearAllWrong];
+    }
+    if(indexPath.row == 2){
+        
+    }
+}
+#pragma mark - -------具体方法实现--------------
+- (void)clearAllWrong{
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"确定清除所有错题吗?" message:nil preferredStyle:UIAlertControllerStyleAlert];
+
+    UIAlertAction *cancle = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *confirm = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+
+        //删除所有错题
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSData *savedEncodedData = [defaults objectForKey:YYHWrongQuestionsArray];
+        NSMutableArray *array = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithData:savedEncodedData];
+        //删除数组所有元素
+        [array removeAllObjects];
+
+        //覆盖
+        NSData *encodedWrongList = [NSKeyedArchiver archivedDataWithRootObject:array];
+
+        [defaults setObject:encodedWrongList forKey:YYHWrongQuestionsArray];
+
+
+    }];
+
+    [alertVC addAction:cancle];
+    [alertVC addAction:confirm];
+
+    [self presentViewController:alertVC animated:YES completion:nil];
 }
 @end

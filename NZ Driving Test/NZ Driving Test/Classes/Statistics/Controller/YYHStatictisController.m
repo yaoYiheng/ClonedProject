@@ -65,10 +65,14 @@ static NSString * const cellID = @"cell";
     [super viewWillAppear:animated];
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSData *savedEncodedData = [defaults objectForKey:YYHWrongQuestionsArray];
-    self.questionArray = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithData:savedEncodedData];
 
-    [self.tableView reloadData];
+    NSData *savedEncodedData = [defaults objectForKey:YYHWrongQuestionsArray];
+    if (savedEncodedData) {
+        self.questionArray = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithData:savedEncodedData];
+
+        [self.tableView reloadData];
+    }
+
 
 }
 
