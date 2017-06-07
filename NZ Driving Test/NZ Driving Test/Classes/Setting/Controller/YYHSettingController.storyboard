@@ -132,7 +132,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1eJ-Yc-kTC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-518" y="271"/>
+            <point key="canvasLocation" x="-1238" y="434"/>
         </scene>
         <!--Discalmer View Controller-->
         <scene sceneID="KcM-GC-7e3">
@@ -145,12 +145,56 @@
                     <view key="view" contentMode="scaleToFill" id="4PS-gL-jum">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="免责声明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myM-ra-eRF">
+                                <rect key="frame" x="153.5" y="30" width="69.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wc-ah-rSq">
+                                <rect key="frame" x="15" y="70.5" width="345" height="115"/>
+                                <string key="text">  本应用程序是为了帮助新驾驶员熟悉新西兰道路规范和学习者理论测试的练习.
+
+  开发者建议您将其用作新西兰官方交规书籍的练习工具，以更全面地了解新西兰的道路和安全规则。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qK4-9J-OHQ">
+                                <rect key="frame" x="170.5" y="215.5" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEg-sa-5v2">
+                                <rect key="frame" x="15" y="256.5" width="345" height="100.5"/>
+                                <string key="text">    本应用提供的内容是根据新西兰官方道路规范制定的.
+
+   然而, 测试并不以与学习者理论测试完全相同的方式呈现, 而新西兰运输局(NZTA)也不认可, 批准或证明本应用程序内容的有效性.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qK4-9J-OHQ" firstAttribute="centerX" secondItem="4PS-gL-jum" secondAttribute="centerX" id="Bbf-Ds-NRB"/>
+                            <constraint firstAttribute="trailing" secondItem="0wc-ah-rSq" secondAttribute="trailing" constant="15" id="GpI-3N-DQx"/>
+                            <constraint firstItem="NEg-sa-5v2" firstAttribute="leading" secondItem="4PS-gL-jum" secondAttribute="leading" constant="15" id="UIL-3t-CR2"/>
+                            <constraint firstItem="NEg-sa-5v2" firstAttribute="top" secondItem="qK4-9J-OHQ" secondAttribute="bottom" constant="20" id="WKD-84-bqV"/>
+                            <constraint firstItem="myM-ra-eRF" firstAttribute="centerX" secondItem="4PS-gL-jum" secondAttribute="centerX" id="b65-wj-kEV"/>
+                            <constraint firstItem="0wc-ah-rSq" firstAttribute="top" secondItem="myM-ra-eRF" secondAttribute="bottom" constant="20" id="gR8-fU-x6T"/>
+                            <constraint firstItem="qK4-9J-OHQ" firstAttribute="top" secondItem="0wc-ah-rSq" secondAttribute="bottom" constant="30" id="itK-r1-oNo"/>
+                            <constraint firstAttribute="trailing" secondItem="NEg-sa-5v2" secondAttribute="trailing" constant="15" id="jWl-J1-9fE"/>
+                            <constraint firstItem="0wc-ah-rSq" firstAttribute="leading" secondItem="4PS-gL-jum" secondAttribute="leading" constant="15" id="m4e-St-MIq"/>
+                            <constraint firstItem="myM-ra-eRF" firstAttribute="top" secondItem="4PS-gL-jum" secondAttribute="top" constant="30" id="neo-tP-UDN"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Znp-ES-WfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-558" y="959"/>
+            <point key="canvasLocation" x="-478" y="814"/>
         </scene>
     </scenes>
 </document>

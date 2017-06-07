@@ -8,8 +8,9 @@
 
 #import "YYHSettingController.h"
 #import "YYHDiscalmerViewController.h"
-#import <SafariServices/SafariServices.h>
-@interface YYHSettingController ()
+#import <MessageUI/MessageUI.h>
+
+@interface YYHSettingController ()<MFMailComposeViewControllerDelegate>
 
 @end
 
@@ -58,10 +59,46 @@ static NSString * const reuseIdentifier = @"cell";
         [self clearAllWrong];
     }
     if(indexPath.row == 2){
+        //发送反馈
+        [self sendFeedback];
         
     }
 }
 #pragma mark - -------具体方法实现--------------
+- (void)sendFeedback{
+    //判断用户是否已设置邮件
+    if (![MFMailComposeViewController canSendMail]) {
+        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@" 您还未设置邮件" message:nil preferredStyle:UIAlertControllerStyleAlert];
+
+        UIAlertAction *cancle = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+
+        [alertVC addAction:cancle];
+
+        [self presentViewController:alertVC animated:YES completion:nil];
+        //不加return, 再没有设置邮件的情况下,程序会崩溃
+        return;
+
+    }
+
+    MFMailComposeViewController* composeVC = [[MFMailComposeViewController alloc] init];
+    composeVC.mailComposeDelegate = self;
+
+    // Configure the fields of the interface.
+    [composeVC setToRecipients:@[@"yiheng1117@gmail.com"]];
+    [composeVC setSubject:@"问题/建议反馈"];
+    [composeVC setMessageBody:@"" isHTML:NO];
+
+    // Present the view controller modally.
+    [self presentViewController:composeVC animated:YES completion:nil];
+}
+- (void)mailComposeController:(MFMailComposeViewController *)controller
+          didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    // Check the result or perform other tasks.
+
+    // Dismiss the mail compose view controller.
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)clearAllWrong{
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"确定清除所有错题吗?" message:nil preferredStyle:UIAlertControllerStyleAlert];
 

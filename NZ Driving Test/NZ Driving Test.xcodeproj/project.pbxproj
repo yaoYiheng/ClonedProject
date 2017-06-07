@@ -10,9 +10,9 @@
 		A507D1891EE14FBA00FDC5CE /* YYHStatictisController.m in Sources */ = {isa = PBXBuildFile; fileRef = A507D1881EE14FBA00FDC5CE /* YYHStatictisController.m */; };
 		A52FF4881EE6AF9000CBFD17 /* YYHSettingController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52FF4871EE6AF9000CBFD17 /* YYHSettingController.storyboard */; };
 		A52FF48D1EE7DCE900CBFD17 /* 019.png in Resources */ = {isa = PBXBuildFile; fileRef = A52FF48C1EE7DCE900CBFD17 /* 019.png */; };
+		A52FF4C91EE8678600CBFD17 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52FF4C81EE8678600CBFD17 /* MessageUI.framework */; };
 		A53175921EDEBFDC00821472 /* YYHWrongCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A53175901EDEBFDC00821472 /* YYHWrongCell.m */; };
 		A53175931EDEBFDC00821472 /* YYHWrongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53175911EDEBFDC00821472 /* YYHWrongCell.xib */; };
-		A56A5BD91EE3FD8C0034780F /* 免责声明.htm in Resources */ = {isa = PBXBuildFile; fileRef = A56A5BD81EE3FD8C0034780F /* 免责声明.htm */; };
 		A56A5BDC1EE3FFE60034780F /* YYHDiscalmerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A56A5BDB1EE3FFE60034780F /* YYHDiscalmerViewController.m */; };
 		A56F2E441EC5D9E900DCF2D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56F2E421EC5D9E900DCF2D2 /* Main.storyboard */; };
 		A56F2E461EC5D9E900DCF2D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A56F2E451EC5D9E900DCF2D2 /* Assets.xcassets */; };
@@ -123,10 +123,10 @@
 		A507D1881EE14FBA00FDC5CE /* YYHStatictisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHStatictisController.m; sourceTree = "<group>"; };
 		A52FF4871EE6AF9000CBFD17 /* YYHSettingController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YYHSettingController.storyboard; sourceTree = "<group>"; };
 		A52FF48C1EE7DCE900CBFD17 /* 019.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 019.png; sourceTree = "<group>"; };
+		A52FF4C81EE8678600CBFD17 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		A531758F1EDEBFDC00821472 /* YYHWrongCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYHWrongCell.h; path = ../../Setting/View/YYHWrongCell.h; sourceTree = "<group>"; };
 		A53175901EDEBFDC00821472 /* YYHWrongCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYHWrongCell.m; path = ../../Setting/View/YYHWrongCell.m; sourceTree = "<group>"; };
 		A53175911EDEBFDC00821472 /* YYHWrongCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YYHWrongCell.xib; path = ../../Setting/View/YYHWrongCell.xib; sourceTree = "<group>"; };
-		A56A5BD81EE3FD8C0034780F /* 免责声明.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "免责声明.htm"; sourceTree = "<group>"; };
 		A56A5BDA1EE3FFE60034780F /* YYHDiscalmerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHDiscalmerViewController.h; sourceTree = "<group>"; };
 		A56A5BDB1EE3FFE60034780F /* YYHDiscalmerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHDiscalmerViewController.m; sourceTree = "<group>"; };
 		A56F2E361EC5D9E900DCF2D2 /* NZ Driving Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NZ Driving Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,17 +271,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A52FF4C91EE8678600CBFD17 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A52FF4C71EE8678500CBFD17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A52FF4C81EE8678600CBFD17 /* MessageUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A56F2E2D1EC5D9E900DCF2D2 = {
 			isa = PBXGroup;
 			children = (
 				A56F2E381EC5D9E900DCF2D2 /* NZ Driving Test */,
 				A56F2E371EC5D9E900DCF2D2 /* Products */,
+				A52FF4C71EE8678500CBFD17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -421,7 +431,6 @@
 				A5F6E26A1ED3605D00C2C8AC /* 题库图片 */,
 				A5F6E2581ED3379700C2C8AC /* 正确.plist */,
 				A5F6E2591ED3379700C2C8AC /* 中文版问题.plist */,
-				A56A5BD81EE3FD8C0034780F /* 免责声明.htm */,
 				A5F6E18F1ECDD49A00C2C8AC /* MJExtension */,
 				A5F6E1761ECDC77600C2C8AC /* Categories */,
 				A5F6E1631ECDC27000C2C8AC /* AppDelegate.h */,
@@ -684,7 +693,6 @@
 				A5F6E2CD1ED3605D00C2C8AC /* 035.png in Resources */,
 				A5F6E2B21ED3605D00C2C8AC /* 006.png in Resources */,
 				A5F6E2DC1ED3605D00C2C8AC /* 050.png in Resources */,
-				A56A5BD91EE3FD8C0034780F /* 免责声明.htm in Resources */,
 				A5F6E2CB1ED3605D00C2C8AC /* 033.png in Resources */,
 				A5F6E2B11ED3605D00C2C8AC /* 005.png in Resources */,
 				A5F6E2C41ED3605D00C2C8AC /* 025.png in Resources */,
