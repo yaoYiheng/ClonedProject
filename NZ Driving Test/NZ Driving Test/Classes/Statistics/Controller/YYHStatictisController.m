@@ -15,6 +15,8 @@
 
 /** question Array*/
 @property (nonatomic, strong) NSMutableArray *questionArray;
+/** <#comments#>*/
+@property (nonatomic, weak) UIToolbar *toolBar;
 
 @end
 
@@ -36,10 +38,16 @@ static NSString * const cellID = @"cell";
 
 
     UIImageView *imageView = [[UIImageView alloc] init];
-    imageView.image = [UIImage imageNamed:@"background"];
+    imageView.image = [UIImage imageNamed:@"LaunchImage"];
     self.tableView.backgroundView = imageView;
 
+    UIToolbar *toolBar = [[UIToolbar alloc] initWithFrame:self.view.bounds];
+    toolBar.barStyle = UIBarStyleBlack;
+    toolBar.alpha = 0.8;
+    self.toolBar = toolBar;
 
+    [self.tableView addSubview:toolBar];
+    [self.view insertSubview:self.toolBar atIndex:1];
 
     self.navigationItem.title = @"错题统计";
 

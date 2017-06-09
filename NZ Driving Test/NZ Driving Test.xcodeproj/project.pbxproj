@@ -11,6 +11,7 @@
 		A52FF4881EE6AF9000CBFD17 /* YYHSettingController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52FF4871EE6AF9000CBFD17 /* YYHSettingController.storyboard */; };
 		A52FF48D1EE7DCE900CBFD17 /* 019.png in Resources */ = {isa = PBXBuildFile; fileRef = A52FF48C1EE7DCE900CBFD17 /* 019.png */; };
 		A52FF4C91EE8678600CBFD17 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52FF4C81EE8678600CBFD17 /* MessageUI.framework */; };
+		A52FF4CD1EE9045700CBFD17 /* 中文版问题.plist in Resources */ = {isa = PBXBuildFile; fileRef = A52FF4CC1EE9045700CBFD17 /* 中文版问题.plist */; };
 		A53175921EDEBFDC00821472 /* YYHWrongCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A53175901EDEBFDC00821472 /* YYHWrongCell.m */; };
 		A53175931EDEBFDC00821472 /* YYHWrongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53175911EDEBFDC00821472 /* YYHWrongCell.xib */; };
 		A56A5BDC1EE3FFE60034780F /* YYHDiscalmerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A56A5BDB1EE3FFE60034780F /* YYHDiscalmerViewController.m */; };
@@ -44,8 +45,7 @@
 		A5F6E24B1ED1B08100C2C8AC /* YYHHomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E24A1ED1B08100C2C8AC /* YYHHomeViewController.storyboard */; };
 		A5F6E24E1ED1B91A00C2C8AC /* YYHButtonOnChooseTyepView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E24D1ED1B91A00C2C8AC /* YYHButtonOnChooseTyepView.m */; };
 		A5F6E2511ED25C0C00C2C8AC /* YYHCatagoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E2501ED25C0C00C2C8AC /* YYHCatagoriesViewController.m */; };
-		A5F6E25A1ED3379700C2C8AC /* 正确.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2581ED3379700C2C8AC /* 正确.plist */; };
-		A5F6E25B1ED3379700C2C8AC /* 中文版问题.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2591ED3379700C2C8AC /* 中文版问题.plist */; };
+		A5F6E25A1ED3379700C2C8AC /* 英文版问题.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2581ED3379700C2C8AC /* 英文版问题.plist */; };
 		A5F6E2611ED3556900C2C8AC /* YYHQuestionsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E2601ED3556900C2C8AC /* YYHQuestionsCollectionViewController.m */; };
 		A5F6E2651ED355B100C2C8AC /* YYHQuestionsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E2631ED355B100C2C8AC /* YYHQuestionsCollectionViewCell.m */; };
 		A5F6E2661ED355B100C2C8AC /* YYHQuestionsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F6E2641ED355B100C2C8AC /* YYHQuestionsCollectionViewCell.xib */; };
@@ -124,6 +124,7 @@
 		A52FF4871EE6AF9000CBFD17 /* YYHSettingController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YYHSettingController.storyboard; sourceTree = "<group>"; };
 		A52FF48C1EE7DCE900CBFD17 /* 019.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 019.png; sourceTree = "<group>"; };
 		A52FF4C81EE8678600CBFD17 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		A52FF4CC1EE9045700CBFD17 /* 中文版问题.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "中文版问题.plist"; sourceTree = "<group>"; };
 		A531758F1EDEBFDC00821472 /* YYHWrongCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYHWrongCell.h; path = ../../Setting/View/YYHWrongCell.h; sourceTree = "<group>"; };
 		A53175901EDEBFDC00821472 /* YYHWrongCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYHWrongCell.m; path = ../../Setting/View/YYHWrongCell.m; sourceTree = "<group>"; };
 		A53175911EDEBFDC00821472 /* YYHWrongCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YYHWrongCell.xib; path = ../../Setting/View/YYHWrongCell.xib; sourceTree = "<group>"; };
@@ -187,8 +188,7 @@
 		A5F6E24D1ED1B91A00C2C8AC /* YYHButtonOnChooseTyepView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHButtonOnChooseTyepView.m; sourceTree = "<group>"; };
 		A5F6E24F1ED25C0C00C2C8AC /* YYHCatagoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHCatagoriesViewController.h; sourceTree = "<group>"; };
 		A5F6E2501ED25C0C00C2C8AC /* YYHCatagoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHCatagoriesViewController.m; sourceTree = "<group>"; };
-		A5F6E2581ED3379700C2C8AC /* 正确.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "正确.plist"; sourceTree = "<group>"; };
-		A5F6E2591ED3379700C2C8AC /* 中文版问题.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "中文版问题.plist"; sourceTree = "<group>"; };
+		A5F6E2581ED3379700C2C8AC /* 英文版问题.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "英文版问题.plist"; sourceTree = "<group>"; };
 		A5F6E25F1ED3556900C2C8AC /* YYHQuestionsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHQuestionsCollectionViewController.h; sourceTree = "<group>"; };
 		A5F6E2601ED3556900C2C8AC /* YYHQuestionsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHQuestionsCollectionViewController.m; sourceTree = "<group>"; };
 		A5F6E2621ED355B100C2C8AC /* YYHQuestionsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHQuestionsCollectionViewCell.h; sourceTree = "<group>"; };
@@ -429,8 +429,8 @@
 			isa = PBXGroup;
 			children = (
 				A5F6E26A1ED3605D00C2C8AC /* 题库图片 */,
-				A5F6E2581ED3379700C2C8AC /* 正确.plist */,
-				A5F6E2591ED3379700C2C8AC /* 中文版问题.plist */,
+				A5F6E2581ED3379700C2C8AC /* 英文版问题.plist */,
+				A52FF4CC1EE9045700CBFD17 /* 中文版问题.plist */,
 				A5F6E18F1ECDD49A00C2C8AC /* MJExtension */,
 				A5F6E1761ECDC77600C2C8AC /* Categories */,
 				A5F6E1631ECDC27000C2C8AC /* AppDelegate.h */,
@@ -743,6 +743,7 @@
 				A5F6E2F11ED5890300C2C8AC /* YYHCatagoriesCell.xib in Resources */,
 				A5F6E2BE1ED3605D00C2C8AC /* 018.png in Resources */,
 				A5F6E2E51ED3605D00C2C8AC /* 059.png in Resources */,
+				A52FF4CD1EE9045700CBFD17 /* 中文版问题.plist in Resources */,
 				A5F6E2BB1ED3605D00C2C8AC /* 015.png in Resources */,
 				A5F6E2B41ED3605D00C2C8AC /* 008.png in Resources */,
 				A5F6E2661ED355B100C2C8AC /* YYHQuestionsCollectionViewCell.xib in Resources */,
@@ -760,9 +761,8 @@
 				A5F6E2DD1ED3605D00C2C8AC /* 051.png in Resources */,
 				A5F6E2C11ED3605D00C2C8AC /* 021.png in Resources */,
 				A5FC77F51EE1A5AC00BF41D8 /* YYHShowRightViewController.xib in Resources */,
-				A5F6E25A1ED3379700C2C8AC /* 正确.plist in Resources */,
+				A5F6E25A1ED3379700C2C8AC /* 英文版问题.plist in Resources */,
 				A5F6E2D31ED3605D00C2C8AC /* 041.png in Resources */,
-				A5F6E25B1ED3379700C2C8AC /* 中文版问题.plist in Resources */,
 				A5F6E2AD1ED3605D00C2C8AC /* 001.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -930,7 +930,7 @@
 				INFOPLIST_FILE = "NZ Driving Test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.NZ-Driving-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NZ-RoadCodeChinese";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -946,7 +946,7 @@
 				INFOPLIST_FILE = "NZ Driving Test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.NZ-Driving-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NZ-RoadCodeChinese";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

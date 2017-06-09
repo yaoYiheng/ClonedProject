@@ -79,8 +79,8 @@
 
     YYHSettingController *settingVC = [setting instantiateInitialViewController];
     [self configureChildViewController:settingVC
-                                 image:@"setting_clicked"
-                         selectedImage:@"setting_normal"
+                                 image:@"more_normal"
+                         selectedImage:@"more_cliced"
                                  title:@"更多"];
 
 }

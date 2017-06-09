@@ -251,7 +251,7 @@
     }else if (sender.selectedSegmentIndex == 1){
         [self initAllArrays];
         //加载英文版本
-        self.allQuestionEN = [YYHQuestionItem mj_objectArrayWithFilename: @"正确.plist"];
+        self.allQuestionEN = [YYHQuestionItem mj_objectArrayWithFilename: @"英文版问题.plist"];
 
         [self chageVersionWithArray:self.allQuestionEN];
 

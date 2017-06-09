@@ -29,7 +29,7 @@ static NSString * const reuseIdentifier = @"cell";
 
 
     UIImageView *imageView = [[UIImageView alloc] init];
-    imageView.image = [UIImage imageNamed:@"background"];
+    imageView.image = [UIImage imageNamed:@"LaunchImage"];
     self.tableView.backgroundView = imageView;
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;

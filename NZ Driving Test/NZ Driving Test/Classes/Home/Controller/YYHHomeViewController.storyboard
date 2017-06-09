@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,9 +21,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="qx9-vt-5xn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="qx9-vt-5xn">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="KHz-Ha-AXF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <items/>
+                            </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0Q-dP-nsU">
                                 <rect key="frame" x="0.0" y="170" width="375" height="375"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -37,8 +42,12 @@
                             <constraint firstItem="qx9-vt-5xn" firstAttribute="leading" secondItem="QjE-7S-zsp" secondAttribute="leading" id="CwN-Ud-xmj"/>
                             <constraint firstItem="u0Q-dP-nsU" firstAttribute="top" secondItem="OOd-m3-u8m" secondAttribute="bottom" constant="150" id="J88-42-OhB"/>
                             <constraint firstItem="xM8-pH-qoK" firstAttribute="top" secondItem="qx9-vt-5xn" secondAttribute="bottom" id="KRo-s5-Gce"/>
+                            <constraint firstItem="KHz-Ha-AXF" firstAttribute="leading" secondItem="QjE-7S-zsp" secondAttribute="leading" id="TJb-qK-Y0E"/>
                             <constraint firstAttribute="trailing" secondItem="qx9-vt-5xn" secondAttribute="trailing" id="ULE-Sg-6JT"/>
                             <constraint firstAttribute="trailing" secondItem="u0Q-dP-nsU" secondAttribute="trailing" id="efg-YC-mT9"/>
+                            <constraint firstItem="xM8-pH-qoK" firstAttribute="top" secondItem="KHz-Ha-AXF" secondAttribute="bottom" id="m5S-3t-FPJ"/>
+                            <constraint firstAttribute="trailing" secondItem="KHz-Ha-AXF" secondAttribute="trailing" id="reZ-84-eKS"/>
+                            <constraint firstItem="KHz-Ha-AXF" firstAttribute="top" secondItem="QjE-7S-zsp" secondAttribute="top" id="xsn-pJ-77Y"/>
                             <constraint firstItem="u0Q-dP-nsU" firstAttribute="leading" secondItem="QjE-7S-zsp" secondAttribute="leading" id="xyl-MC-Cyk"/>
                         </constraints>
                     </view>
@@ -53,6 +62,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="320" height="568"/>
+        <image name="LaunchImage" width="375" height="568"/>
     </resources>
 </document>

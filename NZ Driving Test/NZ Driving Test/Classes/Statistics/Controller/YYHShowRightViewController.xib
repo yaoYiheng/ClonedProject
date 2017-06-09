@@ -24,9 +24,13 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="SOO-cd-juz">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="SOO-cd-juz">
                     <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                 </imageView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Rq4-MN-RcZ">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                    <items/>
+                </toolbar>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5e4-9j-d7r">
                     <rect key="frame" x="284" y="100" width="200" height="140"/>
                     <constraints>
@@ -62,6 +66,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="cQN-0v-TsU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="45" id="2Ko-T5-vSx"/>
+                <constraint firstItem="Rq4-MN-RcZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="35P-hx-gTE"/>
                 <constraint firstItem="9yM-ca-m8g" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="4zj-P0-aE0"/>
                 <constraint firstAttribute="bottom" secondItem="cQN-0v-TsU" secondAttribute="bottom" constant="50" id="75V-ea-mzU"/>
                 <constraint firstItem="ffx-Xl-ION" firstAttribute="top" secondItem="9yM-ca-m8g" secondAttribute="bottom" constant="50" id="7uf-jC-XuN"/>
@@ -69,19 +74,22 @@
                 <constraint firstAttribute="bottom" secondItem="SOO-cd-juz" secondAttribute="bottom" id="Dd9-yN-JcL"/>
                 <constraint firstItem="ffx-Xl-ION" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="Jne-nM-l8N"/>
                 <constraint firstItem="9yM-ca-m8g" firstAttribute="top" secondItem="5e4-9j-d7r" secondAttribute="bottom" constant="50" id="PsB-dV-0JU"/>
+                <constraint firstItem="Rq4-MN-RcZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QBu-Wb-nUa"/>
+                <constraint firstAttribute="bottom" secondItem="Rq4-MN-RcZ" secondAttribute="bottom" id="aZm-UU-hhz"/>
                 <constraint firstAttribute="trailing" secondItem="ffx-Xl-ION" secondAttribute="trailing" constant="30" id="hjV-Mq-GM2"/>
                 <constraint firstItem="SOO-cd-juz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nCd-Bd-gNR"/>
                 <constraint firstItem="5e4-9j-d7r" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="snY-qI-b42"/>
                 <constraint firstItem="SOO-cd-juz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tHG-Sd-6Pd"/>
                 <constraint firstAttribute="trailing" secondItem="SOO-cd-juz" secondAttribute="trailing" id="ubc-pO-eTM"/>
                 <constraint firstItem="5e4-9j-d7r" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="v50-WY-KeJ"/>
+                <constraint firstAttribute="trailing" secondItem="Rq4-MN-RcZ" secondAttribute="trailing" id="v9R-Uh-0I5"/>
                 <constraint firstAttribute="trailing" secondItem="cQN-0v-TsU" secondAttribute="trailing" constant="45" id="vdV-ln-a8z"/>
             </constraints>
             <point key="canvasLocation" x="54.5" y="91.5"/>
         </view>
     </objects>
     <resources>
-        <image name="background" width="320" height="568"/>
+        <image name="LaunchImage" width="375" height="568"/>
         <image name="correctButton" width="375" height="64"/>
     </resources>
 </document>
