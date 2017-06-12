@@ -109,7 +109,7 @@
     [self setUpContents];
 }
 - (void)setQuestionItem:(YYHQuestionItem *)questionItem{
-    YYHFunc
+    
     _questionItem = questionItem;
 
     NSString *A = questionItem.A;

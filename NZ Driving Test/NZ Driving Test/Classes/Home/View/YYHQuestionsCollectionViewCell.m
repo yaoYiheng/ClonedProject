@@ -171,6 +171,7 @@
 
         self.timeLabel.font = [UIFont systemFontOfSize:25];
         self.indexLabel.font = [UIFont systemFontOfSize:23];
+        self.resultLable.font = [UIFont systemFontOfSize:40];
 
         self.topViewDistance.constant = 30;
     }
@@ -180,6 +181,7 @@
 
         self.timeLabel.font = [UIFont systemFontOfSize:25];
         self.indexLabel.font = [UIFont systemFontOfSize:23];
+        self.resultLable.font = [UIFont systemFontOfSize:45];
 
         self.topViewDistance.constant = 30;
     }

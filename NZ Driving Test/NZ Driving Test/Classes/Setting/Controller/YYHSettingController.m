@@ -108,6 +108,7 @@ static NSString * const reuseIdentifier = @"cell";
         //删除所有错题
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         NSData *savedEncodedData = [defaults objectForKey:YYHWrongQuestionsArray];
+        if (savedEncodedData){
         NSMutableArray *array = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithData:savedEncodedData];
         //删除数组所有元素
         [array removeAllObjects];
@@ -116,7 +117,7 @@ static NSString * const reuseIdentifier = @"cell";
         NSData *encodedWrongList = [NSKeyedArchiver archivedDataWithRootObject:array];
 
         [defaults setObject:encodedWrongList forKey:YYHWrongQuestionsArray];
-
+        }
 
     }];
 

@@ -11,13 +11,13 @@
 		A52FF4881EE6AF9000CBFD17 /* YYHSettingController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52FF4871EE6AF9000CBFD17 /* YYHSettingController.storyboard */; };
 		A52FF48D1EE7DCE900CBFD17 /* 019.png in Resources */ = {isa = PBXBuildFile; fileRef = A52FF48C1EE7DCE900CBFD17 /* 019.png */; };
 		A52FF4C91EE8678600CBFD17 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52FF4C81EE8678600CBFD17 /* MessageUI.framework */; };
-		A52FF4CD1EE9045700CBFD17 /* 中文版问题.plist in Resources */ = {isa = PBXBuildFile; fileRef = A52FF4CC1EE9045700CBFD17 /* 中文版问题.plist */; };
 		A53175921EDEBFDC00821472 /* YYHWrongCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A53175901EDEBFDC00821472 /* YYHWrongCell.m */; };
 		A53175931EDEBFDC00821472 /* YYHWrongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53175911EDEBFDC00821472 /* YYHWrongCell.xib */; };
 		A56A5BDC1EE3FFE60034780F /* YYHDiscalmerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A56A5BDB1EE3FFE60034780F /* YYHDiscalmerViewController.m */; };
 		A56F2E441EC5D9E900DCF2D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56F2E421EC5D9E900DCF2D2 /* Main.storyboard */; };
 		A56F2E461EC5D9E900DCF2D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A56F2E451EC5D9E900DCF2D2 /* Assets.xcassets */; };
 		A56F2E491EC5D9E900DCF2D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56F2E471EC5D9E900DCF2D2 /* LaunchScreen.storyboard */; };
+		A5BAFF281EEE9F6A00EFBF38 /* 中文版问题.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5BAFF271EEE9F6A00EFBF38 /* 中文版问题.plist */; };
 		A5F6E16E1ECDC27000C2C8AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E1641ECDC27000C2C8AC /* AppDelegate.m */; };
 		A5F6E16F1ECDC27100C2C8AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E1651ECDC27000C2C8AC /* main.m */; };
 		A5F6E1721ECDC6B800C2C8AC /* YYHTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6E1711ECDC6B800C2C8AC /* YYHTabBarViewController.m */; };
@@ -124,17 +124,17 @@
 		A52FF4871EE6AF9000CBFD17 /* YYHSettingController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YYHSettingController.storyboard; sourceTree = "<group>"; };
 		A52FF48C1EE7DCE900CBFD17 /* 019.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 019.png; sourceTree = "<group>"; };
 		A52FF4C81EE8678600CBFD17 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		A52FF4CC1EE9045700CBFD17 /* 中文版问题.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "中文版问题.plist"; sourceTree = "<group>"; };
 		A531758F1EDEBFDC00821472 /* YYHWrongCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYHWrongCell.h; path = ../../Setting/View/YYHWrongCell.h; sourceTree = "<group>"; };
 		A53175901EDEBFDC00821472 /* YYHWrongCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYHWrongCell.m; path = ../../Setting/View/YYHWrongCell.m; sourceTree = "<group>"; };
 		A53175911EDEBFDC00821472 /* YYHWrongCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YYHWrongCell.xib; path = ../../Setting/View/YYHWrongCell.xib; sourceTree = "<group>"; };
 		A56A5BDA1EE3FFE60034780F /* YYHDiscalmerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHDiscalmerViewController.h; sourceTree = "<group>"; };
 		A56A5BDB1EE3FFE60034780F /* YYHDiscalmerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHDiscalmerViewController.m; sourceTree = "<group>"; };
-		A56F2E361EC5D9E900DCF2D2 /* NZ Driving Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NZ Driving Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A56F2E361EC5D9E900DCF2D2 /* com.NZ-RoadCodeChinese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "com.NZ-RoadCodeChinese.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A56F2E431EC5D9E900DCF2D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A56F2E451EC5D9E900DCF2D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A56F2E481EC5D9E900DCF2D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A56F2E4A1EC5D9E900DCF2D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5BAFF271EEE9F6A00EFBF38 /* 中文版问题.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "中文版问题.plist"; path = "MJExtension/中文版问题.plist"; sourceTree = "<group>"; };
 		A5F6E1631ECDC27000C2C8AC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A5F6E1641ECDC27000C2C8AC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A5F6E1651ECDC27000C2C8AC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 		A5F6E17A1ECDC77600C2C8AC /* UIImage+WithoutRendering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WithoutRendering.m"; sourceTree = "<group>"; };
 		A5F6E17D1ECDC7BB00C2C8AC /* YYHConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHConst.h; sourceTree = "<group>"; };
 		A5F6E17E1ECDC7BB00C2C8AC /* YYHConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHConst.m; sourceTree = "<group>"; };
-		A5F6E1801ECDC87D00C2C8AC /* NZ Driving Test.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NZ Driving Test.pch"; sourceTree = "<group>"; };
+		A5F6E1801ECDC87D00C2C8AC /* com.NZ-RoadCodeChinese.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "com.NZ-RoadCodeChinese.pch"; sourceTree = "<group>"; };
 		A5F6E1811ECDCA7C00C2C8AC /* UIView+YYHFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YYHFrame.h"; sourceTree = "<group>"; };
 		A5F6E1821ECDCA7C00C2C8AC /* UIView+YYHFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YYHFrame.m"; sourceTree = "<group>"; };
 		A5F6E1871ECDCB3400C2C8AC /* YYHSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHSettingController.h; sourceTree = "<group>"; };
@@ -298,7 +298,7 @@
 		A56F2E371EC5D9E900DCF2D2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A56F2E361EC5D9E900DCF2D2 /* NZ Driving Test.app */,
+				A56F2E361EC5D9E900DCF2D2 /* com.NZ-RoadCodeChinese.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -430,7 +430,7 @@
 			children = (
 				A5F6E26A1ED3605D00C2C8AC /* 题库图片 */,
 				A5F6E2581ED3379700C2C8AC /* 英文版问题.plist */,
-				A52FF4CC1EE9045700CBFD17 /* 中文版问题.plist */,
+				A5BAFF271EEE9F6A00EFBF38 /* 中文版问题.plist */,
 				A5F6E18F1ECDD49A00C2C8AC /* MJExtension */,
 				A5F6E1761ECDC77600C2C8AC /* Categories */,
 				A5F6E1631ECDC27000C2C8AC /* AppDelegate.h */,
@@ -438,7 +438,7 @@
 				A5F6E1651ECDC27000C2C8AC /* main.m */,
 				A5F6E17D1ECDC7BB00C2C8AC /* YYHConst.h */,
 				A5F6E17E1ECDC7BB00C2C8AC /* YYHConst.m */,
-				A5F6E1801ECDC87D00C2C8AC /* NZ Driving Test.pch */,
+				A5F6E1801ECDC87D00C2C8AC /* com.NZ-RoadCodeChinese.pch */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -632,9 +632,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A56F2E351EC5D9E900DCF2D2 /* NZ Driving Test */ = {
+		A56F2E351EC5D9E900DCF2D2 /* com.NZ-RoadCodeChinese */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A56F2E4D1EC5D9E900DCF2D2 /* Build configuration list for PBXNativeTarget "NZ Driving Test" */;
+			buildConfigurationList = A56F2E4D1EC5D9E900DCF2D2 /* Build configuration list for PBXNativeTarget "com.NZ-RoadCodeChinese" */;
 			buildPhases = (
 				A56F2E321EC5D9E900DCF2D2 /* Sources */,
 				A56F2E331EC5D9E900DCF2D2 /* Frameworks */,
@@ -644,9 +644,9 @@
 			);
 			dependencies = (
 			);
-			name = "NZ Driving Test";
+			name = "com.NZ-RoadCodeChinese";
 			productName = "NZ Driving Test";
-			productReference = A56F2E361EC5D9E900DCF2D2 /* NZ Driving Test.app */;
+			productReference = A56F2E361EC5D9E900DCF2D2 /* com.NZ-RoadCodeChinese.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -666,7 +666,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A56F2E311EC5D9E900DCF2D2 /* Build configuration list for PBXProject "NZ Driving Test" */;
+			buildConfigurationList = A56F2E311EC5D9E900DCF2D2 /* Build configuration list for PBXProject "com.NZ-RoadCodeChinese" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -679,7 +679,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A56F2E351EC5D9E900DCF2D2 /* NZ Driving Test */,
+				A56F2E351EC5D9E900DCF2D2 /* com.NZ-RoadCodeChinese */,
 			);
 		};
 /* End PBXProject section */
@@ -743,7 +743,7 @@
 				A5F6E2F11ED5890300C2C8AC /* YYHCatagoriesCell.xib in Resources */,
 				A5F6E2BE1ED3605D00C2C8AC /* 018.png in Resources */,
 				A5F6E2E51ED3605D00C2C8AC /* 059.png in Resources */,
-				A52FF4CD1EE9045700CBFD17 /* 中文版问题.plist in Resources */,
+				A5BAFF281EEE9F6A00EFBF38 /* 中文版问题.plist in Resources */,
 				A5F6E2BB1ED3605D00C2C8AC /* 015.png in Resources */,
 				A5F6E2B41ED3605D00C2C8AC /* 008.png in Resources */,
 				A5F6E2661ED355B100C2C8AC /* YYHQuestionsCollectionViewCell.xib in Resources */,
@@ -924,9 +924,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos10.2]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = GA7XQJP4M7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NZ Driving Test/Classes/Other/NZ Driving Test.pch";
+				GCC_PREFIX_HEADER = "NZ Driving Test/Classes/Other/com.NZ-RoadCodeChinese.pch";
 				INFOPLIST_FILE = "NZ Driving Test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -940,14 +943,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos10.2]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = GA7XQJP4M7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NZ Driving Test/Classes/Other/NZ Driving Test.pch";
+				GCC_PREFIX_HEADER = "NZ Driving Test/Classes/Other/com.NZ-RoadCodeChinese.pch";
 				INFOPLIST_FILE = "NZ Driving Test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.NZ-RoadCodeChinese";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -955,7 +963,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A56F2E311EC5D9E900DCF2D2 /* Build configuration list for PBXProject "NZ Driving Test" */ = {
+		A56F2E311EC5D9E900DCF2D2 /* Build configuration list for PBXProject "com.NZ-RoadCodeChinese" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A56F2E4B1EC5D9E900DCF2D2 /* Debug */,
@@ -964,7 +972,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A56F2E4D1EC5D9E900DCF2D2 /* Build configuration list for PBXNativeTarget "NZ Driving Test" */ = {
+		A56F2E4D1EC5D9E900DCF2D2 /* Build configuration list for PBXNativeTarget "com.NZ-RoadCodeChinese" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A56F2E4E1EC5D9E900DCF2D2 /* Debug */,

@@ -15,15 +15,15 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A56F2E351EC5D9E900DCF2D2"
-               BuildableName = "NZ Driving Test.app"
-               BlueprintName = "NZ Driving Test"
-               ReferencedContainer = "container:NZ Driving Test.xcodeproj">
+               BuildableName = "com.NZ-RoadCodeChinese.app"
+               BlueprintName = "com.NZ-RoadCodeChinese"
+               ReferencedContainer = "container:com.NZ-RoadCodeChinese.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A56F2E351EC5D9E900DCF2D2"
-            BuildableName = "NZ Driving Test.app"
-            BlueprintName = "NZ Driving Test"
-            ReferencedContainer = "container:NZ Driving Test.xcodeproj">
+            BuildableName = "com.NZ-RoadCodeChinese.app"
+            BlueprintName = "com.NZ-RoadCodeChinese"
+            ReferencedContainer = "container:com.NZ-RoadCodeChinese.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,16 +56,14 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A56F2E351EC5D9E900DCF2D2"
-            BuildableName = "NZ Driving Test.app"
-            BlueprintName = "NZ Driving Test"
-            ReferencedContainer = "container:NZ Driving Test.xcodeproj">
+            BuildableName = "com.NZ-RoadCodeChinese.app"
+            BlueprintName = "com.NZ-RoadCodeChinese"
+            ReferencedContainer = "container:com.NZ-RoadCodeChinese.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
          <EnvironmentVariable
-            key = "OS_ACTIVITY_MODE"
-            value = "disable"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </EnvironmentVariable>
       </EnvironmentVariables>
       <AdditionalOptions>
@@ -82,14 +80,14 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A56F2E351EC5D9E900DCF2D2"
-            BuildableName = "NZ Driving Test.app"
-            BlueprintName = "NZ Driving Test"
-            ReferencedContainer = "container:NZ Driving Test.xcodeproj">
+            BuildableName = "com.NZ-RoadCodeChinese.app"
+            BlueprintName = "com.NZ-RoadCodeChinese"
+            ReferencedContainer = "container:com.NZ-RoadCodeChinese.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Debug">
+      buildConfiguration = "Release">
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"

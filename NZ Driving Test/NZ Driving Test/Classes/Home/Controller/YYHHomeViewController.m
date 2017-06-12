@@ -84,7 +84,7 @@
 
     self.navigationItem.title = @"首页";
 
-    YYHLog(@"%f", YYHScreenH);
+
 
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(typeButtonDidClicked:) name:YYHTypeButtonDidClicked object:nil];
@@ -263,7 +263,7 @@
 
 
     YYHButtonOnChooseTyepView *button = notification.object;
-    NSLog(@"%ld", (long)button.tag);
+    
 
     YYHCatagoriesViewController *catagory = [[YYHCatagoriesViewController alloc
                                               ] init];
