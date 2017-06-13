@@ -47,7 +47,7 @@ typedef NS_ENUM(NSInteger, YYHCategory) {
 /** catagories*/
 @property (nonatomic, assign) YYHCategory Category;
 /** totla*/
-@property (nonatomic, assign) NSInteger total;
+@property (nonatomic, assign) int total;
 /** current*/
 @property (nonatomic, strong) NSIndexPath *current;
 

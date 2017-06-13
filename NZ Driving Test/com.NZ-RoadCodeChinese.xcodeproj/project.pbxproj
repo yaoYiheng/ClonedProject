@@ -10,7 +10,7 @@
 		A507D1891EE14FBA00FDC5CE /* YYHStatictisController.m in Sources */ = {isa = PBXBuildFile; fileRef = A507D1881EE14FBA00FDC5CE /* YYHStatictisController.m */; };
 		A52FF4881EE6AF9000CBFD17 /* YYHSettingController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52FF4871EE6AF9000CBFD17 /* YYHSettingController.storyboard */; };
 		A52FF48D1EE7DCE900CBFD17 /* 019.png in Resources */ = {isa = PBXBuildFile; fileRef = A52FF48C1EE7DCE900CBFD17 /* 019.png */; };
-		A52FF4C91EE8678600CBFD17 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52FF4C81EE8678600CBFD17 /* MessageUI.framework */; };
+		A52FF4C91EE8678600CBFD17 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52FF4C81EE8678600CBFD17 /* MessageUI.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		A53175921EDEBFDC00821472 /* YYHWrongCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A53175901EDEBFDC00821472 /* YYHWrongCell.m */; };
 		A53175931EDEBFDC00821472 /* YYHWrongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53175911EDEBFDC00821472 /* YYHWrongCell.xib */; };
 		A56A5BDC1EE3FFE60034780F /* YYHDiscalmerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A56A5BDB1EE3FFE60034780F /* YYHDiscalmerViewController.m */; };
@@ -935,6 +935,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.NZ-RoadCodeChinese";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -956,6 +959,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

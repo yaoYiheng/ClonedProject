@@ -44,7 +44,7 @@
 
         self.Category = [aDecoder decodeIntegerForKey:@"Category"];
         self.Type = [aDecoder decodeIntegerForKey:@"Type"];
-        self.total = [aDecoder decodeIntegerForKey:@"total"];
+        self.total = [aDecoder decodeIntForKey:@"total"];
         
         self.current = [aDecoder decodeObjectForKey:@"current"];
         

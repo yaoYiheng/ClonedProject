@@ -141,7 +141,7 @@ static NSString * const reuseIdentifier = @"cell";
 
     YYHQuestionItem *questionItem = self.questionArray[indexPath.row];
     questionItem.current = indexPath;
-    questionItem.total = self.questionArray.count;
+    questionItem.total = (int)self.questionArray.count;
     cell.questionItem = questionItem;
 
     return cell;

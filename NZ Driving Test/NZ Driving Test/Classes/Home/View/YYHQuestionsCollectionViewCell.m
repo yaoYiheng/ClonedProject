@@ -210,10 +210,10 @@
 
     NSNumber *sec = time.userInfo[YYHcountDown];
 
-    NSInteger second = [sec integerValue];
+    int second = [sec intValue];
 
 
-    self.timeLabel.text =  [NSString stringWithFormat:@"%02ld:%02ld", second / 60, second % 60];
+    self.timeLabel.text =  [NSString stringWithFormat:@"%02d:%02d", second / 60, second % 60];
 }
 
 
@@ -230,7 +230,7 @@
     self.questionLabel.text = questionItem.Question;
 
 
-    self.indexLabel.text = [NSString stringWithFormat:@"%ld / %ld", questionItem.current.row + 1, (long)questionItem.total];
+    self.indexLabel.text = [NSString stringWithFormat:@"%d / %d", (int)(questionItem.current.row + 1), questionItem.total];
 
 
     if (questionItem.Image.length > 1) {
