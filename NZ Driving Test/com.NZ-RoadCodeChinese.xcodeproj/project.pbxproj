@@ -661,8 +661,8 @@
 				TargetAttributes = {
 					A56F2E351EC5D9E900DCF2D2 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = GA7XQJP4M7;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = SWWP4FHJHM;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -927,16 +927,16 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos10.2]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = GA7XQJP4M7;
+				DEVELOPMENT_TEAM = SWWP4FHJHM;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NZ Driving Test/Classes/Other/com.NZ-RoadCodeChinese.pch";
 				INFOPLIST_FILE = "NZ Driving Test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.NZ-RoadCodeChinese";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NewZelandRoadCodeOfChineseVersion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "84cdcab1-1823-4be1-b47a-9eb177dbaa77";
+				PROVISIONING_PROFILE_SPECIFIER = RoadCodeChineseVersion;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -949,16 +949,16 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos10.2]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = GA7XQJP4M7;
+				DEVELOPMENT_TEAM = SWWP4FHJHM;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NZ Driving Test/Classes/Other/com.NZ-RoadCodeChinese.pch";
 				INFOPLIST_FILE = "NZ Driving Test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.NZ-RoadCodeChinese";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NewZelandRoadCodeOfChineseVersion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "84cdcab1-1823-4be1-b47a-9eb177dbaa77";
+				PROVISIONING_PROFILE_SPECIFIER = RoadCodeChineseVersion;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
