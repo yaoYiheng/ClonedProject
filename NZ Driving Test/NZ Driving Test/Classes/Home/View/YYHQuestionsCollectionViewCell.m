@@ -101,7 +101,7 @@
                 self.imageView.hidden = YES;
             } completion:^(BOOL finished) {
                 self.imageView.hidden = NO;
-                [self initSubViewsContent];
+
             }];
 
             //不需要再这里进行判断, 在这里负责将每一个对象传递出去, 外界负责判断

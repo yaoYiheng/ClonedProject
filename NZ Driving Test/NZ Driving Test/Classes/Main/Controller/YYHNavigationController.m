@@ -33,38 +33,38 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //creat pan Ges
-    UIPanGestureRecognizer *panGes = [[UIPanGestureRecognizer alloc] initWithTarget:self.interactivePopGestureRecognizer.delegate action:@selector(handleNavigationTransition:)];
 
-    //add
-    [self.view addGestureRecognizer:panGes];
-
-
-    panGes.delegate = self;
-
-
-
-    self.interactivePopGestureRecognizer.enabled = NO;
+    //获取系统侧滑手势
+    UIGestureRecognizer *systemPopGes = self.interactivePopGestureRecognizer;
+    //禁用系统侧滑
+    systemPopGes.enabled = NO;
+    //得到系统target-action数组
+    NSMutableArray *_targets = [systemPopGes valueForKey:@"_targets"];
+    //取出系统实现侧滑的target
+    id systemPanTarget = [_targets.firstObject valueForKey:@"target"];
+    //获取系统实现侧滑的action
+    NSString *selectorStringBegin = @"handleNavigation";
+    NSString *selectorStringEnd = @"Transition:";
+    NSString *selectorString = [NSString stringWithFormat:@"%@%@",selectorStringBegin,selectorStringEnd];
+    SEL systemAction = NSSelectorFromString(selectorString);
+    //自定义滑动手势
+    UIPanGestureRecognizer *myPan = [[UIPanGestureRecognizer alloc] initWithTarget:systemPanTarget action:systemAction];
+    myPan.delegate = self;
+    myPan.maximumNumberOfTouches = 1;
+    //向系统实现侧滑的view中加入自定义的滑动手势
+    [systemPopGes.view addGestureRecognizer:myPan];
 
 
 }
 
 
-- (void)handleNavigationTransition:(UIPanGestureRecognizer *)sender {
-    
-}
+
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
 
     if (self.childViewControllers.count > 0) {
 
         viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem backBarButtonWithImage:[UIImage imageNamed:@"closeBack"]  hightligtedImage:[UIImage imageNamed:@"closeBack"] Target:self action:@selector(back) title:@"返回"];
             viewController.hidesBottomBarWhenPushed = YES;
-        if (self.childViewControllers.count > 1) {
-
-
-
-        }
-
 
 
 
