@@ -149,7 +149,7 @@
 		A5F6E17A1ECDC77600C2C8AC /* UIImage+WithoutRendering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WithoutRendering.m"; sourceTree = "<group>"; };
 		A5F6E17D1ECDC7BB00C2C8AC /* YYHConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHConst.h; sourceTree = "<group>"; };
 		A5F6E17E1ECDC7BB00C2C8AC /* YYHConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHConst.m; sourceTree = "<group>"; };
-		A5F6E1801ECDC87D00C2C8AC /* com.NZ-RoadCodeChinese.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "com.NZ-RoadCodeChinese.pch"; sourceTree = "<group>"; };
+		A5F6E1801ECDC87D00C2C8AC /* 新西兰交规笔试.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "新西兰交规笔试.pch"; sourceTree = "<group>"; };
 		A5F6E1811ECDCA7C00C2C8AC /* UIView+YYHFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YYHFrame.h"; sourceTree = "<group>"; };
 		A5F6E1821ECDCA7C00C2C8AC /* UIView+YYHFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YYHFrame.m"; sourceTree = "<group>"; };
 		A5F6E1871ECDCB3400C2C8AC /* YYHSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHSettingController.h; sourceTree = "<group>"; };
@@ -438,7 +438,7 @@
 				A5F6E1651ECDC27000C2C8AC /* main.m */,
 				A5F6E17D1ECDC7BB00C2C8AC /* YYHConst.h */,
 				A5F6E17E1ECDC7BB00C2C8AC /* YYHConst.m */,
-				A5F6E1801ECDC87D00C2C8AC /* com.NZ-RoadCodeChinese.pch */,
+				A5F6E1801ECDC87D00C2C8AC /* 新西兰交规笔试.pch */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -632,9 +632,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A56F2E351EC5D9E900DCF2D2 /* com.NZ-RoadCodeChinese */ = {
+		A56F2E351EC5D9E900DCF2D2 /* 新西兰交规笔试 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A56F2E4D1EC5D9E900DCF2D2 /* Build configuration list for PBXNativeTarget "com.NZ-RoadCodeChinese" */;
+			buildConfigurationList = A56F2E4D1EC5D9E900DCF2D2 /* Build configuration list for PBXNativeTarget "新西兰交规笔试" */;
 			buildPhases = (
 				A56F2E321EC5D9E900DCF2D2 /* Sources */,
 				A56F2E331EC5D9E900DCF2D2 /* Frameworks */,
@@ -644,7 +644,7 @@
 			);
 			dependencies = (
 			);
-			name = "com.NZ-RoadCodeChinese";
+			name = "新西兰交规笔试";
 			productName = "NZ Driving Test";
 			productReference = A56F2E361EC5D9E900DCF2D2 /* com.NZ-RoadCodeChinese.app */;
 			productType = "com.apple.product-type.application";
@@ -666,7 +666,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A56F2E311EC5D9E900DCF2D2 /* Build configuration list for PBXProject "com.NZ-RoadCodeChinese" */;
+			buildConfigurationList = A56F2E311EC5D9E900DCF2D2 /* Build configuration list for PBXProject "新西兰交规笔试" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -679,7 +679,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A56F2E351EC5D9E900DCF2D2 /* com.NZ-RoadCodeChinese */,
+				A56F2E351EC5D9E900DCF2D2 /* 新西兰交规笔试 */,
 			);
 		};
 /* End PBXProject section */
@@ -929,7 +929,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos10.2]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = SWWP4FHJHM;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NZ Driving Test/Classes/Other/com.NZ-RoadCodeChinese.pch";
+				GCC_PREFIX_HEADER = "NZ Driving Test/Classes/Other/新西兰交规笔试.pch";
 				INFOPLIST_FILE = "NZ Driving Test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -951,7 +951,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos10.2]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = SWWP4FHJHM;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NZ Driving Test/Classes/Other/com.NZ-RoadCodeChinese.pch";
+				GCC_PREFIX_HEADER = "NZ Driving Test/Classes/Other/新西兰交规笔试.pch";
 				INFOPLIST_FILE = "NZ Driving Test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -967,7 +967,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A56F2E311EC5D9E900DCF2D2 /* Build configuration list for PBXProject "com.NZ-RoadCodeChinese" */ = {
+		A56F2E311EC5D9E900DCF2D2 /* Build configuration list for PBXProject "新西兰交规笔试" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A56F2E4B1EC5D9E900DCF2D2 /* Debug */,
@@ -976,7 +976,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A56F2E4D1EC5D9E900DCF2D2 /* Build configuration list for PBXNativeTarget "com.NZ-RoadCodeChinese" */ = {
+		A56F2E4D1EC5D9E900DCF2D2 /* Build configuration list for PBXNativeTarget "新西兰交规笔试" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A56F2E4E1EC5D9E900DCF2D2 /* Debug */,
