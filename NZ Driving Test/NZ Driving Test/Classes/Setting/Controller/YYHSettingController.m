@@ -58,13 +58,21 @@ static NSString * const reuseIdentifier = @"cell";
         //清除所有错题.
         [self clearAllWrong];
     }
-    if(indexPath.row == 2){
+    else if(indexPath.row == 2){
         //发送反馈
         [self sendFeedback];
         
     }
+    else if (indexPath.row == 3){
+        [self comment];
+    }
 }
 #pragma mark - -------具体方法实现--------------
+- (void)comment{
+
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1247403722&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8"]];
+
+}
 - (void)sendFeedback{
     //判断用户是否已设置邮件
     if (![MFMailComposeViewController canSendMail]) {

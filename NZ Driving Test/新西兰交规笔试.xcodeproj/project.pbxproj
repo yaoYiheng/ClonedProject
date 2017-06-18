@@ -129,7 +129,7 @@
 		A53175911EDEBFDC00821472 /* YYHWrongCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YYHWrongCell.xib; path = ../../Setting/View/YYHWrongCell.xib; sourceTree = "<group>"; };
 		A56A5BDA1EE3FFE60034780F /* YYHDiscalmerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHDiscalmerViewController.h; sourceTree = "<group>"; };
 		A56A5BDB1EE3FFE60034780F /* YYHDiscalmerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHDiscalmerViewController.m; sourceTree = "<group>"; };
-		A56F2E361EC5D9E900DCF2D2 /* com.NZ-RoadCodeChinese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "com.NZ-RoadCodeChinese.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A56F2E361EC5D9E900DCF2D2 /* com.NZ-RoadCodeChinese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "com.NZ-RoadCodeChinese.app"; path = "新西兰交规笔试.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A56F2E431EC5D9E900DCF2D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A56F2E451EC5D9E900DCF2D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A56F2E481EC5D9E900DCF2D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
