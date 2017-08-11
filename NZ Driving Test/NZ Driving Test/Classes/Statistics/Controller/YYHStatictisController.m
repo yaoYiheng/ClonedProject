@@ -122,7 +122,7 @@ static NSString * const cellID = @"cell";
     return @[action];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    self.toolBar.yyh_height = tableView.contentSize.height;
+    self.toolBar.yyh_height = tableView.contentSize.height > YYHScreenH ? tableView.contentSize.height : YYHScreenH;
     if (iPad || iPad12) {
         return 160;
     }

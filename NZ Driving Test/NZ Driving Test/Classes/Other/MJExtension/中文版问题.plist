@@ -174,7 +174,7 @@
 		<key>Image</key>
 		<string>001</string>
 		<key>Question</key>
-		<string>当您完成通过另一辆车时,您在前方必须有最少的空旷距离的距离是多少？</string>
+		<string>超车后，您前方道路至少多少米必须是畅通的?</string>
 		<key>Type</key>
 		<string>0</string>
 	</dict>
@@ -196,7 +196,7 @@
 		<key>Image</key>
 		<string>001</string>
 		<key>Question</key>
-		<string>当您完成通过另一辆车时,您在前方必须有最少的空旷距离的距离是多少？</string>
+		<string>超车后，您前方道路至少多少米必须是畅通的?</string>
 		<key>Type</key>
 		<string>1</string>
 	</dict>
@@ -218,7 +218,7 @@
 		<key>Image</key>
 		<string>001</string>
 		<key>Question</key>
-		<string>当您完成通过另一辆车时,您在前方必须有最少的空旷距离的距离是多少？</string>
+		<string>超车后，您前方道路至少多少米必须是畅通的?</string>
 		<key>Type</key>
 		<string>2</string>
 	</dict>
@@ -2016,7 +2016,7 @@
 		<key>CorrectAnswer</key>
 		<string>4</string>
 		<key>D</key>
-		<string>T最高允许时速为70千米/小时</string>
+		<string>最高允许时速为70千米/小时</string>
 		<key>E</key>
 		<string></string>
 		<key>Image</key>
@@ -2038,7 +2038,7 @@
 		<key>CorrectAnswer</key>
 		<string>4</string>
 		<key>D</key>
-		<string>T最高允许时速为70千米/小时</string>
+		<string>最高允许时速为70千米/小时</string>
 		<key>E</key>
 		<string></string>
 		<key>Image</key>
@@ -2060,7 +2060,7 @@
 		<key>CorrectAnswer</key>
 		<string>4</string>
 		<key>D</key>
-		<string>T最高允许时速为70千米/小时</string>
+		<string>最高允许时速为70千米/小时</string>
 		<key>E</key>
 		<string></string>
 		<key>Image</key>
@@ -2206,9 +2206,9 @@
 		<key>A</key>
 		<string>接下来50米不能停车</string>
 		<key>B</key>
-		<string>T最高允许时速为50千米/小时</string>
+		<string>最高允许时速为50千米/小时</string>
 		<key>C</key>
-		<string>T最低允许时速为50千米/小时</string>
+		<string>最低允许时速为50千米/小时</string>
 		<key>Category</key>
 		<string>7</string>
 		<key>CorrectAnswer</key>
@@ -2228,9 +2228,9 @@
 		<key>A</key>
 		<string>接下来50米不能停车</string>
 		<key>B</key>
-		<string>T最高允许时速为50千米/小时</string>
+		<string>最高允许时速为50千米/小时</string>
 		<key>C</key>
-		<string>T最低允许时速为50千米/小时</string>
+		<string>最低允许时速为50千米/小时</string>
 		<key>Category</key>
 		<string>7</string>
 		<key>CorrectAnswer</key>
@@ -2250,9 +2250,9 @@
 		<key>A</key>
 		<string>接下来50米不能停车</string>
 		<key>B</key>
-		<string>T最高允许时速为50千米/小时</string>
+		<string>最高允许时速为50千米/小时</string>
 		<key>C</key>
-		<string>T最低允许时速为50千米/小时</string>
+		<string>最低允许时速为50千米/小时</string>
 		<key>Category</key>
 		<string>7</string>
 		<key>CorrectAnswer</key>
@@ -7588,7 +7588,7 @@
 		<key>Image</key>
 		<string></string>
 		<key>Question</key>
-		<string>当您持有限制驾照时, 您允许载客如果他们是您的妻子或丈夫. 对的还是错的?</string>
+		<string>当您持有限制驾照时, 您允许搭载您的妻子或丈夫. 对的还是错的?</string>
 		<key>Type</key>
 		<string>0</string>
 	</dict>
@@ -7610,7 +7610,7 @@
 		<key>Image</key>
 		<string></string>
 		<key>Question</key>
-		<string>当您持有限制驾照时, 您允许载客如果他们是您的妻子或丈夫. 对的还是错的?</string>
+		<string>当您持有限制驾照时, 您允许搭载您的妻子或丈夫. 对的还是错的?</string>
 		<key>Type</key>
 		<string>1</string>
 	</dict>
@@ -7632,7 +7632,7 @@
 		<key>Image</key>
 		<string></string>
 		<key>Question</key>
-		<string>当您持有限制驾照时, 您允许载客如果他们是您的妻子或丈夫. 对的还是错的?</string>
+		<string>当您持有限制驾照时, 您允许搭载您的妻子或丈夫. 对的还是错的?</string>
 		<key>Type</key>
 		<string>2</string>
 	</dict>
@@ -9326,7 +9326,7 @@
 		<key>Image</key>
 		<string></string>
 		<key>Question</key>
-		<string>在左转成车道之前，您该怎么办？</string>
+		<string>交叉路口的左转弯前，您该怎么做?</string>
 		<key>Type</key>
 		<string>0</string>
 	</dict>
@@ -9348,7 +9348,7 @@
 		<key>Image</key>
 		<string></string>
 		<key>Question</key>
-		<string>在左转成车道之前，您该怎么办？</string>
+		<string>交叉路口的左转弯前，您该怎么做?</string>
 		<key>Type</key>
 		<string>1</string>
 	</dict>
@@ -9370,7 +9370,7 @@
 		<key>Image</key>
 		<string></string>
 		<key>Question</key>
-		<string>在左转成车道之前，您该怎么办？</string>
+		<string>交叉路口的左转弯前，您该怎么做?</string>
 		<key>Type</key>
 		<string>2</string>
 	</dict>
