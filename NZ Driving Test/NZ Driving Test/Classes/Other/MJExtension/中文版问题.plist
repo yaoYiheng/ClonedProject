@@ -800,7 +800,7 @@
 		<key>B</key>
 		<string>任何车辆都有权利在这里停5分钟</string>
 		<key>C</key>
-		<string>任何车辆都可以在这里停下货物或人员最多5分钟</string>
+		<string>只有当您装载货物或乘客上下车时才可以暂时停靠这里，且最多能停靠5分钟</string>
 		<key>Category</key>
 		<string>5</string>
 		<key>CorrectAnswer</key>
@@ -822,7 +822,7 @@
 		<key>B</key>
 		<string>任何车辆都有权利在这里停5分钟</string>
 		<key>C</key>
-		<string>任何车辆都可以在这里停下货物或人员最多5分钟</string>
+		<string>只有当您装载货物或乘客上下车时才可以暂时停靠这里，且最多能停靠5分钟</string>
 		<key>Category</key>
 		<string>5</string>
 		<key>CorrectAnswer</key>
@@ -844,7 +844,7 @@
 		<key>B</key>
 		<string>任何车辆都有权利在这里停5分钟</string>
 		<key>C</key>
-		<string>任何车辆都可以在这里停下货物或人员最多5分钟</string>
+		<string>只有当您装载货物或乘客上下车时才可以暂时停靠这里，且最多能停靠5分钟</string>
 		<key>Category</key>
 		<string>5</string>
 		<key>CorrectAnswer</key>
@@ -7258,7 +7258,7 @@
 		<key>Image</key>
 		<string></string>
 		<key>Question</key>
-		<string>直行穿过环岛，驶入环岛时不用打转向灯，只在将要驶出环岛时打左转向灯，对还是错？. 对的还是错的?</string>
+		<string>直行穿过环岛，驶入环岛时不用打转向灯，只在将要驶出环岛时打左转向灯. 对的还是错的?</string>
 		<key>Type</key>
 		<string>0</string>
 	</dict>
@@ -7280,7 +7280,7 @@
 		<key>Image</key>
 		<string></string>
 		<key>Question</key>
-		<string>直行穿过环岛，驶入环岛时不用打转向灯，只在将要驶出环岛时打左转向灯，对还是错？. 对的还是错的?</string>
+		<string>直行穿过环岛，驶入环岛时不用打转向灯，只在将要驶出环岛时打左转向灯. 对的还是错的?</string>
 		<key>Type</key>
 		<string>1</string>
 	</dict>
@@ -7302,7 +7302,7 @@
 		<key>Image</key>
 		<string></string>
 		<key>Question</key>
-		<string>直行穿过环岛，驶入环岛时不用打转向灯，只在将要驶出环岛时打左转向灯，对还是错？. 对的还是错的?</string>
+		<string>直行穿过环岛，驶入环岛时不用打转向灯，只在将要驶出环岛时打左转向灯. 对的还是错的?</string>
 		<key>Type</key>
 		<string>2</string>
 	</dict>
@@ -9062,7 +9062,7 @@
 		<key>Image</key>
 		<string></string>
 		<key>Question</key>
-		<string>通过停车的校车允许孩子上下车时，您允许驾驶的最大速度是多少？</string>
+		<string>通过孩子正在上下车的校车时，您允许驾驶的最大速度是多少？</string>
 		<key>Type</key>
 		<string>0</string>
 	</dict>
@@ -9084,7 +9084,7 @@
 		<key>Image</key>
 		<string></string>
 		<key>Question</key>
-		<string>通过停车的校车允许孩子上下车时，您允许驾驶的最大速度是多少？</string>
+		<string>通过孩子正在上下车的校车时，您允许驾驶的最大速度是多少？</string>
 		<key>Type</key>
 		<string>1</string>
 	</dict>
@@ -9106,7 +9106,7 @@
 		<key>Image</key>
 		<string></string>
 		<key>Question</key>
-		<string>通过停车的校车允许孩子上下车时，您允许驾驶的最大速度是多少？</string>
+		<string>通过孩子正在上下车的校车时，您允许驾驶的最大速度是多少？</string>
 		<key>Type</key>
 		<string>2</string>
 	</dict>
@@ -10574,7 +10574,7 @@
 		<key>CorrectAnswer</key>
 		<string>3</string>
 		<key>D</key>
-		<string>当您能确保自己清楚看到，完成超车后前方至少还有５０米的距离时</string>
+		<string>当您能确保自己清楚看到，完成超车后前方至少还有50米的距离时</string>
 		<key>E</key>
 		<string></string>
 		<key>Image</key>
@@ -10596,7 +10596,7 @@
 		<key>CorrectAnswer</key>
 		<string>3</string>
 		<key>D</key>
-		<string>当您能确保自己清楚看到，完成超车后前方至少还有５０米的距离时</string>
+		<string>当您能确保自己清楚看到，完成超车后前方至少还有50米的距离时</string>
 		<key>E</key>
 		<string></string>
 		<key>Image</key>
@@ -10618,7 +10618,7 @@
 		<key>CorrectAnswer</key>
 		<string>3</string>
 		<key>D</key>
-		<string>当您能确保自己清楚看到，完成超车后前方至少还有５０米的距离时</string>
+		<string>当您能确保自己清楚看到，完成超车后前方至少还有50米的距离时</string>
 		<key>E</key>
 		<string></string>
 		<key>Image</key>
@@ -11620,7 +11620,7 @@
 	</dict>
 	<dict>
 		<key>A</key>
-		<string>当您需要提示其他车辆您的车辆对他人会是临时的危险时.</string>
+		<string>只有当您的车辆暂时可能危害到其他车辆和行人时，才开危险指示灯.</string>
 		<key>B</key>
 		<string>当您在雾天下行驶在高速路上时.</string>
 		<key>C</key>
@@ -11642,7 +11642,7 @@
 	</dict>
 	<dict>
 		<key>A</key>
-		<string>当您需要提示其他车辆您的车辆对他人会是临时的危险时.</string>
+		<string>只有当您的车辆暂时可能危害到其他车辆和行人时，才开危险指示灯.</string>
 		<key>B</key>
 		<string>当您在雾天下行驶在高速路上时.</string>
 		<key>C</key>
@@ -11664,7 +11664,7 @@
 	</dict>
 	<dict>
 		<key>A</key>
-		<string>当您需要提示其他车辆您的车辆对他人会是临时的危险时.</string>
+		<string>只有当您的车辆暂时可能危害到其他车辆和行人时，才开危险指示灯.</string>
 		<key>B</key>
 		<string>当您在雾天下行驶在高速路上时.</string>
 		<key>C</key>
@@ -12082,11 +12082,11 @@
 	</dict>
 	<dict>
 		<key>A</key>
-		<string>空气过滤器.</string>
+		<string>空气过滤器</string>
 		<key>B</key>
 		<string>排气系统和消音器</string>
 		<key>C</key>
-		<string>地毯与车底盘.</string>
+		<string>地毯与车底盘</string>
 		<key>Category</key>
 		<string>2</string>
 		<key>CorrectAnswer</key>
@@ -12104,11 +12104,11 @@
 	</dict>
 	<dict>
 		<key>A</key>
-		<string>空气过滤器.</string>
+		<string>空气过滤器</string>
 		<key>B</key>
 		<string>排气系统和消音器</string>
 		<key>C</key>
-		<string>地毯与车底盘.</string>
+		<string>地毯与车底盘</string>
 		<key>Category</key>
 		<string>2</string>
 		<key>CorrectAnswer</key>
@@ -12126,11 +12126,11 @@
 	</dict>
 	<dict>
 		<key>A</key>
-		<string>空气过滤器.</string>
+		<string>空气过滤器</string>
 		<key>B</key>
 		<string>排气系统和消音器</string>
 		<key>C</key>
-		<string>地毯与车底盘.</string>
+		<string>地毯与车底盘</string>
 		<key>Category</key>
 		<string>2</string>
 		<key>CorrectAnswer</key>
@@ -12890,7 +12890,7 @@
 		<key>Image</key>
 		<string></string>
 		<key>Question</key>
-		<string>Y当司机留在车里时，您可以把车停在路面的消防栓标志上面。对还是错?</string>
+		<string>当司机留在车里时，您可以把车停在路面的消防栓标志上面。对还是错?</string>
 		<key>Type</key>
 		<string>0</string>
 	</dict>
@@ -12912,7 +12912,7 @@
 		<key>Image</key>
 		<string></string>
 		<key>Question</key>
-		<string>Y当司机留在车里时，您可以把车停在路面的消防栓标志上面。对还是错?</string>
+		<string>当司机留在车里时，您可以把车停在路面的消防栓标志上面。对还是错?</string>
 		<key>Type</key>
 		<string>1</string>
 	</dict>
@@ -12934,7 +12934,7 @@
 		<key>Image</key>
 		<string></string>
 		<key>Question</key>
-		<string>Y当司机留在车里时，您可以把车停在路面的消防栓标志上面。对还是错?</string>
+		<string>当司机留在车里时，您可以把车停在路面的消防栓标志上面。对还是错?</string>
 		<key>Type</key>
 		<string>2</string>
 	</dict>
